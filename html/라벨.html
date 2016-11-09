@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <label for="userid">아이디</label>
+  <!--라벨값은 웹표준상 필요하다!  -->
+  <input type="text" id="userid" placeholder="아이디입력">
+  <!--id 값은 한 페이지에 두번 사용될수 없다!  -->
+
+<p>
+  <label for="userID">아이디</label>
+  <input type="text" id="userID" placeholder="아이디를 입력하세요">
+</p>
+<p>
+  <label for="userPS">비밀번호</label>
+  <input type="password" id="userPS" placeholder="비밀번호를 입력하세요">
+</p>
+<p>
+  <label for="userID"><input type="text" id="userID" placeholder="아이디를 입력하세요">
+  </label>
+</p>
+<p>
+  <label for="man">남자</label>
+  <input type="radio" id="man" name="trans">
+  <label for="woman">여자</label>
+  <input type="radio" id="woman" name="trans">
+  <!-- name="trans" 는 그룹으로 묶어서 선택을 하나만 되게끔 한다. -->
+</p>
+<p>
+  <label for="sports1">축구</label>
+  <input type="radio" id="sports1">
+  <label for="sports2">농구</label>
+  <input type="radio" id="sports2">
+  <label for="sports3">야구</label>
+  <input type="radio" id="sports3">
+  <!--기본적으로는 다중 선택이 가능하다. -->
+</p>
+</body>
+</html>
