@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>테이블</title>
+</head>
+<body>
+<table border="1" width="400">
+  <caption>시간표</caption>
+
+  <!-- <colgroup> 은 빈 태그다. -->
+  <colgroup>
+    <col width="100">
+    <col width="150">
+    <col width="100">
+    <col width="50">
+  </colgroup>
+
+  <thead>
+  <tr>
+    <th>월</th>
+    <th>화</th>
+    <th>수</th>
+    <th>목</th>
+  </tr>
+ </thead>
+ <!-- tfoot은 구지 필요가 없을수도 있다.
+      thead 와 tbody 사이에 들어간다. 정산의 합계를 먼저 읽기 때문에!
+      정산의 합계치 같은데 쓰인다.(사용빈도는 적은편)  -->
+ <tfoot>
+   <tr>
+     <td></td>
+     <td></td>
+     <td>합계</td>
+     <td>100만원</td>
+   </tr>
+ </tfoot>
+ <tbody>
+  <tr>
+    <td>사과</td>
+    <td>배</td>
+    <td>오렌지</td>
+    <td>포도</td>
+  </tr>  <tr>
+    <td>사과</td>
+    <td>배</td>
+    <td>오렌지</td>
+    <td>포도</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<!-- 세로형 테이블 -->
+<table border="1" width="400">
+ <tbody>
+  <tr>
+    <th>사과</th>
+    <td>배</td>
+    <td>오렌지</td>
+    <td>포도</td>
+  </tr>  <tr>
+    <th>사과</th>
+    <td>배</td>
+    <td>오렌지</td>
+    <td>포도</td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+
+<!-- 리딩방향 -->
+<table border="1" width="400">
+  <caption>시간표</caption>
+
+  <!-- <colgroup> 은 빈 태그다. -->
+  <colgroup>
+    <col width="100">
+    <col width="150">
+    <col width="100">
+    <col width="50">
+  </colgroup>
+
+  <thead>
+  <tr>
+  <!-- scope="col"은  읽는 방향을 세로로 읽는다.
+       scope="row"은  읽는 방향을 가로로 읽는다.
+       (시각장애인들이 명확하게 알수있게 읽기 위해서) -->
+    <th scope="col">title</th>
+    <th scope="col">title</th>
+    <th scope="col">title</th>
+    <th scope="col">title</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+    <th scope="row">사과</th>
+    <td>배</td>
+    <td>오렌지</td>
+    <td>포도</td>
+  </tr>
+  <tr>
+    <th scope="row">사과</th>
+    <td>배</td>
+    <td>오렌지</td>
+    <td>포도</td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+</body>
+</html>
