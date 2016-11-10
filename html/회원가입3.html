@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입 작성해보기</title>
+</head>
+<body>
+  <form action="회원가입2.html" method="post">
+    <!-- 정보를 보호하기 위헤서 get을 안쓰고 post로 쓴다!! -->
+  <ul>
+    <li>
+      <label for="a1">회원아이디</label> <input type="text" id="a1" placeholder="아이디" name="아이디">
+      <input type="button" value="아이디중복조회"> <span>(영문자 또는 숫자, 4~15자리)</span></li>
+    <li>
+      <label for="a2">비밀번호</label>
+      <input type="password" id="a2" placeholder="비밀번호" name="비밀번호"> <span>변경 시에만 입력하십시오.(영문자 또는 숫자, 4~12자리)</span></li>
+    <li>
+      <label for="a3">비밀번호</label>
+      <input type="password" id="a3" placeholder="비밀번호 확인" name="비밀번호 확인"></li>
+    <li>
+      <label for="a4">회원성명</label>
+      <input type="text" id="a4" placeholder="성명" name="성명"> <span>(한글 8자이내, 영문 16자이내 입력)</span></li>
+    <li>
+      <label for="a5">주민등록번호</label>
+      <input type="text" id="a5" placeholder="앞자리" name="앞자리"> - <input type="password" placeholder="뒷자리" name="뒷자리"></li>
+    <li>
+      <label for="a6">전화번호</label>
+      <select id="a6" name="전화번호">
+        <option value="02">02</option>
+        <option value="031">031</option>
+        <option value="052">052</option>
+      </select> -
+      <input type="text" placeholder="0000"> - <input type="text" placeholder="0000">
+    </li>
+    <li>
+      <label for="a7">휴대폰번호</label>
+      <select id="a7" name="휴대폰번호">
+        <option value="010">010</option>
+        <option value="011">011</option>
+        <option value="012">012</option>
+      </select> -
+      <input type="text" placeholder="0000" name="전화번호 앞자리"> - <input type="text" placeholder="0000" name="전화번호 뒷자리">
+    </li>
+    <li>
+      <label for="a8">주소</label>
+      <input type="text" id="a8" placeholder="우편" name="우편번호 앞자리"> - <input type="text" placeholder="번호" name="우편번호 뒷자리">
+      <input type="button" value="우편번호 검색"><br/>
+      <input type="text" placeholder="서울특별시 무슨구 무슨동" name="주소"><br/>
+      <input type="text" placeholder="나머지 주소" name="나머지주소">
+    </li>
+    <li>
+      <label for="a9">E-mail</label>
+      <input type="text" placeholder="아이디" name="이메일 아이디"> @
+      <select id="a9" name="메일 주소">
+        <option value="">hanmail.net</option>
+        <option value="">naver.com</option>
+        <option value="">daum.net</option>
+      </select>
+    </li>
+    <li>
+      <label for="a10">참조 E-mail</label>
+      <input type="text" placeholder="아이디" name="이메일 아이디2"> @
+      <select id="a10" name="메일 주소2">
+        <option value="">hanmail.net</option>
+        <option value="">naver.com</option>
+        <option value="">daum.net</option>
+      </select>
+      <p>* 참조 email 이란?<br/>
+      E-mail 고지를 받는 고객께서 고지를 정상적으로 받으실 수 없을 경우 업무의 공백을 막기위한<br/>
+      서비스로 참조 E-mail을 등록해 놓으시면 매번 E-mail 고지서에 두개의 E-mail로 고지해 드립니다.<br/>
+      <strong>단, 한국전력과 서울도시가스에만 해당됩니다.</strong></p>
+    </li>
+    <li>
+      <label for="a11">부가서비스 안내수신</label>
+      <input type="radio" id="a11" name="trans" checked="true">
+      <label for="a11">예</label>
+      <input type="radio" id="a12" name="trans">
+      <label for="a12">아니오</label>
+    </li>
+    <li>
+      <label for="a13">회원성명</label>
+      <input type="text" id="a13" placeholder="추천인 성명" name="추천인 성명">
+    </li>
+  </ul>
+<input type="submit" value="전송">
+<input type="reset" value="재입력">
+</form>
+</body>
+</html>
