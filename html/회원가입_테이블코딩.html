@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입_테이블코딩</title>
+</head>
+<body>
+<fieldset>
+  <legend>회원가입</legend>
+<form action="회원가입_테이블코딩.html" mehod="post">
+<table border="1" width="100%" >
+  <!-- caption은 없어도 되지만 fildset->legend는 있어야 한다 -->
+  <caption>회원가입 양식</caption>
+  <colgroup>
+    <col width="100">
+    <col width="300">
+  </colgroup>
+<tbody>
+  <tr>
+    <th>
+      <label for="a1">회원아이디</label>
+    </th>
+    <td>
+      <input type="text" id="a1" placeholder="아이디" name="">
+      <input type="button" value="아이디중복조회">
+      <span>(영문자 또는 숫자, 4~15자리)</span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a2">비밀번호</label>
+    </th>
+    <td>
+      <input type="password" id="a2" placeholder="비밀번호" name="">
+      <span>변경 시에만 입력하십시오.(영문자 또는 숫자, 4~12자리)</span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a3">비밀번호 확인</label>
+    </th>
+    <td>
+      <input type="password" id="a3" placeholder="비밀번호 확인" name="">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a4">회원성명</label>
+    </th>
+    <td>
+      <input type="text" id="a4" placeholder="회원성명" name="">
+      <span>(한글 8자이내, 영문 16자이내 입력)</span>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a5">주민등록번호</label>
+    </th>
+    <td>
+      <input type="text" id="a5" placeholder="앞자리" name=""> -
+      <input type="text" placeholder="뒷자리" name="">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a6">전화번호</label>
+    </th>
+    <td>
+      <select  id="a6" name="">
+        <option value="02">02</option>
+        <option value="031">031</option>
+        <option value="032">032</option>
+      </select> -
+      <input type="text" placeholder="전화번호 중간자리" name=""> -
+      <input type="text" placeholder="전화번호 뒷자리" name="">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a7">휴대폰번호</label>
+    </th>
+    <td>
+      <select  id="a7" name="">
+        <option value="010">010</option>
+        <option value="011">011</option>
+        <option value="012">012</option>
+      </select> -
+      <input type="text" placeholder="휴대폰번호 중간자리" name=""> -
+      <input type="text" placeholder="휴대폰번호 뒷자리" name="">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a8">주소</label>
+    </th>
+    <td>
+      <input type="text" id="a8" placeholder="우편번호 앞자리" name=""> -
+      <input type="text" placeholder="우편번호 뒷자리" name="">
+      <input type="button" value="우편번호 검색"><br/>
+      <input type="text" placeholder="주소" name=""><br/>
+      <input type="text" placeholder="나머지주소" name="">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a9">E-mail</label>
+    </th>
+    <td>
+      <input type="text" id="a9" placeholder="아이디" name=""> @
+      <select>
+        <option value="naver.com">naner.com</option>
+        <option value="nate.com">nate.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a10">참조 E-mail</label>
+    </th>
+    <td>
+      <input type="text" id="a10" placeholder="아이디" name=""> @
+      <select>
+        <option value="naver.com">naner.com</option>
+        <option value="nate.com">nate.com</option>
+        <option value="hanmail.net">hanmail.net</option>
+      </select>
+      <p>* 참조 email 이란?<br/>
+      E-mail 고지를 받는 고객께서 고지를 정상적으로 받으실 수 없을 경우 업무의 공백을 막기위한<br/>
+      서비스로 참조 E-mail을 등록해 놓으시면 매번 E-mail 고지서에 두개의 E-mail로 고지해 드립니다.<br/>
+      <strong>단, 한국전력과 서울도시가스에만 해당됩니다.</strong></p>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a11">부가서비스 안내수신</label>
+    </th>
+    <td>
+      <input type="radio" id="a11" name="같은이름" checked="true">
+      <label for="a11">예</label>
+      <input type="radio" id="a12" name="같은이름">
+      <label for="a12">아니오</label>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <label for="a13">회원성명</label>
+    </th>
+    <td>
+      <input type="text" id="a13" placeholder="추천인 성명" name="">
+    </td>
+  </tr>
+</table>
+<input type="submit" value="전송">
+<input type="reset" value="재입력">
+<tbody>
+</form>
+</fieldset>
+</body>
+</html>
