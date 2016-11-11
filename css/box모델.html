@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>box모델</title>
+  <style>
+
+  /*
+  min-width = 최소넓이
+  width = 넓이
+  max-width = 최대넓이
+
+  min-height = 최소높이
+  height = 높이
+  max-height = 최대높이
+
+  margin = 바깥쪽 여백 (*margin은 안보이는 영역이 커진것이지 이동한것이 아니다!!!!)
+  margin-top
+  margin-right
+  margin-bottom
+  margin-left
+
+  padding = 안쪽 여백
+  padding-top
+  padding-right
+  padding-bottom
+  padding-left
+
+  border = 선의 두께
+  border-width
+  border-style
+  border-color
+
+
+  #box {
+    width:100px;
+    height:100px;
+    pading:20px;
+    margin:20px;
+    border:1px red solid;
+  }
+
+  width:auto; 부모만큼
+  height:auto; 컨텐츠만큼
+
+  */
+
+  *{
+    margin:0;padding:0;
+    list-style: none;
+  }
+
+  body{
+    margin:0;
+  }
+
+    #menu{
+    width:150px;
+    border:1px #F00 solid;
+  }
+
+
+  #menu ul{
+    border:1px #F00 solid;
+    width:auto;  /*부모만큼*/
+    margin:10px;
+  }
+
+  #box{
+    height:100px;  /*컨텐츠만큼*/
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px #F00 solid;
+    /* overflow:hidden;  자식이 빠져나간 컨텐츠를 막아줌*/
+    }
+
+  #children{
+    height:200px; background:#00F; border:1px #F00 solid
+  }
+    </style>
+
+  </head>
+  <body>
+
+  <div id="box">
+    <div id="children"></div>
+  </div>
+
+  <!-- <div id="menu">
+    <ul>
+      <li>text</li>
+      <li>text</li>
+      <li>text</li>
+      <li>text</li>
+    </ul>
+  </div> -->
+
+  
+</body>
+</html>

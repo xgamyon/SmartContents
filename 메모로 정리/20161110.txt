@@ -32,5 +32,21 @@ scope="row" 는 가로로 읽어주게 인식
 scope="colgroup" 은 갯수가 안맞는 테이블을 세로로 한번에 묶었을때
 scope="rowgroup" 은 갯수가 안맞는 테이블을 가로로 한번에 묶었을때
 
+
 <table>에 붙는 속성 -> summary="" 정확한 정보를 설명해주는 부분(프로젝트에 따라 접근성이 있어야하면 들어가야 하는 부분)
 
+
+
+회원가입_테이블.html ------------------------------------------
+
+<tr>
+    <th>
+      <label for="a5">주민등록번호</label>
+    </th>
+    <td>
+      <input type="text" id="a5" placeholder="앞자리" name=""> -
+      <input type="text" placeholder="뒷자리" name="">
+    </td>
+  </tr>
+
+두번째 input에도 임의의 id 값이 필요하다!!
