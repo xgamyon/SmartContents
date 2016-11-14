@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>레이아웃 잡아보기</title>
+  <style>
+    #news{
+      margin:0 auto;
+      border: 1px black solid;
+      width: 900px;
+      height: 540px;
+    }
+    .top{
+      margin: 15px auto;
+      border: 1px green solid;
+      width: 840px;
+      height: 80px;
+    }
+
+    .wrap{
+      margin: 15px auto;
+      border: 1px gray solid;
+      width: 840px;
+      height: 380px;
+    }
+    .contents{
+      border: 1px red solid;
+      width: 513px;
+      float: left;
+    }
+    .contents .contents1{
+      border: 1px pink solid;
+      height: 132px;
+    }
+    .contents .contents2{
+      border: 1px pink solid;
+      height: 223px;
+      margin-top:20px;
+    }
+    .contents2 .img1{
+      width: 160px;
+      height: 223px;
+      float:left;
+    }
+    .contents2 .notice{
+      border: 1px #ff4800 solid;
+      margin-left: 180px;
+      max-height: 223px;
+
+    }
+    .banner{
+      border: 1px violet solid;
+      margin-left: 533px;
+      height: 380px;
+    }
+    .banner .banner1{
+      border: 1px orange solid;
+      width: 305px;
+      height: 100px;
+    }
+    .banner .banner2{
+      border: 1px orange solid;
+      width: 305px;
+      height: 255px;
+      margin-top:20px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="news">
+  <div class="top">top</div>
+  <hr/>
+    <div class="wrap">
+      <div class="contents">
+        <div class="contents1">contents1</div>
+        <div class="contents2">
+          <img class="img1" src="photo.jpg" alt="사진">
+          <div class="notice">내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+          내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+          내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+          내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+          내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
+          내용입니다.내용입니다.내용입니다.내용입니다.</div>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="banner1">banner1</div>
+        <div class="banner2">banner2</div>
+      </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
