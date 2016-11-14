@@ -3,6 +3,10 @@
   <meta charset="UTF-8">
   <title>레이아웃 잡아보기</title>
   <style>
+
+  body{
+    margin: 0;
+  }
     #news{
       margin:0 auto;
       border: 1px black solid;
@@ -10,57 +14,81 @@
       height: 540px;
     }
     .top{
-      margin: 15px auto;
-      border: 1px green solid;
-      width: 840px;
+      margin:15px 30px;
+      outline: 1px green solid;
       height: 80px;
     }
 
     .wrap{
-      margin: 15px auto;
-      border: 1px gray solid;
-      width: 840px;
+      margin: 15px 30px 0;
+      outline: 1px gray solid;
       height: 380px;
     }
     .contents{
-      border: 1px red solid;
+      outline: 1px red solid;
       width: 513px;
+      height: 100%;
       float: left;
     }
     .contents .contents1{
-      border: 1px pink solid;
+      outline: 1px pink solid;
       height: 132px;
     }
     .contents .contents2{
-      border: 1px pink solid;
-      height: 223px;
+      outline: 1px pink solid;
       margin-top:20px;
+      height: 228px;
     }
-    .contents2 .img1{
+    .contents .contents2 .img1{
       width: 160px;
-      height: 223px;
+      height: 100%;
       float:left;
     }
-    .contents2 .notice{
-      border: 1px #ff4800 solid;
+    .contents .contents2 .notice{
+      outline: 1px green solid;
       margin-left: 180px;
-      max-height: 223px;
-
+      height: 100%;
     }
     .banner{
-      border: 1px violet solid;
+      outline: 1px violet solid;
       margin-left: 533px;
-      height: 380px;
+      height: 100%;
     }
     .banner .banner1{
-      border: 1px orange solid;
-      width: 305px;
+      outline: 1px orange solid;
       height: 100px;
     }
     .banner .banner2{
-      border: 1px orange solid;
-      width: 305px;
-      height: 255px;
+      outline: 1px orange solid;
+      height: 260px;
+      margin-top:20px;
+    }
+    .sub_banner1{
+      outline: 1px red solid;
+      background-color: red;
+      width: 140px;
+      height:120px;
+      float:left;
+    }
+    .sub_banner2{
+      outline: 1px red solid;
+      background-color: yellow;
+      height:120px;
+      margin-left:160px;
+    }
+    .sub_banner3{
+      outline: 1px red solid;
+      background-color: green;
+      width: 140px;
+      height:120px;
+      margin-top:20px;
+      float:left;
+    }
+    .sub_banner4{
+      outline: 1px red solid;
+      background-color: blue;
+      height:120px;
+      margin-left:160px;
       margin-top:20px;
     }
 
@@ -80,13 +108,17 @@
           내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
           내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
           내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
-          내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.내용입니다.
-          내용입니다.내용입니다.내용입니다.내용입니다.</div>
+          </div>
         </div>
       </div>
       <div class="banner">
         <div class="banner1">banner1</div>
-        <div class="banner2">banner2</div>
+        <div class="banner2">
+          <div class="sub_banner1">1</div>
+          <div class="sub_banner2">2</div>
+          <div class="sub_banner3">3</div>
+          <div class="sub_banner4">4</div>
+        </div>
       </div>
     </div>
 </div>
