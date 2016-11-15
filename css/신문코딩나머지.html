@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>신문코딩나머지 연습</title>
+</head>
+<style>
+*{margin: 0; padding:0}
+.contents{
+  border: 1px #f00 solid;
+  width: 900px;
+  height: 540px;
+  margin:0 auto;
+}
+.contents .contents_size{
+  margin: 0 30px;
+}
+.top{
+  height: 100px;
+}
+.wrap{
+  width:513px;
+  height:132px;
+  border: 1px #f00 solid;
+  margin-top: 20px;
+}
+.wrap ul{
+  list-style: none;
+}
+.wrap ul li{
+  font-size: 12px;
+}
+.first{
+  border: 1px #f0f solid;
+  margin-bottom: 10px;
+}
+.first strong{
+  font-size:20px;
+  color:#D91B5C;
+}
+.first span{
+  width: 160px;
+  height: 93px;
+  display: block; /* span이 inline 요소이기 떄문에 width height 값이 안먹어서 block으로 바꿔준다.*/
+  border: 1px #f00 solid;
+  float:left;
+  margin-right:10px;
+  margin-top:10px;
+  overflow:hidden;
+}
+.first span img{
+  width: 100%;
+}
+.first p{
+  margin-top: 10px;
+  color:#000;
+}
+.first a{
+  text-decoration: none;
+}
+.wrap2{
+  width:513px;
+  height:100%px;
+  border: 1px #f00 solid;
+  margin-top: 20px;
+}
+.second{
+  font-size: 12px;
+}
+.second .layout{
+  border: 1px #f00 solid;
+  width: 140px;
+  height: 250px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+.second img{
+  width: 100%
+}
+.layout .img_line{
+  margin-top: 10px;
+}
+</style>
+<body>
+<div class="contents">
+  <div class="contents_size">
+  <div class="top">top
+  </div>
+  <hr />
+  <div class="wrap">
+   <ul>
+    <li class="first">
+      <a href =""><strong>삼성, 美전장기업 하만 9조3000억에 인수</strong>
+      <span><img src="http://static.naver.net/newsstand/2016/1115/etnews/174048/001.jpg" alt="이미지"></span>
+      <p>삼성전자가 미국 전장 전문 기업 하만을 인수했다.
+      신성장 분야인 자동차 전장 사업을 대폭 강화하기 위한 조치다.
+      삼성전자는 미래 자동차 시장에서 퀀텀 점프를 노린다....</p></a>
+    </li>
+    <li>[해설]삼성전자 `스마트 카` 주도권 의지 드러냈다</li>
+    <li>[해설]삼성전자 `스마트 카` 주도권 의지 드러냈다</li>
+   </ul>
+  </div>
+
+ <div class="wrap2">
+    <div class="second">
+       <span class="layout">
+         <img src="http://static.naver.net/newsstand/2016/1115/etnews/174048/002.jpg" alt="이미지">
+         <p>정부, 오늘부터 '대포폰' 직권해지</p>
+         <img class="img_line" src="http://static.naver.net/newsstand/2016/1115/etnews/174048/003.jpg" alt="이미지">
+         <p>삼성, 美전장기업 하만 9조3000억에 인수</p></span>
+       <p>간섭 카드도 물건너가나···KT, 800㎒ 고민 깊어진다</p>
+       <p>"포켓몬고, 곧 한국 서비스 한다"</p>
+       <p>[동영상 뉴스]68년만 뜬 슈퍼문의 향연</p>
+       <p>11번가, '110분 이내 무료배송' 프로모션 선보여</p>
+       <p>삼성 인수한 하만 주가 25% 이상 급등</p>
+       <p>전기차 최대 7대 동시 충전…'개방형 충전소' 오픈</p>
+       <p>한국형전투기에 국산 SW통합관리솔루션 첫 적용</p>
+       <p>남자보다 여자 기억력이 뛰어나다?</p>
+       <p>SK텔레콤 '루나S 태권브이' 18일 출시</p>
+    </div>
+ </div>
+</div>
+</div>
+</body>
+</html>
