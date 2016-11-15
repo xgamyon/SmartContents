@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>접근성코딩과 비접근성코딩 비교</title>
+</head>
+ <style>
+ *{margin: 0; padding:0}
+
+ .wrap{
+   width:513px;
+   height:132px;
+   border: 1px #f00 solid;
+ }
+ .wrap ul{
+   list-style: none;
+ }
+ .wrap ul li{
+   font-size: 12px;
+ }
+ .first{
+   border: 1px #f0f solid;
+   margin-bottom: 10px;
+ }
+ .first strong{
+   font-size:20px;
+   color:#D91B5C;
+ }
+ .first span{
+   width: 160px;
+   height: 93px;
+   display: block; /* span이 inline 요소이기 떄문에 width height 값이 안먹어서 block으로 바꿔준다.*/
+   border: 1px #f00 solid;
+   float:left;
+   margin-right:10px;
+   margin-top:10px;
+   overflow:hidden;
+ }
+ .first span img{
+   width: 100%;
+ }
+ .first p{
+   margin-top: 10px;
+   color:#000;
+ }
+ .first a{
+   text-decoration: none;
+ }
+ </style>
+
+<body>
+ <div class="wrap">
+  <ul>
+   <li class="first">
+     <a href =""><strong>삼성, 美전장기업 하만 9조3000억에 인수</strong>
+     <span><img src="http://static.naver.net/newsstand/2016/1115/etnews/102250/001.jpg" alt="이미지"></span>
+     <p>삼성전자가 미국 전장 전문 기업 하만을 인수했다.
+     신성장 분야인 자동차 전장 사업을 대폭 강화하기 위한 조치다.
+     삼성전자는 미래 자동차 시장에서 퀀텀 점프를 노린다....</p></a>
+   </li>
+   <li>[해설]삼성전자 `스마트 카` 주도권 의지 드러냈다</li>
+   <li>[해설]삼성전자 `스마트 카` 주도권 의지 드러냈다</li>
+  </ul>
+ </div>
+
+</body>
+</html>

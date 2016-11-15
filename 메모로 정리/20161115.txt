@@ -1,0 +1,125 @@
+
+overflow ---------------------------------------------------------
+
+주어진 영역을 벗어났을때 부모만큼으로 맞춰라!! (마스크 개념)
+
+overflow: hidden  넘어간 영역을 숨겨라.
+              visible   주어진 영역을 벗어날수 있다!(디폴트 상태)
+              scroll    넘어간 영역을 숨기되 스크롤을 생기게 하라.
+
+
+
+* margin은 영역의 확장!!!
+
+* span 같은 인라인 요소는 width height값을 안먹는다!!!! 
+  블럭요소로 바꾸기 위해서 display:block 으로 바꿔줄수 있다.
+
+* 인라인 요소가 블럭 요소를 감쌀수 없다!!!
+  예) <span><p>  -> x
+         inline   block
+
+
+display ---------------------------------------------------------
+
+display: inline           -    span strong em    글씨를 꾸미는
+            block           -    div p h1               레이아웃 잡는 태그
+            inline-block  -    button input         메뉴만들때 많이 씀.    
+            table            -    표
+            table-cell      -   표안의 칸
+            list-item        -    ul ol li   
+
+
+
+inline은 margin은 좌우만 먹는다.
+            padding은 다 되긴 하는데 형태가 중심축에서 다름.
+
+inline-block 인라인처럼 배치되면서 블럭처럼 보여줌. 
+                  inline 자체가 width  height 가 안먹기 때문에 쓴다.
+                  속성 자체가 list-style을 먹기 때문에 ul li 에 점이 안나온다.
+
+익스7에서는 호환이 안되는데 style에
+
+display:inline-block; 
+*display:inline;
+*zoom:1;
+
+이렇게 하면 보임 (hack 이라고 불림)
+
+
+
+
+selectors ------------------------------------------------------------
+
+
+동일하게 스타일을 주고 싶을경우
+
+
+div,ul{ border: 1px #F00 solid;}   쉼표를 써서 이어나갈수 있다.
+
+.menu ul{}    메뉴안에 "모든" ul선택자는..
+
+.menu> ul{}  메뉴안에 바로 안에 있는 ul만
+
+
+예) .menu .testu1>li{border: 1px #F00 solid;}
+      메뉴 안에 testu1 을 찾아 그녀석 안의 li에 
+
+
+
+li input[type="button"]{border: 1px #F00 solid;}   button 이라는 속성 선택자
+간단하게 속성 자체인 type="text" , href="링크"이런것을 긁어다가 쓰면된다.
+
+
+
+제일 중요한 선택자 (외우자!!)
+^ 시작하면!!   * 포함되어 있으면!!   $ 끝나면!!
+
+<div class=" text1 text2"> 클래스를 여러가지로 쓸때 띄어쓰기로 무한정 클래스를 추가할수 있다.
+
+스타일 예시
+ul .subul .list-item{border: 1px #F00 solid;}  ul 안에 .subul 안에 .list-item 라는 클래스를 가지고 있는녀석
+ul.subul.list-item{border: 1px #F00 solid;}  ul을 가지고 있는 .subul 클래스와 .list-item 클래스를 둘다 가지고 있는녀석
+                                                               (ul 안에 다른 클래스가 속해 있을수 있기 때문에 ul과 클래스를 붙여 쓴다.)
+
+
+
+
+캐스케이딩 ------------------------------------------------------------------
+
+
+저작자   h1{color:red;  !important}  가장 강력한 순위!! 어떠한 클래스, 아이디 값이 있어도 제일 먼저 순위!
+
+명시도
+
+우선순
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

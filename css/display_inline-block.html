@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+   <style>
+    ul{
+      margin: 0;
+      padding:0;
+      list-style: none;
+      font-size:0;
+      /*inline-block이 inline 요소도 가지고 있기 때문에
+      글자와 글자 사이에 간격 이 있어 드래그 했을 경우에 공간을 없애기 위해 넣음  */
+      text-align: center;
+    }
+    li{
+      border: 1px #f00 solid;
+      display:inline-block;
+      /*inline 자체가 width  height 가 안먹기 때문에 쓴다.
+        속성 자체가 list-style을 먹기 때문에 ul li 에 점이 안나온다. */
+      width: 100px;
+      height: 30px;
+      font-size: 12px; /* ul에 font size:0; 을 넣었기 때문에 메뉴가 나오지 않으니
+                          디폴드 값인 12px을 넣어줌으로 메뉴가 없어지지 않게 한다.*/
+
+
+      /*익스플로어7 에서는 inline-block 요소를 먹지 않아서 공식처럼 넣어주는 요소*/
+      *display: inline;
+      *zoom:1;           /* 브라우저의 크기를 제시 */
+    }
+
+   </style>
+</head>
+<body>
+
+  <div>
+    <ul>
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+      <li>menu5</li>
+    </ul>
+  </div>
+
+</body>
+</html>
