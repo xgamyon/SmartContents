@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>selectors</title>
+  <style>
+  /*div{border: 1px #F00 solid;} */
+  /*div,ul,li{border: 1px #F00 solid;} 전부 포함 */
+  /*.menu{border: 1px #F00 solid;}  클래스 */
+  /*#unit1{border: 1px #F00 solid;}  아이디 */
+  /*.menu ul{border: 1px #F00 solid;} 한칸 띄는것은 그 안에 모든 */
+  /*.menu .testu1>li{border: 1px #F00 solid;} > 는 바로 아래 있는! */
+  /*.menu ul .subul{border: 1px #F00 solid;}*/
+  /*ul .subul .list-item{border: 1px #F00 solid;}  ul 안에 .subul 안에 .list-item 라는 클래스를 가지고 있는녀석*/
+  /*ul.subul.list-item{border: 1px #F00 solid;}  ul을 가지고 있는 .subul 클래스와 .list-item 클래스를 둘다 가지고 있는녀석, 다수의 클래스를 선택.
+                                                 (ul 안에 다른 클래스가 속해 있을수 있기 때문에 ul과 클래스를 붙여 쓴다.)*/
+  /*.menu li li:first-child{border: 1px #F00 solid;}   7 8 9 */
+  /*.menu li li:last-child{border: 1px #F00 solid;}    8 9  */
+
+
+  /*li input[type="button"]{border: 1px #F00 solid;}   button 이라는 속성 선택자*/
+  /*a[href="링크"]{border: 1px #F00 solid;}*/
+
+  /*a[href="라이코스"]{border:1px #F00 solid}*/
+  /*
+     ^ 시작하면
+     * 포함되어 있으면
+     $ 끝나면
+                  */
+
+    /*a[href^="라이"]{border:1px #F00 solid}*/
+    /*a[href*="이코"]{border:1px #F00 solid}*/
+    /*a[href$="코스"]{border:1px #F00 solid}*/
+
+
+
+  /*.unit+li{border: 1px #F00 solid;}   유닛이라는 클래스를 가지고 있는 녀석 그 다음 녀석들*/
+  /*.unit+li+li{border: 1px #F00 solid;} 유닛이라는 클래스를 가지고 있는 녀석 그 다음다음 녀석들*/
+  /*.unit~p{border: 1px #F00 solid;}   유닛이라는 클래스를 가지고 있는 p 라는 녀석 밑으로 있는 녀석들*/
+
+  </style>
+
+
+</head>
+<body>
+
+
+
+  <p>text</p>
+  <p>text</p>
+  <p>text</p>
+  <p class="unit"></p>
+  <p>text</p>
+  <p>text</p>
+  <p>text</p>
+  <div>text</div>
+  <p>text</p>
+  <p>text</p>
+
+
+
+<div class="menu">
+  <ul class="first-ul">
+    <li>text1
+      <ul class="subul">
+        <li>text1-1</li>
+        <li>text2-2</li>
+        <li class="unit">unit</li>
+        <li>text1-1</li>
+        <li>text2-2</li>
+        <li>text3-3</li>
+      </ul>
+    </li>
+    <li>text2
+      <ul class="subul list-item">
+        <li><input type="text"></li>
+        <li><input type="button"></li>
+        <li><a href="네이버">text3-3</a></li>
+      </ul>
+    </li>
+    <li><a href="라이코스">text3</a>
+      <ul class="testul">
+        <li><input type="text"></li>
+        <li id="unit">text2-2</li>
+        <li>text3-3
+          <ul class="testul1">
+            <li><input type="text1"></li>
+            <li id="unit1">text2-2</li>
+            <li>text3-3</li>
+            <li><input type="text1"></li>
+            <li id="unit2">text2-2</li>
+            <li>text3-3</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+</body>
+</html>
