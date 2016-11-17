@@ -1,125 +1,296 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="UTF-8">
-  <title>신문코딩나머지 연습</title>
+    <meta charset="UTF-8">
+    <title>신문코딩나머지 연습</title>
 </head>
 <style>
-*{margin: 0; padding:0}
+*{margin: 0; padding: 0;}
+body{
+    font-family: "돋움";
+    font-size: 12px;
+}
+.border{
+    border: 1px #f00 solid;
+}
 .contents{
-  border: 1px #f00 solid;
-  width: 900px;
-  height: 540px;
-  margin:0 auto;
+    width: 900px;
+    height: 540px;
+    margin:0 auto;
+    border: 1px #ccc solid;
 }
 .contents .contents_size{
-  margin: 0 30px;
+    margin: 0 30px;
 }
 .top{
-  height: 100px;
+    height: 100px;
+}
+.top .logo{
+    margin-top: 10px;
+    height: 90px;
+    float: left;
+}
+input{
+    font-size: 11px;
+    height: 20px;
+}
+.top_bt{
+}
+.banner{
+    margin-left: 375px;
+}
+
+
+
+.left{
+    width: 513px;
+    margin-top: 15px;
+    float: left;
+}
+.right{
+    width: 307px;
+    height: 410px;
+    margin-top: 15px;
+    margin-left: 535px;
 }
 .wrap{
-  width:513px;
-  height:132px;
-  border: 1px #f00 solid;
-  margin-top: 20px;
+    width:513px;
+    height:140px;
 }
 .wrap ul{
-  list-style: none;
+    list-style: none;
 }
 .wrap ul li{
-  font-size: 12px;
+    font-size: 12px;
 }
 .first{
-  border: 1px #f0f solid;
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .first strong{
-  font-size:20px;
-  color:#D91B5C;
+    font-size:20px;
+    color:#D91B5C;
 }
 .first span{
-  width: 160px;
-  height: 93px;
-  display: block; /* span이 inline 요소이기 떄문에 width height 값이 안먹어서 block으로 바꿔준다.*/
-  border: 1px #f00 solid;
-  float:left;
-  margin-right:10px;
-  margin-top:10px;
-  overflow:hidden;
+    width: 160px;
+    height: 93px;
+    display: block; /* span이 inline 요소이기 떄문에 width height 값이 안먹어서 block으로 바꿔준다.*/
+    float:left;
+    margin-right:10px;
+    margin-top:10px;
+    overflow:hidden;
 }
 .first span img{
-  width: 100%;
+    width: 100%;
 }
 .first p{
-  margin-top: 10px;
-  color:#000;
+    margin-top: 10px;
+    line-height: 140%;
+    color:#999;
 }
 .first a{
-  text-decoration: none;
-}
-.wrap2{
-  width:513px;
-  height:100%px;
-  border: 1px #f00 solid;
-  margin-top: 20px;
+    text-decoration: none;
 }
 .second{
-  font-size: 12px;
+    font-size: 12px;
+    width:513px;
+    height:100%;
+    margin-top: 10px;
 }
 .second .layout{
-  border: 1px #f00 solid;
-  width: 140px;
-  height: 250px;
-  display: block;
-  float: left;
-  margin-right: 20px;
+    width: 140px;
+    height: 250px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    overflow:hidden;
 }
 .second img{
-  width: 100%
+    width: 100%
 }
-.layout .img_line{
-  margin-top: 10px;
+.second .layout p{
+    font-size: 11px;
+    line-height: 120%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.second .list {
+    font-size: 15px;
+    list-style: none;
+    line-height: 190%;
+}
+.second a{
+    text-decoration: none;
+    color: black;
+}
+.third{
+    width: 307px;
+    height: 115px;
+    border: 1px #ccc solid;
+    overflow: hidden;
+}
+.third .box{
+    width: 317px;
+    height: 35px;
+    background-color: #777;
+    line-height: 35px;
+    vertical-align: middle;
+}
+.third .box span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.third .box ul{
+    width: 280px;
+    margin: 10px 20px;
+}
+.third .box ul li{
+    font-size: 12px;
+    margin-left: 5px;
+    line-height: 160%;
+}
+.third .box ul li a{
+    text-decoration:none;
+    color: #000;
+}
+.third .box ul li a p{
+    font-weight:bold;
+    color:#D91B5C;
+    letter-spacing:-.8px;
+}
+.fourth{
+    height: 265px;
+    margin-top: 20px;
+}
+.fourth .img1{
+    width: 145px;
+    height: 135px;
+    overflow: hidden;
+    float:left;
+}
+.fourth .img1 img{
+    width: 100%;
+}
+.fourth .img1 p{
+    font-size: 11px;
+    margin-top: 5px;
+}
+.fourth .img2{
+    width: 145px;
+    height: 135px;
+    overflow: hidden;
+    margin-left: 164px;
+}
+.fourth .img2 img{
+    width: 100%;
+}
+.fourth .img2 p{
+    font-size: 11px;
+    margin-top: 5px;
 }
 </style>
 <body>
-<div class="contents">
-  <div class="contents_size">
-  <div class="top">top
-  </div>
-  <hr />
-  <div class="wrap">
-   <ul>
-    <li class="first">
-      <a href =""><strong>삼성, 美전장기업 하만 9조3000억에 인수</strong>
-      <span><img src="http://static.naver.net/newsstand/2016/1115/etnews/174048/001.jpg" alt="이미지"></span>
-      <p>삼성전자가 미국 전장 전문 기업 하만을 인수했다.
-      신성장 분야인 자동차 전장 사업을 대폭 강화하기 위한 조치다.
-      삼성전자는 미래 자동차 시장에서 퀀텀 점프를 노린다....</p></a>
-    </li>
-    <li>[해설]삼성전자 `스마트 카` 주도권 의지 드러냈다</li>
-    <li>[해설]삼성전자 `스마트 카` 주도권 의지 드러냈다</li>
-   </ul>
-  </div>
+    <!-- 상단부분 시장 -->
+    <div class="contents">
+        <div class="contents_size">
+            <div class="top border">
+                <div class="logo border">
+                    <img src="http://static.naver.net/newsstand/up/2013/0813/nsd114836462.gif" alt="logo">
+                    <div class="top_bt">
+                        <input type="button" value="구독해지" />
+                        <input type="button" value="이용자 한마디" />
+                        <span>11-16 14:03 편집</span>
+                    </div>
+                    <div class="banner">
+                        <img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01475642087174.jpg" alt="배너">
+                    </div>
+                </div>
+            </div>
+                  <hr />
 
- <div class="wrap2">
-    <div class="second">
-       <span class="layout">
-         <img src="http://static.naver.net/newsstand/2016/1115/etnews/174048/002.jpg" alt="이미지">
-         <p>정부, 오늘부터 '대포폰' 직권해지</p>
-         <img class="img_line" src="http://static.naver.net/newsstand/2016/1115/etnews/174048/003.jpg" alt="이미지">
-         <p>삼성, 美전장기업 하만 9조3000억에 인수</p></span>
-       <p>간섭 카드도 물건너가나···KT, 800㎒ 고민 깊어진다</p>
-       <p>"포켓몬고, 곧 한국 서비스 한다"</p>
-       <p>[동영상 뉴스]68년만 뜬 슈퍼문의 향연</p>
-       <p>11번가, '110분 이내 무료배송' 프로모션 선보여</p>
-       <p>삼성 인수한 하만 주가 25% 이상 급등</p>
-       <p>전기차 최대 7대 동시 충전…'개방형 충전소' 오픈</p>
-       <p>한국형전투기에 국산 SW통합관리솔루션 첫 적용</p>
-       <p>남자보다 여자 기억력이 뛰어나다?</p>
-       <p>SK텔레콤 '루나S 태권브이' 18일 출시</p>
+
+                 <!-- 상단부분 끝 -->
+                 <!-- 컨텐츠 1 시작 -->
+                 <div class="left border">
+                    <div class="wrap border">
+                        <ul>
+                            <li class="first border">
+                              <a href =""><strong>SKT·BMW, 세계 최초 5G 커넥티드카 시연</strong>
+                              <span><img src="http://static.naver.net/newsstand/2016/1115/etnews/174048/001.jpg" alt="이미지"></span>
+                              <p>5세대(5G) 이동통신망으로 각종 사고와 교통 정체 등 도로 상황을 0.1초 만에
+                                인식하고 UHD급 영상으로 실시간 전송하는 커넥티드카가 세계 최초로 시동을
+                                걸었다. SK텔레...
+                            </p></a>
+                            </li>
+                            <li><strong>[이슈분석]커넥티드카 `가속 중`</strong></li>
+                            <li><strong>[이슈분석]미래 자동차엔 왜 5G가 필요한가</strong></li>
+                        </ul>
+                    </div>
+                    <!-- 컨텐츠1 끝 -->
+                    <!-- 컨텐츠2 시작 -->
+                    <hr/>
+                    <div class="second border">
+                        <div class="layout border">
+                            <img src="http://static.naver.net/newsstand/2016/1116/etnews/140531/002.jpg" alt="이미지">
+                            <p>애플, 최신 제품은 25만원짜리 포토북</p>
+                            <img src="http://static.naver.net/newsstand/2016/1116/etnews/140531/003.jpg" alt="이미지">
+                            <p>정부, 오늘부터 '대포폰' 직권해지</p>
+                        </div>
+                        <ul class="list">
+                            <li><a href="">간섭 카드도 물건너가나···KT, 800㎒ 고민 깊어진다</a></li>
+                            <li><a href="">"포켓몬고, 곧 한국 서비스 한다"</a></li>
+                            <li><a href="">[카드뉴스]미션:아스가르디아 '우주 국가'를 세워라</a></li>
+                            <li><a href="">11번가, '110분 이내 무료배송' 프로모션 선보여</a></li>
+                            <li><a href="">삼성 인수한 하만 주가 25% 이상 급등</a></li>
+                            <li><a href="">전기차 최대 7대 동시 충전…'개방형 충전소' 오픈</a></li>
+                            <li><a href="">한국형전투기에 국산 SW통합관리솔루션 첫 적용</a></li>
+                            <li><a href="">남자보다 여자 기억력이 뛰어나다?</a></li>
+                            <li><a href="">SK텔레콤 '루나S 태권브이' 18일 출시</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    <!-- 컨텐츠2 끝 -->
+
+                    <!-- 컨텐츠3 시작 -->
+                <div class="right border">
+                    <div class="third">
+                        <div class="box">
+                            <span>이슈분석</span>
+                            <ul>
+                                <li><a href=""><p>2017년 신차 경쟁...전 차급 경쟁 심화·PHEV 진격</p></a></li>
+                                <li><a href="">사상 최대 실적 앞둔 정유업계, 내년 준비는?</a></li>
+                                <li><a href="">삼성전자 미래 스마트가 주도권 잡기 나섰다</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 컨텐츠3 끝 -->
+
+                    <!-- 컨텐츠4 시작 -->
+                    <div class="fourth border">
+                        <div class="img1 border">
+                            <img src="http://static.naver.net/newsstand/2016/1116/etnews/140531/004.jpg" alt="이미지">
+                            <p>中 "세계 최초 더블M형 스마트 무인함정 개발"</p>
+                        </div>
+                        <div class="img2 border">
+                            <img src="http://static.naver.net/newsstand/2016/1116/etnews/140531/006.jpg" alt="이미지">
+                            <p>3800년 전 이집트 벽화에 숨은 비밀</p>
+                        </div>
+                        <div class="img1 border">
+                            <img src="http://static.naver.net/newsstand/2016/1116/etnews/140531/005.jpg" alt="이미지">
+                            <p>830만년전엔…냥이 몸무게가 404㎏</p>
+                        </div>
+                        <div class="img2 border">
+                            <img src="http://static.naver.net/newsstand/2016/1116/etnews/140531/007.jpg" alt="이미지">
+                            <p>탱크로봇 전쟁터로···이라크, 모술에 배치</p>
+                        </div>
+
+                    </div>
+                    <!-- 컨텐츠4 끝 -->
+                </div>
+
+
+
+        </div>
     </div>
- </div>
-</div>
-</div>
 </body>
 </html>

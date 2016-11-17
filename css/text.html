@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>text</title>
+</head>
+ <style>
+  .box{
+    width: 400px;
+    height: 400px;
+    border: 1px #f00 solid;
+    color: orange;
+    font-weight: bold;  /* 텍스트와 관련된 스타일은 상속되어서 전부 먹는다. */
+    font-size: 12px;
+    /*font-style: italic;*/
+    /*  font-family: "돋움";   한글은 따옴표 무조건, 영문은 띄어쓰기가 있는경우 따옴표를 쓴다.!!*/
+    font-family: Helvetica,Dotum,'돋움','Apple SD GothicNeo',sans-serif;
+  }
+  .box div{
+    color: pink;
+    font-family: '궁서';
+  }
+  .box div a{
+    color: inherit;  /*상속받음!!*/
+  }
+
+  .box div p{
+    color: initial;  /*상속을 끊음!!*/
+  }
+  .box{
+    letter-spacing: -0.8px; /* 글씨 간격 조절*/
+    word-spacing: 0px;     /* 띄어쓰기 간격 조절*/
+    word-break: keep-all; /* 단어를 떨구지 않고 지키면서 줄바꿈을 실행한다.*/
+    line-height: 180%;    /* 보통은 장문에 폰트 사이즈가 바뀔수 있기에 %를 많이 쓴다.*/
+  }
+
+ </style>
+<body>
+  <div class="box">
+    <span>위키백과(Wiki百科, 듣기 (도움말·정보)) 혹은 위키피디아
+      (영어: Wikipedia 위키피디어[*] 듣기 (도움말·정보))는 지미 웨일스가 제작한 모두가
+      함께 만들어 가며 누구나 자유롭게 쓸 수 있는 다언어판 인터넷 백과사전이다. 대표적인
+      집단 지성의 사례로 평가받고 있다. 위키백과는 크리에이티브 커먼즈 라이선스(CCL)와
+      GNU 자유 문서(GFDL)의 2중 라이선스를 따른다. 배타적인 저작권 라이선스가 아닌 자유
+      콘텐츠로 사용에 제약을 받지 않는다.</span>
+    <p>돋음 Apple ppap</p>
+    <div>
+      <a href="">궁서 Apple ppap</a>
+      <p>궁서 Apple ppap</p>
+    </div>
+  </div>
+</body>
+</html>
