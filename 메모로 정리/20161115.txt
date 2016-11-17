@@ -36,6 +36,7 @@ inline은 margin은 좌우만 먹는다.
 inline-block 인라인처럼 배치되면서 블럭처럼 보여줌. 
                   inline 자체가 width  height 가 안먹기 때문에 쓴다.
                   속성 자체가 list-style을 먹기 때문에 ul li 에 점이 안나온다.
+                  folat 속성이랑 같이 쓸수 없다!! (적용이 안됨)
 
 익스7에서는 호환이 안되는데 style에
 
@@ -92,29 +93,6 @@ ul.subul.list-item{border: 1px #F00 solid;}  ul을 가지고 있는 .subul 클래스와 .l
 명시도
 
 우선순
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

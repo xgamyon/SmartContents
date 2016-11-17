@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>grid_test</title>
+</head>
+  <style>
+  ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+  .grid_list{
+      border:1px #F00 solid;
+      width: 550px;  /* 원래대로라면 540px 이지만 ul에 있는 border값 떄문에 추가해준다.*/
+      overflow: hidden;  /*ul의 늘어난 10% 값을 보여지지 않게 마스크 씌우려고 준 overflow:hidden*/
+  }
+  .grid_list ul{
+      outline: 1px #F00 solid; /*박스 앞부분에 ul 떄문에 벌어진 수치를 안보이게 하려고 outline씀*/
+      width: 110%;    /*ul은 임의상 보이지 않기 때문에 여기에 10%의 영역을 더 추가해 줌으로써
+                        박스가 깨지지 않고 정렬을 할수 있게 한다.*/
+  }
+  .grid_list ul li{
+      border: 1px #F00 solid;
+      width: 100px;
+      height: 100px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+  }
+
+  </style>
+<body>
+    <h1>grid list</h1>
+    <hr/>
+   <div class="grid_list">
+       <ul>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+       </ul>
+   </div>
+</body>
+</html>

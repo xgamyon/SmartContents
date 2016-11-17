@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .box1{
+        width:300px;
+        height:100px;
+        border:1px #F00 solid;
+        float:left;
+    }
+    .box2{
+        width:400px;
+        height:200px;
+        border:1px #F00 solid;
+        float:right;
+    }
+    .clearbox{
+      height:100px;
+      width:400px;
+      border:2px #00F solid;
+      background: #CCC;
+      clear: both;   /*float: left와 right 중에 더 긴 height 값으로 */
+      /*float:right; 이 값으로 정렬을 오른쪽으로 할수도 있다.*/
+    }
+  </style>
+</head>
+<body>
+
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="clearbox">c</div>

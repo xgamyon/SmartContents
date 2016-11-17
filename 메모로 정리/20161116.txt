@@ -32,6 +32,17 @@ vertical-align.html ------------------------------------------------------------
 vartical-align은 
 인라인을 기준으로 line-height 값의 위냐 아래냐 (블록에는 안먹음!)
 무조건 line-height 값이 존재 해야만 vartical-align 수치가 먹는다!!
+부모속성 안에 있는 형제 값이 전부 display:inline-block 상태여야 하며 vartical-align:middle 처럼 같은 속성을 주어야 한다!!
+
+
+
+
+태그에는 먹지 않는다!.. 예를들어
+
+<div class="banner">                 <---- 여기에  line-height
+     <img src="이미지" alt="배너">       <----이 이미지에 vertical-align
+</div>
+
 
 
 가운데 정렬!
@@ -44,5 +55,5 @@ text-align:center; 로 폰트자체를 가운데 정렬 시킨다.
 
 
 
-display: inline    line-height값을 기준으로 top, middle, bottom이 정해진다.
+display: inline    line-height 값을 기준으로 top, middle, bottom이 정해진다.
 display: inline-block;   인라인 블럭이 선언된 것들 중에 가장 큰 박스를 기준으로 top, middle, bottom이 정해진다.
