@@ -88,19 +88,19 @@
 
 
     .left{
-        width: 520px;
-        height: 380px;
+        width: 560px;
+        height: 390px;
         float:left;
 
     }
     .right{
-        width: 360px;
-        height: 380px;
-        margin-left: 540px;
+        width: 320px;
+        height: 390px;
+        float: right;
     }
     h1{
         font-size: 24px;
-        letter-spacing: -3px;
+        letter-spacing: -2px;
         color: #333;
     }
     .main_photo{
@@ -123,7 +123,7 @@
     .main_text ul li{
         line-height: 20px;
         list-style: none;
-        padding-left: 10px;
+        padding-left: 15px;
     }
     .dot{
         display: block;
@@ -142,7 +142,180 @@
         background-position: 0px 8px;
         background-repeat: no-repeat;
         float: right;
-        margin-right: 250px;
+        margin-right: 240px;
+    }
+    .main_text ul li:first-child{
+       color: #c51917;
+       font-weight: bold;
+    }
+    .main_line{
+        height: 2px;
+        background-color: #ccc;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .bottom_cont{
+       height: 220px;
+       overflow: hidden;
+    }
+    .bottom_cont .sub_text{
+       width: 380px;
+       float: left;
+    }
+    .bottom_cont .sub_text ul li{
+       list-style: none;
+       font-size: 14px;
+       font-weight: bold;
+       letter-spacing: -1px;
+       margin-bottom: 12px;
+    }
+    .bottom_cont .sub_text .blue{
+       color: #0505FF;
+    }
+    .bottom_cont .sub_photo{
+       width: 150px;
+       height: 100%;
+       margin-left: 410px;
+       background-image: url(../img/002.jpg);
+       background-repeat:no-repeat;
+    }
+
+
+
+    .right_cont1{
+        width: 320px;
+        height: 190px;
+    }
+    .right_cont1 .right1{
+        width: 320px;
+        height: 60px;
+        overflow: hidden;
+    }
+    .right_cont1 .right1 ul{
+        list-style: none;
+    }
+    .right_cont1 .right1 ul li:first-child{
+        float: left;
+        margin-right: 10px;
+    }
+    .right_cont1 .right1 .right_font1{
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+    }
+    .right_cont1 .right1 .right_font2{
+        color: #888;
+    }
+    .right_cont1 .right2{
+        margin-top: 10px;
+        width: 320px;
+        height: 60px;
+        overflow: hidden;
+    }
+    .right_cont1 .right2 ul{
+        list-style: none;
+    }
+    .right_cont1 .right2 ul li:first-child{
+        float: left;
+        margin-right: 10px;
+    }
+    .right_cont1 .right2 .right_font1{
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+    }
+    .right_cont1 .right2 .right_font2{
+        line-height: 16px;
+        color: #888;
+        letter-spacing: -1px;
+    }
+    .right_cont1 .right3{
+        margin-top: 15px;
+        width: 320px;
+    }
+    .right_cont1 .right3 ul li{
+        font-size: 15px;
+        color: #0505FF;
+        font-weight: bold;
+        letter-spacing: -1.5px;
+        margin-bottom: 7px;
+        list-style: none;
+    }
+
+
+    .right_cont2{
+        margin-top: 30px;
+        width: 320px;
+        height: 170px;
+    }
+    .right_cont2 .bot1{
+        width: 320px;
+        height: 85px;
+        overflow: hidden;
+    }
+    .right_cont2 .bot1 ul li{
+        font-size: 15px;
+        color: #333;
+        font-weight: bold;
+        letter-spacing: -1.5px;
+        margin-bottom: 7px;
+        list-style: none;
+    }
+    .right_cont2 .bot2{
+        height: 100px;
+    }
+    .right_cont2 .bot2 .bot_img1{
+        width: 143px;
+        height: 82px;
+        background-image: url(../img/006.jpg);
+        background-repeat: no-repeat;
+        float: left;
+    }
+    .right_cont2 .bot2 .bot_img1 span{
+        position: relative;
+        color: #fff;
+        margin-top: 65px;
+        display: block;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: -.8px;
+        z-index: 1;
+    }
+    .right_cont2 .bot2 .bot_img1 .bg{
+        position: relative;
+        bottom :22px;
+        width: 143px;
+        height: 25px;
+        background-color: #000;
+        opacity: 0.7;
+        float: left;
+    }
+    .right_cont2 .bot2 .bot_img2{
+        width: 143px;
+        height: 82px;
+        background-image: url(../img/006.jpg);
+        background-repeat: no-repeat;
+        margin-left: 163px;
+    }
+    .right_cont2 .bot2 .bot_img2 span{
+        position: relative;
+        color: #fff;
+        padding-top: 65px;
+        display: block;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: -.8px;
+        z-index: 1;
+    }
+    .right_cont2 .bot2 .bot_img2 .bg{
+        position: relative;
+        bottom :22px;
+        width: 143px;
+        height: 25px;
+        background-color: #000;
+        opacity: 0.7;
     }
     </style>
 </head>
@@ -170,7 +343,7 @@
             <div class="line">
             </div>
             <!-- 컨텐츠 시작 -->
-            <div class="left outline">
+            <div class="left">
                 <h1>朴대통령의 '崔선생님' 문자 본 후, 검사들 반응이…</h1>
                 <div class="main_photo">
                     <img src="../img/001.jpg" alt="">
@@ -182,17 +355,83 @@
                         <li><span class="dot"></span>'백남기씨 사망진단서 논란' 백선하 서울대병원 교수 보직 해임</li>
                         <li><span class="dot"></span>"온 우주의 기를 모아" 수능 응원에도 등장한 '최순실 파문'</li>
                         <li><span class="dot"></span>[속보] 檢 "주말까지 물리적으로 朴대통령 조사 어려울 듯"</li>
-
                     </ul>
+                </div>
+                <div class="main_line">
+                </div>
+                <div class="bottom_cont">
+                    <div class="sub_text">
+                        <ul>
+                            <li>최순실 조카, 고교 14개 과목 '가' 받고 연세대 입학</li>
+                            <li class="blue">"朴대통령 너무 많이 알아 걱정… 마녀사냥은 곤란"</li>
+                            <li>靑, 사찰 정황… 우병우는 장·차관 사생활 조사도</li>
+                            <li>'개미'들도 100만원으로 빌딩 사는 시대</li>
+                            <li>APEC 정상회의 사상 최초로, 대통령 아닌 총리가 참석</li>
+                            <li class="blue">19일 촛불집회 앞두고, SNS 떠도는 '국민 학익진 작전' </li>
+                            <li>朴대통령의 '崔선생님' 문자 본 후, 검사들 반응이…</li>
+                            <li>"세월호 당일, 국군 수도병원 간호장교의 靑 출장 기록 확보"</li>
+                        </ul>
+                    </div>
+                    <div class="sub_photo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="right outline">
+                <div class="right_cont1">
+                    <div class="right1">
+                        <ul>
+                            <li><img src="../img/004.jpg" alt="이미지"></li>
+                            <li class="right_font1">'단두대 매치' 끝나자… 슈틸리케 울었다</li>
+                            <li class="right_font2">15일 한국과 우즈베키스탄의 2018 러시아</li>
+                        </ul>
+                    </div>
+                    <div class="right2">
+                        <ul>
+                            <li><img src="../img/005.jpg" alt="이미지"></li>
+                            <li class="right_font1">하지원 "길라임 얘기에 깜짝… 한제인은 쓰지 말아주세요"</li>
+                            <li class="right_font2">'목숨 건 연애' 하지원이 '박근혜 길라임' 논란에 대해 입을 열었다. 17일 서울..</li>
+                        </ul>
+                    </div>
+                    <div class="right3">
+                        <ul>
+                            <li><span class="dot"></span>개막 일주일째, 잠잠한 FA 시장 왜?</li>
+                            <li><span class="dot"></span>빅뱅 '30세 이하 가장 많이 돈번 유명인' 13위</li>
+                        </ul>
+                    </div>
+
+                    <div class="main_line">
+                    </div>
 
                 </div>
+                <div class="right_cont2">
+                    <div class="bot1">
+                        <ul>
+                            <li><span class="dot"></span>대구 찾은 김무성에 "근혜씨랑 친했잖아요" </li>
+                            <li><span class="dot"></span>탈모 희소식… 200만원으로 2000개 심는다</li>
+                            <li><span class="dot"></span>4-4-4-4-5… 수험생 머리 싸매게 한 숫자</li>
+                        </ul>
+                    </div>
+                    <div class="bot2">
+                        <div class="bot_img1">
+                            <span>초호화 'UFO' 수상 주택?</span>
+                            <div class="bg">
+                            </div>
+                        </div>
+                        <div class="bot_img2">
+                            <span>초호화 'UFO' 수상 주택?</span>
+                            <div class="bg">
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-            <div class="right outline">
+
+                </div>
             </div>
             <!-- 컨텐츠 끝 -->
-        </div>
 
+
+        </div>
     </div>
 
 </body>
