@@ -54,17 +54,17 @@
     .top .button .bt1{
         width: 66px;
         height: 22px;
-        background: url(../img/sp_nwstd.png) -256px -199px no-repeat;
+        background: url(../news_img1/sp_nwstd.png) -256px -199px no-repeat;
     }
     .top .button .bt2{
         width: 106px;
         height: 22px;
-        background: url(../img/sp_nwstd.png) -293px -174px no-repeat;
+        background: url(../news_img1/sp_nwstd.png) -293px -174px no-repeat;
     }
     .top .button .bt3{
         width: 28px;
         height: 22px;
-        background: url(../img/sp_nwstd.png) -500px -270px no-repeat;
+        background: url(../news_img1/sp_nwstd.png) -500px -270px no-repeat;
     }
     .top .button .bt4{
         margin-left: 5px;
@@ -97,14 +97,167 @@
     .left .main1{
         height: 200px;
     }
-    .left .main1 .h1{
-        margin-top: 30px;
+    .left .main1 h1{
+        font-family: 'Malgun Gothic';
+        font-size: 28px;
+        letter-spacing: -2px;
+        font-weight: bold;
+    }
+    .left .main1 span{
+        position: absolute;
+        top:200px;
+        display: block;
+        width: 210px;
+        height: 150px;
+        overflow: hidden;
+    }
+    .left .main1 span img{
+        width: 100%;
+        height: 100%;
+    }
+    .left .main1 .main_text{
+        position: relative;
+        left:220px;
+        width: 335px;
+        height: 150px;
+        line-height: 24px;
+        margin-top: 12px;
+        background-color: #eee;
+    }
+    .left .main1 .main_text .text_color{
+        color: #3460c3;
+
+    }
+    .left .main1 .main_text ul li{
+        list-style: none;
+        background-image: url(../news_img1/dot.png);
+        background-position: 5px -40px;
+        background-repeat: no-repeat;
+        padding-left: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: -2px;
     }
     .left .main2{
+        margin-top: 10px;
+        width: 555px;
         height: 132px;
     }
+    .left .main2 ul li{
+        list-style: none;
+        float: left;
+    }
+    .left .main2 ul li img{
+        width: 130px;
+        height: 92px;
+    }
+    .left .main2 ul li span{
+        display: block;
+        margin-top: 5px;
+        width: 130px;
+        height: 30px;
+        margin-right: 10px;
+        line-height: 16px;
+        overflow: hidden;
+    }
+    .left .main2 ul li:last-child{
+        margin-right: -20px;
+    }
     .left .main3{
-        height: 60px;
+        height: 48px;
+        overflow: hidden;
+    }
+    .left .main3 ul li{
+        width: 280px;
+        height: 15px;
+        list-style: none;
+        font-size: 14px;
+        letter-spacing: -1px;
+        margin-bottom: 11px;
+    }
+    .left .main3 ul li:first-child{
+        float: left;
+    }
+    .left .main3 ul li:last-child{
+        position: relative;
+        bottom:7px;
+        margin-left: 280px;
+        line-height: 30px;
+    }
+    .left .main3 ul li strong{
+        color: #1ba2f7;
+        margin-right: 5px;
+    }
+    .left .main3 .line{
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin: 10px 0;
+    }
+
+
+    .right .cont1{
+        width: 270px;
+        height: 114px;
+    }
+    .right .cont1 .photo{
+        position: relative;
+        width: 130px;
+        height: 114px;
+        overflow: hidden;
+        float: left;
+        margin-right: 10px;
+    }
+    .right .cont1 .photo:last-child{
+        margin-right: -10px;
+    }
+    .right .cont1 .photo img{
+        width: 100%;
+        height: 100%;
+    }
+    .right .cont1 .photo .title1{
+        position: absolute;
+        height: 20px;
+        background-color: #3460c3;
+    }
+    .right .cont1 .photo .title1 span{
+        display: block;
+        margin: 4px 5px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    .right .cont1 .photo .title2{
+        position: absolute;
+        height: 20px;
+        background-color: #3eab83;
+    }
+    .right .cont1 .photo .title2 span{
+        display: block;
+        margin: 4px 5px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: -1px;
+    }
+    .right .cont1 .photo .bg{
+        position: absolute;
+        top: 33px;
+        width: 130px;
+        height: 81px;
+        background-image: url(../news_img1/012.png);
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+    .right .cont1 .up_text{
+        position: absolute;;
+        top:75px;
+        left:15px;
+        width: 100px;
+        height: 28px;
+        overflow: hidden;
+        color: #fff;
+        letter-spacing: -0.5px;
+        z-index: 2;
     }
 
     </style>
@@ -113,10 +266,10 @@
         <div class="main">
             <div class="top">
                 <div class="logo">
-                    <img src="../img/nocut.gif" alt="로고">
+                    <img src="../news_img1/nocut.gif" alt="로고">
                 </div>
                 <div class="banner">
-                    <img src="../img/468_60_01473227375503.jpg" alt="배너">
+                    <img src="../news_img1/468_60_01473227375503.jpg" alt="배너">
                 </div>
                 <div class="button">
                     <ul>
@@ -129,17 +282,87 @@
                 <div class="top_line">
                 </div>
             </div>
-            <div class="left out">
+            <div class="left">
                 <div class="main1">
-                    <h1 class="h1 out">'황제 학생' 정유라, 면접때 "저 금메달 있어요"</h1>
+                    <h1>'황제 학생' 정유라, 면접때 "저 금메달 있어요"
+                        <span class="main_photo">
+                        <img src="../news_img1/001.jpg" alt="이미지">
+                        </span>
+                    </h1>
+                    <div class="main_text">
+                        <ul>
+                            <li class="text_color">'朴 세일즈 외교' 가면 벗기니 128조원 증발</li>
+                            <li>정윤회 "최순실, 날 질투···보좌하는 스타일 달랐다"</li>
+                            <li>정유라 '대리시험 의혹' 교수는 '박정희 미화' 소설가</li>
+                            <li class="text_color">전여옥 "국민 불행한데 朴대통령 얼굴 갈수록 팽팽"</li>
+                            <li>삼성은 '권력서열 1위' 최순실 어떻게 알았나?</li>
+                            <li>수능당국 "한국사 14번 중대사안"···복수정답 인정?</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="main2 out">2
+                <div class="main2">
+                    <ul>
+                        <li>
+                            <img src="../news_img1/002.jpg" alt="이미지">
+                            <span>朴 대면조사 불발은 자승자박···"확보 증거 충분"</span>
+                        </li>
+                        <li>
+                            <img src="../news_img1/003.jpg" alt="이미지">
+                            <span>'학익진'으로 '근라임 씨 거처' 포위한다</span>
+                        </li>
+                        <li>
+                            <img src="../news_img1/004.jpg" alt="이미지">
+                            <span>"왕이 두 명?"···예능 파고든 '박근혜·최순실 게이트'</span>
+                        </li>
+                        <li>
+                            <img src="../news_img1/005.jpg" alt="이미지">
+                            <span>"애플, 아이폰 통화 내역 무단 수집"</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="main3 out">3
+                <div class="main3">
+                    <div class="line">
+                    </div>
+                    <ul>
+                        <li><strong>시사자키</strong> 전세계 한류팬들 관심받는 대통령</li>
+                        <li>[오늘의 논평] 국정재개 움직임 박 대통령, 검찰 수사부터 받아라</li>
+                    </ul>
+                    <div class="line">
+                    </div>
                 </div>
-
             </div>
             <div class="right out">
+                <div class="cont1 out">
+                    <div class="photo">
+                        <div class="title1">
+                            <span>영상</span>
+                        </div>
+                        <img src="../news_img1/006.jpg" alt="이미지">
+                        <div class="up_text">
+                            <p>2017년 수능 수험생, 박정희 정권 미화를 배우다?</p>
+                        </div>
+                        <div class="bg">
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <div class="title2">
+                            <span>카드뉴스</span>
+                        </div>
+                        <img src="../news_img1/007.jpg" alt="이미지">
+                        <div class="up_text">
+                            <p>트럼포칼립스,하우스 오브 호러···'미국을 구하소서!'</p>
+                        </div>
+                        <div class="bg">
+                        </div>
+                    </div>
+
+                </div>
+                <div  class="cont2 out">
+
+                </div>
+                <div  class="cont3 out">
+
+                </div>
 
             </div>
 
