@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>뉴스과제_2</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .out{
+        outline:1px red solid;
+    }
+    .border{
+        border: 1px blue solid;
+    }
+    .wrapper{
+        margin: 20px auto 0;
+        width: 900px;
+        height: 540px;
+        border: 1px #ccc solid;
+        font-size: 12px;
+        font-family: "돋움"
+    }
+    .main{
+        margin: 20px 30px;
+        width: 840px;
+        height: 500px;
+    }
+
+
+    .main .top{
+        height: 90px;
+    }
+    .top .logo{
+        float: left;
+        margin-bottom: 5px;
+    }
+    .top .banner{
+        float: right;
+        margin-top: 25px;
+    }
+    .top .button{
+        clear: left;
+        width: 305px;
+        height: 22px;
+    }
+    .top .button ul li{
+        list-style: none;
+        float: left;
+        margin-right: 3px;
+        font-size: 11px;
+        color: #333;
+    }
+    .top .button .bt1{
+        width: 66px;
+        height: 22px;
+        background: url(../news_img2/sp_nwstd.png) -187px -199px no-repeat;
+    }
+    .top .button .bt2{
+        width: 106px;
+        height: 22px;
+        background: url(../news_img2/sp_nwstd.png) -293px -174px no-repeat;
+    }
+    .top .button .bt3{
+        width: 28px;
+        height: 22px;
+        background: url(../news_img2/sp_nwstd.png) -500px -270px no-repeat;
+    }
+    .top .button .bt4{
+        margin-left: 5px;
+        margin-top: 5px;
+
+    }
+    .top_line{
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        margin-top: 10px;
+    }
+
+
+
+    .left{
+        margin-top: 25px;
+        width: 660px;
+        height: 375px;
+        float: left;
+    }
+    .right{
+        margin-top: 25px;
+        margin-left: 680px;
+        width: 160px;
+        height: 375px;
+    }
+
+    .left h1{
+        font-family: 'Malgun Gothic';
+        font-size: 28px;
+        letter-spacing: -2px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .left .main1{
+        width: 261px;
+        height: 323px;
+        float: left;
+        margin-right: 15px;
+    }
+    .left .main1 .left1{
+        width: 261px;
+        height: 142px;
+        margin-bottom: 15px;
+    }
+    .left .main1 .left2{
+        height: 23px;
+    }
+    .left .main1 .left2 ul li:first-child{
+        list-style: none;
+        color: red;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .left .main1 .left2 .banner{
+        height: 135px;
+        border: 1px #E3E3E3 solid;
+        background-color: #F5F5F5;
+        padding-left: 4px;
+        padding-top: 5px;
+    }
+    .left .main1 .left2 .banner ul li img{
+        width: 100%;
+    }
+    .left .main1 .left2 .banner ul li:first-child{
+        float: left;
+        width: 150px;
+    }
+    .left .main1 .left2 .banner ul li:last-child{
+        position: relative;
+        left: 5px;
+        width: 95px;
+        height: 125px;
+        overflow: hidden;
+        float: left;
+    }
+    .left .main1 .left2 .banner ul li span{
+        margin-top: 5px;
+        display: block;
+        text-align: center;
+    }
+
+
+    .left .main2{
+        width: 384px;
+        height: 323px;
+        margin-left: 276px;
+    }
+    .left .main2 .mid1{
+        width: 384px;
+        height: 130px;
+    }
+    .left .main2 .mid1 p{
+        margin-bottom: 10px;
+    }
+    .left .main2 .mid1 ul li{
+        list-style: none;
+        left:220px;
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        float: left;
+        background-image: url(../news_img1/dot.png);
+        background-position: 5px -43px;
+        background-repeat: no-repeat;
+        padding-left: 10px;
+    }
+    .left .main2 .mid1 ul li img{
+        width: 130px;
+        height: 92px;
+    }
+    .left .main2 .mid1 ul li span{
+        display: block;
+        margin-top: 5px;
+        width: 130px;
+        height: 30px;
+        margin-right: 10px;
+        line-height: 16px;
+        overflow: hidden;
+    }
+    .left .main2 .mid2{
+        width: 384px;
+        height: 178px;
+        margin-top: 15px;
+    }
+    .left .main2 .mid2 .mid2_cont1{
+        width: 50%;
+        height: 60px;
+        float: left;
+    }
+    .left .main2 .mid2 ul li{
+        list-style: none;
+    }
+    .left .main2 .mid2 .mid2_cont1 ul li:first-child{
+        float: left;
+    }
+    .left .main2 .mid2 .mid2_cont1 ul li:last-child{
+        margin-left: 65px;
+        font-weight: bold;
+        padding:10px 12px 0 3px;
+    }
+    .left .main2 .mid2 .mid2_cont2{
+        float: left;
+        margin-top: 10px;
+        width: 384px;
+        height: 108px;
+    }
+    .left .main2 .mid2 .mid2_cont2 ul li{
+        margin-bottom: 7px;
+        font-size: 14px;
+        background-image: url(../news_img1/dot.png);
+        background-position: 5px -43px;
+        background-repeat: no-repeat;
+        padding-left: 10px;
+    }
+
+
+    .right .r_banner{
+        width: 160px;
+        height: 376px;
+        background-color: #1b1b27;
+    }
+    .right .r_banner ul li{
+        list-style: none;
+        width: 120px;
+        height: 108px;
+        color: #fff;
+        margin-left: 20px;
+        letter-spacing: -0.4px;
+
+    }
+    .right .r_banner ul li img{
+        width: 100%;
+    }
+    .right .r_banner ul li span{
+        display: block;
+        line-height: 30px;
+    }
+    .right .r_banner .title{
+        width: 160px;
+        height: 50px;
+        background: url(../news_img2/007.jpg) 0px 5px no-repeat;
+    }
+
+
+
+
+    </style>
+</head>
+    <div class="wrapper">
+        <div class="main">
+            <div class="top">
+                <div class="logo">
+                    <img src="../news_img2/maeil.png" alt="로고">
+                </div>
+                <!-- <div class="banner">
+                    <img src="../news_img2/468_60_01473227375503.jpg" alt="배너">
+                </div> -->
+                <div class="button">
+                    <ul>
+                        <li class="bt1"><a href=""></a></li>
+                        <li class="bt2"><a href=""></a></li>
+                        <li class="bt3"><a href=""></a></li>
+                        <li class="bt4">11-18 17:00 편집</li>
+                    </ul>
+                </div>
+                <div class="top_line">
+                </div>
+            </div>
+            <div class="left">
+                <h1>퇴진 압박에도···국정 재개 활동 늘려가는 朴 대통령</h1>
+                <div class="main1">
+                    <div class="left1">
+                        <img src="../news_img2/002.jpg" alt="이미지">
+                    </div>
+                    <div class="left2">
+                        <ul>
+                            <li>[매일희평] …달라진건 …없다!?</li>
+                        </ul>
+                        <div class="banner">
+                            <ul>
+                                <li><img src="../news_img2/003.jpg" alt="이미지"></li>
+                                <li><img src="../news_img2/004.gif" alt="이미지">
+                                    <span>김경수의 <br/>매일희평 더 보기</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main2">
+                    <div class="mid1">
+                        <p>박근혜 대통령이 18일 청와대 신임 참모진과 대사들에게 각각 임명장과 신임장을 수여하면서 국정 재개에 속도를 붙이고 있다.</p>
+                        <ul>
+                            <li>부산·광주·대구…지방 곳곳서 대통령 하야 요구 시위</li>
+                            <li>고3 수험생도 촛불행진…"이러려고 공부했나 자괴감"</li>
+                            <li>야권 대선주자 6인 회동, 정국 새 해법 나올까</li>
+                            <li>주말 나들이·축제·공연·전시·5일장 (19~20일)</li>
+                        </ul>
+                    </div>
+                    <div class="mid2">
+                        <div class="mid2_cont1">
+                            <ul>
+                                <li><img src="../news_img2/005.jpg" alt="이미지"></li>
+                                <li>[금주의 역사속 인물] 최익현, 계유상소 올리다</li>
+                            </ul>
+                        </div>
+                        <div class="mid2_cont1">
+                            <ul>
+                                <li><img src="../news_img2/006.jpg" alt="이미지"></li>
+                                <li>[광장] 내리막길에 선 두 여인</li>
+                            </ul>
+                        </div>
+                        <div class="mid2_cont2">
+                            <ul>
+                                <li>경북대 영어교육 352·의예 373점 이상 지원 가능</li>
+                                <li>박명재 사무총장 사표에…코너에 더 몰린 이정현</li>
+                                <li>朴대통령 생가터 조형물 훼손…"붉은 래커칠" 철거</li>
+                                <li>대구경북 상장사 91곳, 매출 줄고 영업익은 증가</li>
+                                <li>대구 도시철 기술·운영 노하우, 마닐라 수출 추진</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="r_banner">
+                    <div class="title ">
+                    </div>
+                    <ul>
+                        <li><img src="../news_img2/008.jpg" alt="이미지">
+                            <span>비행중 짐칸에 나타난..</span>
+                        </li>
+                        <li><img src="../news_img2/009.jpg" alt="이미지">
+                            <span>통조림 따개가 없을때..</span>
+                        </li>
+                        <li><img src="../news_img2/010.jpg" alt="이미지">
+                            <span>이재명 성남시장 "유..</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+<body>
+
+</body>
+</html>
