@@ -10,7 +10,7 @@
         .box{
             padding: 20px;
             width: 300px;
-            height: 400px;
+            height: 230px;
             border: 1px #f00 solid;
             border-radius: 20px;
         }
@@ -20,14 +20,36 @@
         .box .margin{
             margin-top: 10px;
         }
-        #menu{
+        .box #menu{
+            position: relative;
+            width: 0px;
+            height: 0px;
+            transition: 1s;
+        }
+        .box #menu:target{
+            width: 300px;
+            height: 200px;
+        }
+        .box #menu img{
+            width: 100%;
+        }
+        .box #menu a{
+            position: absolute;
+            top: 0;
+            left: 300px;
+            width: 15px;
+            height: 20px;
+            padding-left: 5px;
+            border: 1px #f00 solid;
+
+        }
+        #close{
+            transition: 1s;
+        }
+        #close:target{
             height: 0px;
         }
-        #menu:target{
-            border: 1px #f00 solid;
-            width: 100px;
-            height: 120px;
-        }
+
     </style>
 </head>
 <body>
@@ -38,10 +60,13 @@
             </li>
             <li>
                 <div id="menu">
-                    <img src="" alt="">asdasdasdadasd
-                </div>
-                <div id="closs">
-                    닫기
+                    <img src="../img/play-stone.jpg" alt="이미지">
+                    <ul>
+                        <li>
+                            <a href="#close">X</a>
+                        </li>
+                        <li id="close"></li>
+                    </ul>
                 </div>
             </li>
         </ul>
