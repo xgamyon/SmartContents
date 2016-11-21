@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    div[class^="box"]{
+        border: 1px #f00 solid;
+    }
+    div.box{
+        border: 0 none;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .box1{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    .box1:hover{
+        animation: box_animation1 1s;
+    }
+    @keyframes box_animation1 {
+        100%{transform:rotate(360deg)}
+    }
+
+    .box2{
+        position: relative;
+        width: 200px;
+        height: 300px;
+        margin-left: 110px;
+    }
+    .box2:hover{
+        animation: box_animation2 3s;
+    }
+    @keyframes box_animation2 {
+        0%{top:0;  left:0; transform:none;}
+        20%{top:0; left:0; transform:translateX(30px)}
+        40%{top:0; left:10px; transform: rotateY(160deg); background-color: pink;}
+        60%{top:0; left:0; transform: none;}
+        80%{top:0; left:100px; transform: rotateX(160deg); background-color: green;}
+        100%{top:0; left:0; transform:none;}
+
+        /*만약 애니메이션 값을 준것에 떨궈준 값이 존재할 경우 그 상위에서도 값을 0수치를 주어야
+        끊김없이 동작한다.
+        예: 20%에 left:0 값이 있어야 그 다음 40% 에서 left:10px이 끊어짐 없이 동작한다.*/
+    }
+
+
+    .box3{
+        position: absolute;
+        top: 110px;
+        width: 100px;
+        height: 100px;
+    }
+    .box3:hover{
+        animation: box_animation3 2s;
+    }
+    @keyframes box_animation3 {
+
+        50%{transform:rotate(1440deg); border-radius:100px;}
+        100%{transform:rotate(2880deg); }
+
+
+    }
+
+    .box4{
+        position: absolute;
+        top: 220px;
+        width: 100px;
+        height: 80px;
+    }
+    .box4:hover{
+        animation: box_animation4 3s;
+    }
+    @keyframes box_animation4 {
+        0%{transform:translateX(0px)}
+        25%{transform:translateX(320px); background-color: red;}
+        50%{transform:translateX(320px) translateY(-220px); background-color: green;}
+        75%{transform:translateX(320px); background-color: blue;}
+        100%{transform:translateX(0px)}
+    }
+
+    .box5{
+        position: relative;
+        margin-top: 10px;
+        width: 310px;
+        height: 100px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            padding: 20px;
+            width: 300px;
+            height: 400px;
+            border: 1px #f00 solid;
+            border-radius: 20px;
+        }
+        .box ul li{
+            list-style: none;
+        }
+        .box .margin{
+            margin-top: 10px;
+        }
+        #menu{
+            height: 0px;
+        }
+        #menu:target{
+            border: 1px #f00 solid;
+            width: 100px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#menu">menu</a>
+            </li>
+            <li>
+                <div id="menu">
+                    <img src="" alt="">asdasdasdadasd
+                </div>
+                <div id="closs">
+                    닫기
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>

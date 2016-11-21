@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>effect</title>
+    <style type="text/css">
+        a{
+            display:inline-block;
+            border:1px #F00 solid;
+            width:200px;
+            height:100px;
+            text-align:center;
+            font-size:50px;
+            text-decoration: none;
+            color:#000;
+            line-height: 90px;
+            transition:1000ms; /* 변하는 과정을 설명하는 명령어, 1초동안 ..  1s 라도 적어도 무방함*/
+        }
+        a:hover{
+            background-color:#F00;
+            color:#FFF;
+            margin-top: 5px;
+            border-radius:10px;
+        }
+
+
+        /*http://www.w3schools.com/cssref/css3_pr_transform.asp*/
+        .box1{
+            width:100px;
+            height:100px;
+            border:1px #F00 solid;
+            position:relative; /* 포지션 값으로 움직이는게 편함!*/
+            font-size:100px;
+        }
+        .box1:hover{
+            animation: myani 3s; /* 애니메이션을 불러와서 쓰는것.*/
+        }
+
+        @keyframes myani {
+            0%{left:0; top:0;}
+            20%{left:500px; top:0; transform:rotate(100deg)}
+            50%{left:500px; top:200px; transform:rotateX(100deg)}
+            70%{left:0; top:700px; transform:skew(2,2)}
+            100%{left:0; top:0;}
+            /*만약 애니메이션 값을 준것에 떨궈준 값이 존재할 경우 그 상위에서도 값을 0수치를 주어야
+            끊김없이 동작한다.
+            예: 20%에 left:0 값이 있어야 그 다음 40% 에서 left:10px이 끊어짐 없이 동작한다.*/
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <a href="">text</a>
+    <a href="">text</a>
+    <a href="">text</a>
+    <a href="">text</a>
+    <a href="">text</a> -->
+
+    <div class="box1">
+    </div>
+
+
+
+</body>
+</html>

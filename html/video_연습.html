@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html, body{
+        height: 100%;
+    }
+    .intro{
+        position: relative;
+        height: 100%;
+        border: 1px #f00 solid;
+    }
+    video{
+        width: 100%;
+    }
+    .wrap{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: table;
+        border:1px black solid;
+    }
+    h1{
+        display: table-cell;
+        border: 1px #f00 solid;
+        vertical-align: middle;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <video autoplay loop>
+            <source src="../video/snow_ball.mp4" type="video/mp4"></source>
+        </video>
+        <div class="wrap">
+            <h1>나는 제목이다!!!</h1>
+        </div>
+    </div>
+</body>
+</html>
