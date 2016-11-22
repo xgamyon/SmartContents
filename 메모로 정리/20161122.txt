@@ -48,6 +48,15 @@ less에서 사용하는 css 변수 -----------------------------------------------------
 .bgpos() 이런 형식은 mixin
 
 
+less 문법
+
+ .wrap{
+   .top{
+     }
+     .bottom{
+     }
+ } 
+
 
 @imgsplit-bg:"http:/naver.com";
 
