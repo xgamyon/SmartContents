@@ -42,7 +42,8 @@
              animation:openMotion 1s  both ease-out;
              /* both 둘다, ease-out 갈수록 느리게 애니메이션 효과*/
         }
-         #aaa:target + .box{ /*id aaa 라는 녀석의 타겟 다음의 .box*/
+        #aaa:target + .box{ /*id aaa (id="aaa") 라는 녀석의 타겟(a href="#aaa")을
+        불러와서 그 다음(+) (id="aaa"의 다음 값인 녀석 id="popup")의 .box를 선택!!*/
              animation:closeMotion 1s both ease-in;
         }
 

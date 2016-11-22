@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+.wrap {
+  width: 900px;
+  height: 540px;
+  margin: 0 auto;
+  border: 1px #F00 solid;
+}
+.wrap .top {
+  margin: 0 30px;
+  height: 100px;
+  border: 1px #F00 solid;
+}
+.wrap .logo {
+  float: left;
+  border: 1px #F00 solid;
+}
+.wrap .banner {
+  float: right;
+  border: 1px #F00 solid;
+}
+.wrap .btn-list {
+  clear: left;
+  border: 1px #F00 solid;
+}
+.wrap .btn-list button {
+  height: 22px;
+}
+.wrap .btn-list .btn-follow {
+  width: 66px;
+  background-position: -187px -199px;
+  background-image: url("http:naver.com");
+  border: 1px #F00 solid;
+}

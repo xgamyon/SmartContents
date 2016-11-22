@@ -18,3 +18,89 @@ a~a -> a 라는 녀석 밑으로 전부
 클래스a 와 클래스b 가 부모자식으로 많이 이루어져 있을 경우 a 가 b 를 선택하기엔 어려움이 있어서
 .a:root .b 를 쓰면
 클래스 a 를 선택하면 root ( 최상위로 올라가서) 다시 클래스 b 를 찾아라.
+
+
+
+
+
+less --------------------------------------------------------------------------------
+
+ess 인스톨 방법 
+ 
+node.js 가 깔려있는 컴퓨터에 한해서
+git base 를 git으로 되어있는 곳에서 열어서
+npm install -g less 을 입력 
+
+
+git base 열고 경로 찾아 들어가서
+
+cd 경로
+
+lessc news.less ../css/news.css  이런식으로 less 파일과 동기화 시켜준다.
+
+
+
+less에서 사용하는 css 변수 ------------------------------------------------------------
+
+
+
+@는 변수라는 뜻. variable
+.bgpos() 이런 형식은 mixin
+
+
+
+@imgsplit-bg:"http:/naver.com";
+
+.bgpos(@x:0,@:y,@bg){
+                                      background-posistion: @x @y;
+                                      background-image: url(@bg);
+                                  }
+
+
+
+div.a{ 
+          .bgpos(100px 100px @imgsplite-bg)
+        }
+
+이 뜻은 background-position: 100px 100px;
+            background-image:url(http:/naver.com);
+
+
+div.b{
+          .bgpos(200px, 200px, @imgsplite-bg)
+       }
+div.c{
+          .bgpos(200px, 200px, @imgsplite-bg)
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
