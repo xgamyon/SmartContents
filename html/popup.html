@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popup</title>
+    <style type="text/css">
+        :root{
+            background-color:#EEE;
+        }
+
+        *{margin:0; padding:0;}
+        .box{
+            position:absolute;
+            width:500px;
+            height:500px;
+            border:1px #CCC solid;
+            border-radius:10px;
+            background-color:#FFF;
+            left:50%;
+            margin-left:-250px;
+            /* alsolute 로 윈도우 사이즈에서
+            500px 사이즈를 가진 팝업이 왼쪽으로 50% 이동하여
+            그것을 다시 margin-left 로 절반 만큼 다시 이동해주면
+            가운데 정렬 효과를 볼수 있다.*/
+            top:-60%;
+            /*상위로 숨기기 위한 값*/
+        }
+
+        a{text-decoration: none;}
+
+        .btn{
+            border:1px #CCC solid;
+            height:50px;
+            line-height:50px;
+            color:#FFF;
+            padding:0 30px;
+            font-size:16px;
+            background-color:#333;
+        }
+
+        .box:target{
+             animation:openMotion 1s  both ease-out;
+             /* both 둘다, ease-out 갈수록 느리게 애니메이션 효과*/
+        }
+         #aaa:target + .box{ /*id aaa 라는 녀석의 타겟 다음의 .box*/
+             animation:closeMotion 1s both ease-in;
+        }
+
+        .close{
+            position:absolute;
+            padding: 0 10px;
+            width:80px;
+            height:50px;
+            right:-100px;
+            line-height:50px;
+            top:10px;
+            background:#333;
+            color:#FFF;
+            border-radius:0 10px 10px 0 ;
+        }
+
+
+
+
+
+        @keyframes openMotion {
+            from { top:-60%; margin:0; left:50%;margin-left:-250px; } /*from 시작지점*/
+            to {top:50%;margin-top:-250px;}  /*to 완료지점*/
+        }
+        @keyframes closeMotion  {
+            from {top:50%;margin-top:-250px;}
+            to {top:-60%; margin:0; left:50%;margin-left:-250px;}
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <a href="#popup" id="aaa" class="btn">Open</a>
+
+    <div class="box" id="popup">
+        <a href="#aaa" class="close">Close</a>
+    </div>
+
+
+</body>
+</html>
