@@ -10,7 +10,7 @@
         .box{
             padding: 20px;
             width: 300px;
-            height: 230px;
+            height: 220px;
             border: 1px #f00 solid;
             border-radius: 20px;
         }
@@ -20,35 +20,46 @@
         .box .margin{
             margin-top: 10px;
         }
+
+
         .box #menu{
-            position: relative;
+            position: absolute;
             width: 0px;
             height: 0px;
-            transition: 1s;
+            overflow: hidden;
+            /*transition: 1s;*/
         }
         .box #menu:target{
             width: 300px;
             height: 200px;
+            animation: box 1s;
+        }
+        @keyframes box {
+            0%{transform:none;}
+            50%{transform:translateX(30px)}
+            100%{transform:none;}
         }
         .box #menu img{
-            width: 100%;
+            width: 270px;
+            height: 100%;
         }
+
+
         .box #menu a{
-            position: absolute;
+            position:absolute;
             top: 0;
-            left: 300px;
+            left: 275px;
             width: 15px;
             height: 20px;
             padding-left: 5px;
-            border: 1px #f00 solid;
-
-        }
-        #close{
+            text-decoration: none;
+            float: left;
             transition: 1s;
         }
         #close:target{
             height: 0px;
         }
+
 
     </style>
 </head>
