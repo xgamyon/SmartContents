@@ -1,51 +1,69 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>video</title>
 </head>
-    <style>
-        *{margin:0; padding:0;}
-        body,html{height:100%;}
-        .intro{
-            position:relative;
-            border:1px #F00 solid;
-            height:100%;
-            overflow:hidden;
-        }
-        .wrap{
-            position:absolute;
-            top:0;
-            left:0;
-            border:1px #00F solid;
-            width:100%;
-            color:#FFF;
-            text-align:center;
-            display:table;   /*부모를 테이블로 선언했으면 자식에는 table-cell이 선언되어야 한다.*/
-            height:100%;
-         }
-         h1{
-             display:table-cell;   /*부모가 display:table 값을 선언해야 쓸수있다.*/
-             vertical-align: middle;
-             border:1px #F00 solid;
-         }
-        .box{position:absolute;
-            width:500px;
-            height:500px;
-            background-color:rgba(0,0,0,.8);
-            right:-250px;
-            bottom:-250px;
-            transform:rotate(45deg);
-        }
-        video{
-            position: relative;
-            left:50%;
-            width: 1920px;    /* 영상 사이즈 기준 사이즈 */
-            margin-left:-960px;  /* 위에서 일부러 relative 로 left만큼 50% 옮겨놓고 다시 절반 만큼 옮겨온것,
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    .intro {
+        position: relative;
+        border: 1px #F00 solid;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px #00F solid;
+        width: 100%;
+        color: #FFF;
+        text-align: center;
+        display: table;
+        /*부모를 테이블로 선언했으면 자식에는 table-cell이 선언되어야 한다.*/
+        height: 100%;
+    }
+
+    h1 {
+        display: table-cell;
+        /*부모가 display:table 값을 선언해야 쓸수있다.*/
+        vertical-align: middle;
+        border: 1px #F00 solid;
+    }
+
+    .box {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: rgba(0, 0, 0, .8);
+        right: -250px;
+        bottom: -250px;
+        transform: rotate(45deg);
+    }
+
+    video {
+        position: relative;
+        left: 50%;
+        /*임의로 가운데 정렬 하기 위해서*/
+        width: 1920px;
+        /* 영상 사이즈 기준 사이즈 */
+        margin-left: -960px;
+        /* 위에서 일부러 relative 로 left만큼 50% 옮겨놓고 다시 절반 만큼 옮겨온것,
             보통 가운데 정렬 할때 이런 방법으로 잡아주면 정확하게 잡힌다.*/
-        }
+    }
+</style>
 
-
-    </style>
 <body>
     <!-- <video width="100%" controls>
       <source src="../video/video.mp4" type="video/mp4">
@@ -55,7 +73,7 @@
 
 
     <div class="intro">
-    <video autoplay loop>
+        <video autoplay loop>
       <source src="../video/snow_ball.mp4" type="video/mp4">
     </video>
         <div class="box"></div>
@@ -67,4 +85,5 @@
     <!--http://jsbin.com/labinezewu/1/edit?css,output-->
 
 </body>
+
 </html>

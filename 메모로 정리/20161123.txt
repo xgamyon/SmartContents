@@ -1,0 +1,48 @@
+
+
+media.html  -----------------------------------------------------------------
+
+
+
+@media screen and (min-width:1024px){
+    body {
+                background-color: #FFF;
+             }
+         }
+
+min-width:1024px;  -> ; 이거 붙이면 안된다!!!!!!
+
+
+
+min-width  -> 1024px 보다 위일 경우 (최소1024보다  큰)
+max-width -> 1024px 보다 아래일 경우 (max치가 몇몇몇)
+
+target 처럼 의미가 좀 반대로 해석된다.
+(pc 버전 만들때는 구지 안만드는게 낫다. 타블렛 버전 이상부터만 사용한다.)
+
+
+
+transition: 1s; 은 몇초동안 변화된 과정을 보여주는 명령어
+
+
+font-size: 3vw;   현재 브라우저 창의 현재값 width 값의 3% 라는 뜻 (잘 안씀!)
+font-size: 3vh;   현재 브라우저 창의 현재값 height 값의 3% 라는 뜻 
+
+
+
+
+
+jyp 만들기 ----------------------------------------------------------------------
+
+background-size: cover;  이미지를 width 값 부모사이즈에 맞게 늘린다.
+background-size: contain; 이미지를 height 값 기준으로 맞춘다.  
+
+밴더프리픽스 
+
+백그라운드 이미지 넣을때 브라우저 싸움때문에 다 같은 값으로 다 넣어줘야한다.
+
+-webkit-  background-size: cover;   // 크롬 사파리
+  -moz-   background-size: cover;  // 파이어폭스
+      -o-   background-size: cover;  //오페라
+    -ms-   background-size: cover;  //IE
+              background-size: cover;

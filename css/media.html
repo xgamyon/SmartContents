@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 2px black solid;
+            margin: 0 auto;
+            font-size: 3vw;
+            /* 잘안씀 */
+            transition: 1s;
+            display: table;
+            /*가운데 정렬하려고 dispaly 바꿈*/
+        }
+
+        .text {
+            display: table-cell;
+            /*display:table; 값을 선언해줘서 그 자식 값이 table-cell 형식으로 바꿔줌*/
+            text-align: center;
+            vertical-align: middle;
+            /*display가 table 형식일때만 먹는다.*/
+        }
+        /*tablet*/
+
+        @media screen and (max-width:1024px) {
+            /*최대값이 1024px 일 경우
+            min -> 2014px 보다 위일 경우
+            max -> 2014px 보다 아래일 경우*/
+            body {
+                background-color: #F00;
+            }
+            .box {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        /*mobile*/
+
+        @media screen and (max-width:480px) {
+            body {
+                background-color: #FF0;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="text">
+            <p>컨텐츠</p>
+        </div>
+    </div>
+</body>
+
+</html>
