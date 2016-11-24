@@ -2,6 +2,9 @@
 html,body{
     height: 100%;
 }
+a {
+  text-decoration: none;
+}
 ul{
     list-style: none;
 }
@@ -10,32 +13,72 @@ body{
     background-image: url(@pcBg);
     background-repeat: no-repeat;
     .bgsize(cover);
-    background-position:center;
+    background-position:center 0;
 }
 header{
     height: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 0 20px;
-    box-shadow: 0 2px 10px #666;
-             // x  y  퍼짐정도 오퍼시티정도
+    box-shadow: 0 2px 7px #999;
+             /* x  y  퍼짐정도 오퍼시티정도*/
     h1{
-        background-image: url(@logo);
-        width:104px;
-        height: 52px;
         float: left;
+        a{
+            display: block;
+            background-image: url(@logo);
+            width:104px;
+            height: 50px;
+            text-indent: -9999px; /* h1 태그에 글을 썻기 떄문에 없애는 용도로 쓰려고 안보이는 조취*/
+            font-size: 0; /* 익스플로어에선 0 이라도 ... 으로 나오기 떄문에 넣어준다.*/
+            transition: 1s;
+            padding: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover{
+                transform: rotateY(180deg);
+            }
+        }
     }
     nav{
         float: right;
+        .menu{
+            display: none;   /* 숨겨진 상태로 만들어진다. 존재하지만 보여지진 않는다.*/
+            height: 55px;
+            width: 200px;
+            background-color: @text-color;
+            position: relative;
+            left: 20px;   /*header 가 padding: 0 20px; 으로 띄워줬기 때문에 left 로 붙여준것*/
+            line-height: 55px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
         li{
             float:left;
             height:100px;
             line-height:100px; /* 이거 하나만 써줘도 되는데 표준성 때문에 height:100px;도 씀*/
+            // cursor: pointer;   이것을 쓰면 li에 마우스 포인트가 되긴 하지만 실질적인 링크 영역은 아니다.
+            transition: 0.15s linear;
+            &:hover{                     /*&를 써서 이어갈수 있다.(less 전용 단축어)
+                                            li 에게 hover 시키면 이라는 뜻*/
+                background-color: rgba(255, 255, 255, 0.5);
+            }
             a{
+                display: block;  /* 이걸 쓰면 부모의 line-height 를 상속 받아서 자동으로 영역이
+                                     line-height 값이 된다.(a 태그가 inline 이기 때문에)*/
                 padding: 0 18px;
-                text-decoration:none;
                 font-size: 16px;
                 color:(@text-color);
+                font-weight: bold;
+                letter-spacing: -0.5px;
+                transition: 0.15s linear;
+                &:hover{
+                    border-top: 3px @base-color solid;
+                    color: @base-color;
+                }
             }
+
         }
     }
 }

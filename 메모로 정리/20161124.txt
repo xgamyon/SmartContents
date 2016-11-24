@@ -1,0 +1,21 @@
+
+
+jyp 만들기 ----------------------------------------------------------------------
+
+background-size: cover;  이미지를 width 값 부모사이즈에 맞게 늘린다.
+background-size: contain; 이미지를 height 값 기준으로 맞춘다.  
+
+밴더프리픽스 
+
+백그라운드 이미지 넣을때 브라우저 싸움때문에 다 같은 값으로 다 넣어줘야한다.
+
+-webkit-  background-size: cover;   // 크롬 사파리
+  -moz-   background-size: cover;  // 파이어폭스
+      -o-   background-size: cover;  //오페라
+    -ms-   background-size: cover;  //IE
+              background-size: cover;
+
+
+
+display:none;   리딩기가 읽지 못한다.
+display:visibility
