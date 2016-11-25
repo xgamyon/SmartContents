@@ -5,22 +5,34 @@
     }
     header{
         height: 55px;  /* bg 로 줬던 값 반응형에 맞게 사이즈 조절 */
+        h1{
+            a{
+                width: 80px;
+                height: 40px;
+                padding: 0;
+                margin-top: 5px;
+                margin-left: -20px;
+                background-size: cover;
+            }
+        }
         nav{
             .menu {     /* 캐스케이딩으로 우선순위를 제데로 안잡아줘야 하기 때문에 앞에 header가 명시되어야 한다.*/
                 display: block;  /*사이즈가 줄어들면서 none 에서 block으로 다시 보여지는 상태가 된다.*/
-                &:hover + ul{
+            /*  &:hover + ul{
                     display: block;
-                }
+                }  스크립트 쓰면서 hover 가 아닌 click 으로 쓰기 위해 삭제*/
             }
             ul {
                 display:none;   /* header nav .menu 가 block 으로 바뀌었으니 기존 메뉴는 숨어야 한다.*/
-                position: absolute;
+                position: absolute; /* 원래대로라면 absolute로 인해서 .menu 랑 분리되어 붕 떳기때문에 hover 했을 시에 별개의 오브젝트가 되어버린다.*/
+                width: 200px;
                 background-color: rgba(255, 255, 255, 0.7);
-                margin-left: 20px;
+                z-index: 1;  /* .bglogo 와 겹치지 않게 하기위에서 값을 줌.*/
                 li{
-                    width: 200px;
-                    height: 40px;
-                    line-height: 40px;
+                    float: none;  /*float: left; 로 정렬이 된걸 세로형으로 하려고 none 시킴.*/
+                    display: block; /* display: block; 이 자식 영역에 쓰였을 경우 부모영역만큼 꽉 참*/
+                    height: 55px;
+                    line-height: 55px;
                     a{
                         border-left: 0px @base-color solid;
                         &:hover{
@@ -30,6 +42,12 @@
                     }
                 }
             }
+        }
+    }
+    section{
+        .biglogo{
+            margin-top: 0;   /* 이미 pc 버전 제작시 12% 먹은것 없앤거*/
+            transform:scale(0.8);
         }
     }
 }
