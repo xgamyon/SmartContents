@@ -1,6 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Nanum Gothic';
+  font-size: 12px;
 }
 html,
 body {
@@ -148,6 +153,123 @@ footer ul li a [class^="flaticon-"]::before {
   margin-right: 10px;
   display: block;
 }
+body.bg_none {
+  margin: 0;
+  background-image: none;
+}
+header.zindex {
+  position: relative;
+  z-index: 10;
+}
+section.discography .title {
+  background-image: url("../image/title-discography.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f4f4f4;
+  height: 110px;
+  text-indent: -9999px;
+  font-size: 0;
+  transition: 1s;
+}
+section.discography .wrap {
+  line-height: 20px;
+  margin: 0 auto 60px;
+  width: 90%;
+  max-width: 1000px;
+}
+section.discography .wrap .global-leng {
+  margin: 50px auto 10px;
+  height: 21px;
+}
+section.discography .wrap .global-leng a {
+  color: #FFF;
+  font-size: 10px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  /* 앞자는 대문자로*/
+  display: inline-block;
+  /* 인라인 블럭은 자동으로 띄어쓰기가 한칸 들어간다.*/
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-image: url("../image/a-titlebg.png");
+  vertical-align: top;
+}
+section.discography .wrap .left,
+section.discography .wrap .content {
+  display: table-cell;
+}
+section.discography .wrap .left {
+  width: 35%;
+  margin-right: 20px;
+  float: left;
+}
+section.discography .wrap .left img {
+  width: 100%;
+}
+section.discography .wrap .left h3 {
+  font-size: 13px;
+  margin-top: 10px;
+}
+section.discography .wrap .left ol {
+  list-style-position: inside;
+}
+section.discography .wrap .left ol:last-child {
+  margin-bottom: 20px;
+}
+section.discography .wrap .content {
+  overflow: hidden;
+  vertical-align: top;
+}
+section.discography .wrap .content .title_bg {
+  height: 60px;
+  background-image: url("../image/a-titlebg.png");
+  line-height: 56px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+section.discography .wrap .content .title_bg h2 {
+  float: left;
+  color: #fff;
+  font-size: 24px;
+}
+section.discography .wrap .content .title_bg span {
+  float: right;
+  font-size: 12px;
+}
+section.discography .wrap .content h4 {
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+section.discography .wrap .album-list {
+  margin-top: 30px;
+  text-align: center;
+}
+section.discography .wrap .album-list li {
+  margin: 0 5px;
+  vertical-align: top;
+  display: inline-block;
+}
+section.discography .wrap .album-list li img {
+  border: 1px #ddd solid;
+}
+section.discography .wrap .album-list li .description {
+  display: block;
+}
+section.discography .wrap .album-list li .description span {
+  display: block;
+}
+section.discography .wrap .album-list .list-btn a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CCC;
+  display: inline-block;
+  margin-top: 10px;
+}
 @media screen and (max-width: 769px) {
   body {
     background-image: url("../image/bg-720.jpg");
@@ -202,5 +324,26 @@ footer ul li a [class^="flaticon-"]::before {
     margin-top: 0;
     /* 이미 pc 버전 제작시 12% 먹은것 없앤거*/
     transform: scale(0.8);
+  }
+  section.discography .title {
+    -wibkit-background-size: 40%;
+    background-size: 40%;
+    height: 70px;
+  }
+  section.discography .wrap .album-list li {
+    width: 100px;
+  }
+  section.discography .wrap .album-list li img {
+    width: 100%;
+  }
+  section.discography .wrap .left,
+  section.discography .wrap .content {
+    display: block;
+    width: auto;
+    float: none;
+  }
+  section.discography .wrap .left {
+    max-width: 350px;
+    margin-right: 0px;
   }
 }

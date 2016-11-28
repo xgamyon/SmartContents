@@ -1,4 +1,13 @@
-*{margin: 0; padding: 0;}
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic';
+    font-size: 12px;
+}
 html,body{
     height: 100%;
 }
@@ -104,9 +113,6 @@ section{
     }
 }
 
-
-
-
 footer{
     position: fixed;
     bottom:0;
@@ -139,4 +145,127 @@ footer{
             }
         }
     }
+}
+
+
+// discography 시작
+
+body.bg_none{
+    margin: 0;
+    background-image: none;
+}
+header.zindex{
+    position: relative;
+    z-index: 10;
+}
+section.discography{
+    .title{
+        background-image: url(@cont_top);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: @cont_bg;
+        height: 110px;
+        text-indent:-9999px;
+        font-size:0;
+        transition: 1s;
+    }
+    .wrap{
+        line-height: 20px;
+        margin: 0 auto 60px;
+        width: 90%;
+        max-width: 1000px;
+        .global-leng{
+            margin:50px auto 10px;
+            height:21px;
+            a{
+                color:#FFF;
+                font-size:10px;
+                line-height:21px;
+                text-align:center;
+                text-transform:uppercase;  /* 앞자는 대문자로*/
+                display: inline-block;     /* 인라인 블럭은 자동으로 띄어쓰기가 한칸 들어간다.*/
+                width:21px;
+                height:21px;
+                border-radius:50%;
+                background-image: url(@cont_title);
+                vertical-align:top;
+            }
+        }
+        .left,.content{
+            display: table-cell;
+        }
+        .left{
+            width: 35%;
+            margin-right: 20px;
+            float: left;
+            img{
+                width: 100%;
+            }
+            h3{
+                font-size: 13px;
+                margin-top: 10px;
+            }
+            ol{
+                list-style-position: inside;
+            }
+            ol:last-child{
+                margin-bottom: 20px;
+            }
+
+        }
+        .content{
+            overflow: hidden;
+            vertical-align: top;
+            .title_bg{
+                height: 60px;
+                background-image: url(@cont_title);
+                line-height: 56px;
+                padding: 0 15px;
+                margin-bottom: 20px;
+                color: #fff;
+                h2{
+                    float: left;
+                    color: #fff;
+                    font-size: 24px;
+                }
+                span{
+                    float: right;
+                    font-size:12px;
+                }
+            }
+            h4{
+                font-size: 13px;
+                line-height: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        .album-list{
+            margin-top:30px;
+            text-align:center;
+            li{
+                margin:0 5px;
+                img{
+                    border: 1px #ddd solid;
+                }
+                vertical-align:top;
+                display:inline-block;
+                .description {
+                    display:block;
+                    span{
+                        display:block;
+                    }
+                }
+            }
+            .list-btn a{
+                width:10px;
+                height:10px;
+                border-radius:50%;
+                background-color: #CCC;
+                display:inline-block;
+                margin-top: 10px;
+            }
+
+        }
+    }
+
 }
