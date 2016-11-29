@@ -161,8 +161,7 @@ header.zindex {
   position: relative;
   z-index: 10;
 }
-section.discography .title {
-  background-image: url("../image/title-discography.png");
+section .title {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f4f4f4;
@@ -171,14 +170,45 @@ section.discography .title {
   font-size: 0;
   transition: 1s;
 }
-section.discography .wrap {
+section .wrap {
   line-height: 20px;
-  margin: 0 auto 60px;
   width: 90%;
   max-width: 1000px;
+  margin: 50px auto 60px;
+}
+section .wrap .album-list {
+  margin-top: 30px;
+  text-align: center;
+}
+section .wrap .album-list li {
+  margin: 0 5px;
+  vertical-align: top;
+  display: inline-block;
+}
+section .wrap .album-list li img {
+  border: 1px #ddd solid;
+}
+section .wrap .album-list li .description {
+  display: block;
+}
+section .wrap .album-list li .description span {
+  display: block;
+}
+section .wrap .album-list .list-btn a {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CCC;
+  display: inline-block;
+  /*  a 태그가 inline-block 형태가 되면 자동으로 띄어쓰기 값이 존재한다.*/
+  margin: 10px 2px 20px;
+  /*  간격 좀만 더 떨구려고..*/
+}
+section.discography .title {
+  background-image: url("../image/title-discography.png");
 }
 section.discography .wrap .global-leng {
-  margin: 50px auto 10px;
+  margin-bottom: 10px;
   height: 21px;
 }
 section.discography .wrap .global-leng a {
@@ -244,31 +274,93 @@ section.discography .wrap .content h4 {
   line-height: 20px;
   margin-bottom: 10px;
 }
-section.discography .wrap .album-list {
-  margin-top: 30px;
+section.gallery .title {
+  background-image: url("../image/title-gallery.png");
+}
+section.gallery .wrap .grid-list {
+  max-width: 769px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+section.gallery .wrap .grid-list ul {
+  overflow: hidden;
+  /* 실질적인 사이즈 값이 없기 때문에 ul 에 overflow:hidden; 을 주면 그 영역만큼 잡는다.*/
+  /*outline:1px #00F solid; 확인 가능 */
+}
+section.gallery .wrap .grid-list ul li {
+  width: 20%;
+  max-width: 153px;
+  /* 3px 만큼 떨구기 위해 li 영역을 크게 줌 */
+  float: left;
+}
+section.gallery .wrap .grid-list ul li img {
+  max-width: 150px;
+  width: 100%;
+  margin-bottom: 3px;
+  vertical-align: top;
+  /* 이미지 영역 자체에 아래 영역에 margin 값이 있기 때문에 없애기 위해서 정렬을 해준다.*/
+}
+section.gallery .wrap .album-list {
+  margin-top: 20px;
+  /* 기본값으로 들어간 30px을 캐스케이딩(명시도)에 따라 수치 바꿔준것*/
+}
+section.notice .title {
+  background-image: url("../image/title-notice.png");
+}
+section.notice .wrap .list table {
+  width: 100%;
+  border-collapse: collapse;
+  /* 테이블 형식의 border를 없앤다.*/
+}
+section.notice .wrap .list table thead {
+  visibility: hidden;
+  /* thead 부분은 읽혀지지만 숨긴다.*/
+  border-bottom: 2px #aaa solid;
+}
+section.notice .wrap .list table td,
+section.notice .wrap .list table th {
+  border-bottom: 1px #ccc solid;
+  background-color: #fcfcfc;
+  padding: 10px 0;
+}
+section.notice .wrap .list table tr > td:first-child {
   text-align: center;
 }
-section.discography .wrap .album-list li {
-  margin: 0 5px;
-  vertical-align: top;
-  display: inline-block;
+section.notice .wrap .list table tr > td:nth-child(3) {
+  /* 몇번째인지 정해주는 선택자 (tr의 바로 밑 td 의 3번째 td)*/
+  text-align: center;
 }
-section.discography .wrap .album-list li img {
-  border: 1px #ddd solid;
+section.notice .wrap .list table td[colspan="3"] {
+  background-color: #fff;
 }
-section.discography .wrap .album-list li .description {
+section.notice .wrap .list table tr.select_bg td {
+  font-weight: bold;
+  background-color: #f8f5f2;
+  padding: 15px 0;
+}
+section.notice .wrap .list table td[colspan="3"] div {
+  /*속성 선택자 (td인데 colspan="3" 의 내용을 가진 녀석안에 div 에)*/
+  padding: 40px;
+  text-align: left;
+}
+section.notice .wrap .list table .elip {
+  text-align: left;
+  max-width: 0;
+  /* 제데로 준 width 값이 없기 때문에 max 값을 제일 적게 주면 같이 줄어든다.
+                       (table 이기 때문에 max 값이 0 이라도 되는것)*/
+}
+section.notice .wrap .list table .elip span {
   display: block;
-}
-section.discography .wrap .album-list li .description span {
-  display: block;
-}
-section.discography .wrap .album-list .list-btn a {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #CCC;
-  display: inline-block;
-  margin-top: 10px;
+  max-width: 700px;
+  /*max-width 으로 주어야만 창을 줄였을때 같이 줄어든다.
+                          (max치 width 값 안에서는 자유롭게)*/
+  overflow: hidden;
+  white-space: nowrap;
+  /* 줄바꿈 없이 한줄로 글씨를 쭉 보이게*/
+  text-overflow: ellipsis;
+  /* text 가 길어지면 ... 으로 숨겨라*/
+  font-size: 15px;
+  color: #05abf6;
 }
 @media screen and (max-width: 769px) {
   body {
@@ -322,10 +414,10 @@ section.discography .wrap .album-list .list-btn a {
   }
   section .biglogo {
     margin-top: 0;
-    /* 이미 pc 버전 제작시 12% 먹은것 없앤거*/
+    /* 이미 pc 버전 제작시 margin-top: 12%; 먹은것 없앤거*/
     transform: scale(0.8);
   }
-  section.discography .title {
+  section .title {
     -wibkit-background-size: 40%;
     background-size: 40%;
     height: 70px;
@@ -345,5 +437,13 @@ section.discography .wrap .album-list .list-btn a {
   section.discography .wrap .left {
     max-width: 350px;
     margin-right: 0px;
+  }
+  section.gallery .wrap .grid-list ul {
+    padding-left: 2%;
+    /* 왼쪽 정렬이기 떄문에 좀 떨궈줘서 가운데 처럼 보이게 함*/
+  }
+  section.gallery .wrap .grid-list ul li {
+    width: 33.333333%;
+    /*이미지 width 값을 늘려서 overflow:hidden 영역보다 많게 하여 밑으로 떨어지게 하기위해*/
   }
 }

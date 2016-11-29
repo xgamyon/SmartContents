@@ -148,7 +148,7 @@ footer{
 }
 
 
-// discography 시작
+// content 공통부분 시작
 
 body.bg_none{
     margin: 0;
@@ -158,9 +158,8 @@ header.zindex{
     position: relative;
     z-index: 10;
 }
-section.discography{
+section{
     .title{
-        background-image: url(@cont_top);
         background-repeat: no-repeat;
         background-position: center;
         background-color: @cont_bg;
@@ -171,11 +170,49 @@ section.discography{
     }
     .wrap{
         line-height: 20px;
-        margin: 0 auto 60px;
         width: 90%;
         max-width: 1000px;
+        margin:50px auto 60px;
+
+        .album-list{
+            margin-top:30px;
+            text-align:center;
+            li{
+                margin:0 5px;
+                img{
+                    border: 1px #ddd solid;
+                }
+                vertical-align:top;
+                display:inline-block;
+                .description {
+                    display:block;
+                    span{
+                        display:block;
+                    }
+                }
+            }
+            .list-btn a{
+                width:10px;
+                height:10px;
+                border-radius:50%;
+                background-color: #CCC;
+                display:inline-block; /*  a 태그가 inline-block 형태가 되면 자동으로 띄어쓰기 값이 존재한다.*/
+                margin: 10px 2px 20px;   /*  간격 좀만 더 떨구려고..*/
+            }
+
+        }
+    }
+}
+// content 공통부분 끝
+
+// discography 시작
+section.discography{
+    .title{
+        background-image: url(@cont_discography);
+    }
+    .wrap{
         .global-leng{
-            margin:50px auto 10px;
+            margin-bottom: 10px;
             height:21px;
             a{
                 color:#FFF;
@@ -239,33 +276,103 @@ section.discography{
                 margin-bottom: 10px;
             }
         }
-        .album-list{
-            margin-top:30px;
-            text-align:center;
-            li{
-                margin:0 5px;
-                img{
-                    border: 1px #ddd solid;
-                }
-                vertical-align:top;
-                display:inline-block;
-                .description {
-                    display:block;
-                    span{
-                        display:block;
+    }
+}
+// discography 끝
+
+// gallery 시작
+section.gallery{
+    .title{
+        background-image: url(@cont_gallery);
+    }
+    .wrap{
+        // border: 1px #f00 solid;
+        .grid-list{
+            max-width:769px;
+            margin:0 auto;
+            overflow:hidden;
+            ul{
+                overflow:hidden;
+                /* 실질적인 사이즈 값이 없기 때문에 ul 에 overflow:hidden; 을 주면 그 영역만큼 잡는다.*/
+                /*outline:1px #00F solid; 확인 가능 */
+                li{
+                    width:20%;
+                    max-width:153px;
+                    /* 3px 만큼 떨구기 위해 li 영역을 크게 줌 */
+                    float:left;
+                    img{
+                        max-width:150px;
+                        width:100%;
+                        margin-bottom:3px;
+                        vertical-align: top;
+                        /* 이미지 영역 자체에 아래 영역에 margin 값이 있기 때문에 없애기 위해서 정렬을 해준다.*/
                     }
                 }
             }
-            .list-btn a{
-                width:10px;
-                height:10px;
-                border-radius:50%;
-                background-color: #CCC;
-                display:inline-block;
-                margin-top: 10px;
-            }
-
+        }
+        .album-list{
+            margin-top: 20px; /* 기본값으로 들어간 30px을 캐스케이딩(명시도)에 따라 수치 바꿔준것*/
         }
     }
-
 }
+// gallery 끝
+
+// notice 시작
+section.notice{
+    .title{
+        background-image: url(@cont_notice);
+    }
+    .wrap{
+        .list{
+            table{
+                width: 100%;
+                border-collapse: collapse;  /* 테이블 형식의 border를 없앤다.*/
+                thead{
+                    visibility: hidden;   /* thead 부분은 읽혀지지만 숨긴다.*/
+                    border-bottom: 2px #aaa solid;
+                }
+                td,th{
+                    border-bottom:1px #ccc solid;
+                    background-color: #fcfcfc;
+                    padding:10px 0;
+                }
+                tr>td:first-child{
+                    text-align:center;
+                }
+                tr>td:nth-child(3){   /* 몇번째인지 정해주는 선택자 (tr의 바로 밑 td 의 3번째 td)*/
+                    text-align:center;
+                }
+                td[colspan="3"]{
+                    background-color: #fff;
+                }
+                tr.select_bg td{
+                    font-weight: bold;
+                    background-color: #f8f5f2;
+                    padding:15px 0;
+                }
+                td[colspan="3"] div{  /*속성 선택자 (td인데 colspan="3" 의 내용을 가진 녀석안에 div 에)*/
+                    padding: 40px;
+                    text-align: left;
+                }
+                .elip{
+                    text-align: left;
+                    max-width: 0;
+                    /* 제데로 준 width 값이 없기 때문에 max 값을 제일 적게 주면 같이 줄어든다.
+                       (table 이기 때문에 max 값이 0 이라도 되는것)*/
+                    span{
+                        display: block;
+                        max-width: 700px;
+                        /*max-width 으로 주어야만 창을 줄였을때 같이 줄어든다.
+                          (max치 width 값 안에서는 자유롭게)*/
+                        overflow:hidden;
+                        white-space:nowrap; /* 줄바꿈 없이 한줄로 글씨를 쭉 보이게*/
+                        text-overflow:ellipsis; /* text 가 길어지면 ... 으로 숨겨라*/
+                        font-size: 15px;
+                        color: #05abf6;
+                    }
+                }
+            }
+        }
+    }
+}
+// notice 끝

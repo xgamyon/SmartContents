@@ -46,17 +46,22 @@
     }
     section{
         .biglogo{
-            margin-top: 0;   /* 이미 pc 버전 제작시 12% 먹은것 없앤거*/
+            margin-top: 0;   /* 이미 pc 버전 제작시 margin-top: 12%; 먹은것 없앤거*/
             transform:scale(0.8);
         }
     }
 
-    // discography 시작
-    section.discography{
+    // content 공통부분 시작
+    section{
         .title{
             .bgsize(40%);
             height: 70px;
         }
+    }
+    // content 공통부분 끝
+
+    // discography 시작
+    section.discography{
         .wrap{
             .album-list{
                 li{
@@ -77,6 +82,25 @@
             }
         }
     }
+    // discography 끝
+
+    // gallery 시작
+    section.gallery{
+        .wrap{
+            .grid-list{
+                ul{
+                    padding-left: 2%;
+                    /* 왼쪽 정렬이기 떄문에 좀 떨궈줘서 가운데 처럼 보이게 함*/
+                    li{
+                        width:33.333333%;  
+                        /*이미지 width 값을 늘려서 overflow:hidden 영역보다 많게 하여 밑으로 떨어지게 하기위해*/
+                    }
+                }
+            }
+        }
+
+    }
+    // gallery 끝
 
 
 

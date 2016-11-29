@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/import.css" type="text/css">
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() { // 문서가 준비되면 실행해
+            $('.menu').click(function() { // .menu 가 클릭되면 실행해
+                $(this).next('ul').slideToggle(1000); // 이것(.menu)다음 ul 이 슬라이드 1000ms(1s)로 보여줘
+            })
+        })
+    </script>
+
+    <title>TWICE</title>
+</head>
+
+<body class="bg_none">
+    <header class="zindex">
+        <h1><a href="index.html">트와이스</a></h1>
+        <nav>
+            <a href="javascript:void(0);" class="menu">Main Menu</a>
+            <!-- javascript:void(0); 는 a 링크를 누르면 그 위치르 가려고 하는걸 막기 위해서 -->
+            <ul>
+                <li><a href="">PROFILE</a></li>
+                <li><a href="">DISCOGRAPHY</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">VIDEO</a></li>
+                <li><a href="">NOTICE</a></li>
+                <li><a href="">SCHEDULE</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- gallery 시작 -->
+    <section class="notice">
+        <div class="title">notice</div>
+        <div class="wrap">
+            <div class="list">
+                <table>
+                    <colgroup>
+                        <col style="width:20px;" />
+                        <col />
+                        <col style="width:100px;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>number</th>
+                            <th>subject</th>
+                            <th>date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="select_bg">
+                            <td>8</td>
+                            <td class="elip">
+                                <span>TWICE 3rd Mini Album "JELLY JELLY " 공식 응원법 (Ver.2)</span>
+                            </td>
+                            <td>2016.11.27</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div>
+                                    <span>
+                                        우 jelly jelly 우 jelly jelly 우 jelly jelly Oh ma boy<br/>
+                                        우 jelly jelly 우 jelly jelly 우 jelly jelly Oh ma boy<br/><br/>
+                                        요즘 나 왜 이런지 몰라 (몰라) 나도 정말 내가 이해 안가 (안가)<br/>
+                                        우 베베베베 나만 혼자<br/>
+                                        우 베베베베 질투하나 봐<br/><br/>
+                                        니가 다른 여자에게 눈길만 줘도<br/>
+                                        화가 나서 못 참겠어<br/>
+                                        나 왜 이러는데<br/><br/>
+                                        내 맘을 내 맘을 들킬까 봐 또 조심조심 해 oh 보일랑 말랑<br/>
+                                        like 젤리처럼 투 명한 my heart<br/>
+                                        어떻게 숨 기질 못해<br/><br/>
+                                        너만 보면 내 맘이 말랑말랑 또 기분 좋은 향기가 살랑살랑<br/>
+                                        like 젤리처럼 쫄깃한 ma luv<br/>
+                                        니가 알진 못하게 babe~
+                                      </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>TWICE 3rd Mini Album "JELLY JELLY " 공식 응원법 (Ver.2)</td>
+                            <td>2016.11.27</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>TWICE 3rd Mini Album "TT " 공식 응원법</td>
+                            <td>2016.11.12</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Happy Birthday MOMO ♥</td>
+                            <td>2016.11.09</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Happy Birthday JEONGYEON ♥</td>
+                            <td>2016.11.01</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>TWICE OFFICIAL COLORS</td>
+                            <td>2016.09.23</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Happy Birthday NAYEON ♥</td>
+                            <td>2016.09.22</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TWICE 2nd mini Album SPECIAL EVENT 2 안내</td>
+                            <td>2016.06.27</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="album-list">
+                    <div class="list-btn">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- gallery 끝 -->
+    <footer>
+        <div class="bottomlogo"></div>
+        <ul>
+            <li>
+                <a href="" title="facebook"><i class="flaticon-facebook-logo"></i></a>
+            </li>
+            <li>
+                <a href="" title="twitter"><i class="flaticon-twitter-logo-silhouette"></i></a>
+            </li>
+            <li>
+                <a href="" title="youtube"><i class="flaticon-youtube-logo"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
