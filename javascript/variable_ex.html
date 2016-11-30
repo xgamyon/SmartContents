@@ -1,0 +1,18 @@
+<script type="text/javascript">
+
+    var name = prompt("너 이름이 뭐니?"); // 값을 적으면 반환되어서 name 이 된다.
+    var year = prompt("몇년생이니?");   // prompt는 숫자를 집어넣어도 기본적으로 문자로 인식한다.
+
+
+    year = Number(year)  // year 의 속성을 Number 형식(Number 는 앞자가 대문자!!)으로 바꾼것.
+    console.log("name:"+typeof(name)); // 문자인 string 으로 인식
+    console.log("year:"+typeof(year)); // 숫자로 인식을 안하고 string 으로 인식을 한다.(그래서 year를 변수로 number형태로 바뀌준다.)
+
+
+    console.log("name:"+name+"<br />year:"+Number(year))  // console 창에 보여지는 형식이라 태그가 적용 안된다.
+    document.write("name:"+name+"<br />year:"+year)  // body에 들어가는 형식이라 태그가 적용된다.
+    // +와 문자나 숫자 사이에서는 띄어쓰기 안해도 된다~
+    // <br /> 을 감싸지 않고 쓰면 변수값으로 인식해서 그냥 나온다. 따로 쓰려고 응용하자면..
+    document.write("name:"+name+"<br />"+"year:"+year)
+
+</script>

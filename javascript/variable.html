@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    //상수 = 변하지 않는 수(그냥 값 자체!)
+    // 1;"문자";
+
+    // var x = 10;   x 는 10
+    // x = x + 20;   x 에 20을 더한 값이 x , 고로 x 는 30
+    // x + 50        x 자체가 30 인데 그것을 정의해 주지 않았기 때문에 인식하지 않는다.
+    // console.log(x);
+
+    var x,y,z
+
+       x = 50;
+       console.log(x,y,z)
+       y = 800;
+       console.log(x,y,z)
+       z = 100;
+       console.log(x,y,z)
+       x = x/y;
+       // 이것에서 x 는 50/800을 한 0.0625 가 된다.
+       console.log(x,y,z)
+       z = "value:"+x*z
+       // value: 그냥 보이기 위해 붙인것! (value 라는 값이라고 적어줬기 때문에 이때부터 string 상태가 되어서 문자가 된다.)
+        console.log(z + 20)
+        // z 는 이미 문자가 되어서 6.25 숫자와 뒤에 20이 더해져서 6.2520이 된다.
+
+       // console 결과값 파란색=숫자, undefined = 값 이지만 결과값이 없음, 검은색은 문자(string).
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

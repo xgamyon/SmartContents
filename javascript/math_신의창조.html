@@ -1,0 +1,38 @@
+<script type="text/javascript">
+
+// Math.random()  // 난수/실수 형태 생성
+// Math.floor(Math.random() * 100)  // 절삭 (floor 는 소숫점 자리를 그냥 버림!) 100 까지 안에서 랜덤하게
+
+var random = Math.random()   // random 이라는 변수를 랜덤하게 주라고 선언
+
+var random_number = Math.floor(random * 100) // 위에서 선언한 random 변수를 소숫점 없애고 100숫자 안에서 나와라
+
+Math.floor(Math.random() * 100)  // 소숫점으로 변환된 변수안에 Math.random()을 100안에서 보여주어라. Math.floor는 소숫점 없앰
+
+console.log(random_number) // 보기 편하게 random_number 를 이용함
+//console.log(Math.floor(Math.random() * 100)) 사실상 이렇게 써도 되지만 간략하게 하려고
+
+//length  // 길이를 뜻함 (갯수)
+
+
+
+
+    var user = prompt('만들 사람을 입력하시오!')
+
+    alert('어디한번 '+user+' 을(를) 만들어볼까!')
+    alert('확인을 누르면 만들어집니다.')
+
+    var text1 = ["일단은","음....","어디보자..","우어엇!!","호옹이!"]
+    var text2 = ["어여쁨","높은지능","낮은지능","먹성","귀여움","못된인성","바른인성","몸매","빚","돈"]
+    var text3 = ["한스푼","한방울","가득넣음","헛!! 다 쏟았다!!","휴..넣을뻔..","깜빡했다..","넣다 말음"];
+
+    var ran1 = Math.floor(Math.random() * text1.length);  // .length 를 넣으면 text1 안의 모든 값을  0 1 2 3 4 중에인식한다.
+    var ran2 = Math.floor(Math.random() * text2.length)   // .length 를 넣으면 text2 안의 모든 값을  0 1 2 3 4 5 6 7 8 9 10중에인식한다.
+    var ran3 = Math.floor(Math.random() * text3.length)   // .length 를 넣으면 text3 안의 모든 값을  0 1 2 3 4 6 7 중에인식한다.
+
+    //console.log(text1[ran1])   하나씩 값을 확인할수 있다.
+
+    document.write(user+"님은.. "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3])
+    //var ran1~3 들은 값을 수치로만 랜덤으로 뽑아주기 때문에 읽어들일때 text1[ran1] 이런식으로 값 자체도 불러와줘야한다.
+    //" " 는 띄어쓰기 하려고..
+</script>

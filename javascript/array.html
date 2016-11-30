@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    var arr = ["apple","orange","banana","pineapple","pen"]
+    //  arr       0       1        2          3        4
+    // 배열 관련 선택할때는 0 부터 시작한다.
+    console.log(arr[0])  // 0은 apple, 1은 orange, 2는 banana, 3은 pineapple ...
+
+    console.log(arr[0],arr[4],arr[3],arr[4])
+
+    arr[2] = "strawberry";
+    console.log(arr)   // arr 뒤에 어떤걸 보여줄것인지 값이 없으면 그 전체 값을 보여준다.
+
+    var arr2 = [    // 2차원 변수(변수 안에 변수)
+        ["apple0","pen0","banana0","pineapple0"],
+        ["apple1","pen1","banana1","pineapple1"],
+        ["apple2","pen2","banana2","pineapple2"],
+        ["apple3","pen3","banana3","pineapple3"]
+        ]
+    console.log(arr2[2][2])  // arr2 의 2라는 변수 위치 0 1 2 번째 위치인 banana0 의 자리에서 밑으로 0 1 2 번째 위치인 banana2 를 말한다.
+
+</script>
