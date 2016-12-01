@@ -153,14 +153,107 @@ footer ul li a i[class^="flaticon-"]::before{
 body.nonebg{
     background-image: none;
 }
-section .discograhy{
+section .discography{
     height: 110px;
     background-color: #f4f4f4;
+}
+section .discography h2{
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    background-image: url(../image/title-discography.png);
+    background-repeat: no-repeat;
+    background-position: center;
     text-indent: -9999px;
     font-size: 0;
+    width: 350px;
+    height: 60px;
 }
-section .discograhy h2{
-    width: 300px;
-    height: 55px;
-    border: 1px #f00 solid;
+section .discography .wrap{
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 70px;
+}
+section .discography .wrap .global-leng ul li{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    background-image: url(../image/a-titlebg.png);
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+section .discography .wrap .global-leng ul li a{
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+section .discography .wrap .left{
+    display: table-cell;
+    width: 35%;
+    float: left;
+    margin-right: 20px;
+}
+section .discography .wrap .left img{
+    width: 100%;
+    vertical-align: top;
+}
+section .discography .wrap .left strong{
+    display: block;
+    margin-top: 15px;
+}
+section .discography .wrap .left ol li{
+    list-style-position: inside;
+    line-height: 20px;
+}
+section .discography .wrap .content{
+    display: table-cell;
+    line-height: 20px;
+}
+section .discography .wrap .content .title_bg{
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    color: #fff;
+    background-image: url("../image/a-titlebg.png");
+    margin-bottom: 15px;
+}
+section .discography .wrap .content .title_bg h3{
+    float: left;
+    font-size: 24px;
+}
+section .discography .wrap .content .title_bg span{
+    float: right;
+}
+section .discography .wrap .content .txt_bold{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+section .discography .wrap .album-list {
+    margin-top: 30px;
+    text-align: center;
+}
+section .discography .wrap .album-list ul{
+    transition: 1s;
+}
+section .discography .wrap .album-list ul li {
+    display: inline-block;
+    padding: 0 3px;
+}
+section .discography .wrap .album-list ul li a span{
+    display: block;
+    line-height: 20px;
+}
+section .discography .wrap .album-list ul li a img{
+    border: 1px #ddd solid;
+}
+section .discography .wrap .album-list .list-btn a{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background-color: #ccc;
+    margin: 15px 0;
 }

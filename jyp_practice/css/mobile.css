@@ -71,4 +71,62 @@
     }
 
 
+
+
+    section .discography .wrap .left,
+    section .discography .wrap .content{
+        display: block;
+    }
+    section .discography .wrap .left{
+        float: none;
+        width: auto;
+        max-width: 350px;
+        margin-right: 0;
+    }
+    section .discography .wrap .left ol {
+        margin-bottom: 15px;
+    }
+    section .discography .wrap .content .title_bg h3,
+    section .discography .wrap .content .title_bg span{
+        position: relative;
+        top: 6px;
+        display: block;
+        float: none;
+        text-align: center;
+        line-height: 24px;
+    }
+    section .discography .wrap .album-list ul{
+        transform: scale(0.8);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
