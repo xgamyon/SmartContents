@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    var text = [
+        ["일단은","음....","어디보자","우어어어어"],
+        ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"],
+        ["한숟깔","한방울","한가득","우오오","헉....","깜빡했다..","덜넣음"]
+        ]
+
+
+    var html = "";
+
+    for(i = 0; i < text.length; i++){
+
+        var randoms = Math.floor(Math.random() * text[i].length);
+
+        html += text[i][randoms]+" ";
+    }
+
+    document.write(html);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

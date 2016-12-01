@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/mobile.css" type="text/css">
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() { // 문서가 준비되면 실행해
+            $('.menu').click(function() { // .menu 가 클릭되면 실행해
+                $(this).next('ul').slideToggle(1000); // 이것(.menu)다음 ul 이 슬라이드 1000ms(1s)로 보여줘
+            })
+        })
+    </script>
+    <title>트와이스</title>
+</head>
+
+<body class="nonebg">
+    <header>
+        <h1><a href="">트와이스</a></h1>
+        <nav>
+            <a class="menu" href="javascript:void(0);">Main Menu</a>
+            <ul>
+                <li><a href="">PROFILE</a></li>
+                <li><a href="">DISCOGRAPHY</a></li>
+                <li><a href="">GALLERY</a></li>
+                <li><a href="">VIDEO</a></li>
+                <li><a href="">NOTICE</a></li>
+                <li><a href="">SCHEDULE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section>
+        <div class="discograhy">
+            <h2>discograhy</h2>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="bottomlogo"></div>
+            <ul>
+                <li><a href="" title="facebook"><i class="flaticon-facebook-logotype-button"></i></a></li>
+                <li><a href="" title="twitter"><i class="flaticon-twitter-logo"></i></a></li>
+                <li><a href="" title="youtube"><i class="flaticon-youtube-rounded-square-logo"></i></a></li>
+                <li><a href="" title="instagram"><i class="flaticon-picture"></i></a></li>
+            </ul>
+
+    </footer>
+</body>
+
+</html>

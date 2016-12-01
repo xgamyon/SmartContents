@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    var text = [
+    /*0*/    ["일단은","음....","어디보자","우어어어어"], // text 안의 length  0번쨰
+    /*1*/    ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"], // text 안의 length  1번쨰
+    /*2*/    ["한숟깔","한방울","한가득","우오오","헉....","깜빡했다..","덜넣음"] // text 안의 length  2번쨰
+        ]
+
+    var html = "";
+    /* 아무값도 쓰지 않고 변수만 선언했을시에 console을 찍어보면 값은 undefind(문자도 아니고 숫자도 아니다.) 이다.
+    그래서 의미없는 값을 문자로 쓰기 위해 넣은것.*/
+
+    for(var i=0; i<text.length; i++){  /* 반복문 for의 경우 그 안에 변수값을 선언하는 var 를 안써줘도 무방.*/
+        /*i가 현재 0이다. i는 text의 변수값(0,1,2)의 length([]안의 갯수)의 갯수인 3보다 작으면 다음을 실행한다. i++는 아직 실행이 덜되어서 실행되는 단계가 아니다.*/
+        /*console.log(text.length)*/
+        /*text.length 는 그래서 3이 된다(0,1,2 의 갯수)*/
+
+        var randoms = Math.floor(Math.random() * text[i].length);
+        /* text의 i 값 안의 length를 랜덤수치로 곱해서 그것을 소수점 없앤(Math.floor) 그 값을 randoms 라 한다.(결국 0,1,2 중에 하나의 랜덤값) */
+        /* 결국 이 값은 변수 i 안에 해당하는 []안 갯수의 랜덤수치*/
+
+        console.log(i)     /* 0, 1, 2 */
+        console.log(text[i])  /*text []안의 수치,  ["일단은", "음....", "어디보자", "우어어어어"], ["어여쁨","높은지.... (3개)*/
+        console.log(text[i].length) /* 0이나 1이나 2 안의 갯수인 4, 12, 7 */
+        console.log(Math.floor(Math.random() * text[i].length)) /* 각각 4, 12, 7 개의 수치를 소수점 떼고 랜덤하게 나타난다. */
+
+        html += text[i][randoms]+" ";
+        /* 임의 변수 html 을 선언하고
+           정해진 랜덤값을 += 계속 반복실행하라,
+           text안의 i값의 []안의 랜덤수치를 뿌려주는것을 계속 반복해서 0부터 시작해서 i++로 하나씩 증가했기 떄문에
+           0 의 위치의 length 안의 숫자를 문자값으로 하나 보여주고 그 값에 추가로 더해서
+           1 의 위치의 length 안의 숫자를 문자값으로 하나 보여주고 그 값에 추가로 더해서
+           2 의 위치의 length 안의 숫자를 문자값으로 하나 보여주고 멈추게 된다.*/
+    }
+
+    document.write(html)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

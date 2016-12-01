@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        // for  -> 증가로 인한 반복실행!!
+        // while
+        // 반복문
+
+        // ++ 는 1씩 증가,  -- 는 1씩 감소
+
+        // for(초기값 ; 조건; 증가)
+
+        for(var i = 0; i < 10; i++){
+
+            console.log("정주리" + i) ;
+
+        }
+
+    /*  i 는 0
+        i < 10 만족
+        정주리 + 0      -> 정주리0
+        i++ i           -> i 를 증가시켜
+        i = 1
+
+        반복
+
+        i 는 1
+        i < 10 만족
+        정주리 + 1      -> 정주리0
+        i++             -> i 를 증가시켜
+        i = 2
+
+        반복해서 i 가 10이 되고 < 10 에서 false 가 되기 때문에 반복문이 끝난다.  */
+
+        // for(var i = 0; i < 10; i++){
+        //
+        //    for(var j=0; j < 10; j++){
+        //
+        //         console.log(i*j)
+        //
+        //    }
+        //
+        // }
+
+            for(var i = 0; i < 10; i++){
+
+                console.log(i+" 단")
+                for(var j = 0; j <10; j++){
+
+                    console.log(i+" X "+j+" = "+i*j)
+                }
+            }
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
