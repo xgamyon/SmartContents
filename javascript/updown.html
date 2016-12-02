@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>업 & 다운</title>
+    <script type="text/javascript">
+
+        var numberScope = 100;  // 최초의 변수 선언
+        var randomNum = Math.random() * numberScope; // numberScope 변수값을 랜덤 수치로 전환해준다.(소숫점)
+        var ranNum = Math.floor(randomNum);    //랜덤수치 변수값을 정수만 남게 소수점 단위를 날려버린다.
+
+        var count = prompt('1~5 중에 카운터 할 숫자를 입력해 주세요');  // 정해서 값을 주어도 되고 직접 몇번까지 카운팅 할건지 정해주는 변수
+
+
+        for(i = 0; i < count; i++){    // i 가 0 이고 카운터 숫자 정해준것보다 작으면 계속 반복하라.
+
+            var entry = prompt("맞춰보세요!!"); // 계속 로테이션 돌면서 값을 쓰게끔
+
+                if(ranNum > entry){    // 만약 정수로 된 랜덤 수치값이 값을 준 수치(entry)보다 작을 경우
+                    alert("up!!");
+                }else if(ranNum < entry){  // 그렇지 않고 만약 정수로 된 랜덤 수치값이 값을 준 수치(entry)보다 작을 경우
+                    alert("down!!");
+                }else if(ranNum == entry){  // 그렇지 않고 만약 정수로 된 랜덤 수치값이 값을 준 수치(entry)와 같을 경우
+                    alert("빙고!!");
+                    break;     // 더이상 for문을 반복하지 않고 반복문을 나가서 끝난다!! (break 는 for 문 안에서만 동작한다!!)
+                }else{
+                    alert("입력 다시!!")  // 위의 조건을 만족하지 않는 문자 형식을 넣으면 뜨고 다시 for문으로 반복
+                }
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

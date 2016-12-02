@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var nameSave = [];
+        var scoreSave = [];
+
+        var max_user = prompt("학생의 수를 입력해 주세요")
+        var check = confirm(max_user+ "명이 맞습니까?")
+
+        if(check){
+            for(i = 0; i < max_user; i++){
+                var name = prompt("학생 이름을 입력하세요")
+                nameSave.unshift(name)
+                var score = prompt("점수를 입력하세요")
+                scoreSave.unshift(score)
+            }
+
+            document.write("이름: "+nameSave+"<br/> 점수: "+scoreSave);
+            var check2 = confirm("학생 이름과 점수가 맞습니까?")
+
+            if(check2){
+                console.log("반 전체 평균을 산출합니다.")
+
+                var score = 0; //prompt로 인해서 생겨나는 녀석이라 원래 값이 없기 때문에 0이라는 값을 준다.
+
+                for(i = 0; i < scoreSave.length; i++){ //length를 안쓰면 그 안에 값이 적는대로이기 때문에 없는것으로 인식한다.
+                    score += Number(scoreSave[i]);
+                }
+                document.write("<br/>더한값은 "+score+"점 입니다.")
+
+
+
+            }else if(!check2){
+                alert("다시 입력하세요.")
+            }
+
+
+
+
+
+        }else if(!check){
+            alert("입력을 취소합니다.")
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

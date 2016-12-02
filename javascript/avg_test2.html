@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var nameArr = [];  // 값이 여러가지 원래 들어가지만 쓴 값을 넣기 위해 저장공간을 만들어둔것 뿐.
+        var scoreArr = [];
+
+        var max_user = prompt("학생의 수를 입력해 주세요.")
+        var check = confirm(max_user+" 인원이 맞습니까?")  // confirm 은 무언가 확인하는 것. true 와 false 를 나누는것.
+
+        if(check){             // if(true) 값이면
+
+            for(var i = 0; i < max_user; i++){   // 변수 i 가 max_user 수치보다 적을때 반복실행해라.
+                var name = prompt("이름을 입력하세요");
+                var score = prompt("점수를 입력하세요");
+                nameArr.unshift(name)
+                scoreArr.unshift(score)
+                // .unshift 는 배열(nameArr)이라는 저장공간 안에 값을 입력하기 위해 쓴다.(가장 최근에 쓴게 앞에 들어간다!!!)
+                // .unshift 와는 반대로 .push 를 쓸 경우에는 최근 값이 뒤로 들어간다.
+            }
+
+            document.write(nameArr +"<br/>"+scoreArr)   // 쓰여지는것으로 보여짐
+            var next = confirm("입력정보가 맞습니까?")   // 확인단계
+
+            if(next){                                  // true 값으로 next가 확인이 되었을 경우
+                console.log("반 전체 평균을 산출합니다.")
+
+                var score = 0;     // 0을 주지 않으면 연산할수 없는 형태인 nan(not a number) 이 된다
+                // 연산 시켜주기 위한 초기값
+                console.log(score) // score 에 0 이라는 값이 없으면 undifind(연산이 되지 않는다.) 라고 뜬다.
+
+                for(i=0; i<scoreArr.length; i++){  //for(var i = 0 in scoreArr){ 이렇게 써도 무방
+                    score += Number(scoreArr[i]);  //scoreArr[i] 는 [숫자,숫자,숫자..]안에 해당하는 값의 위치 값을 말한다.
+                    // score += Number(score);   라고 써도 무방함, scoreArr[i] 와 score 의 값이 0~내가 정한 학생수 만큼 인건 동일하기 떄문에.
+                    // Number 수치로 바꿔주어야 문자(string) 형식이 아니게 된다.
+                    // A += 첫번째 적은 값, -> A 에 첫번째 적은 값을 더하면 A
+                    console.log("로테이션 되는 적은 값들: "+scoreArr[i])
+
+                }
+
+                console.log("total:"+score)
+
+
+                var sss = score/max_user;
+
+                if(sss >= 0 && sss < 20){    //  &&(그리고) 는 둘다 true 여야만 실행된다.
+                    document.write("<br />반 전체 평균은 "+ sss +"점 이고 가 입니다.")
+                }else if(sss >= 20 && sss < 40){
+                    document.write("<br />반 전체 평균은 "+ sss +"점 이고 양 입니다.")
+                }else if(sss >= 40 && sss < 70){
+                    document.write("<br />반 전체 평균은 "+ sss +"점 이고 미 입니다.")
+                }else if(sss >= 70 && sss < 90){
+                    document.write("<br />반 전체 평균은 "+ sss +"점 이고 우 입니다.")
+                }else if(sss >= 90 && sss <= 100){
+                    document.write("<br />반 전체 평균은 "+ sss +"점 이고 수 입니다.")
+                }else{
+                    console.log("입력 제데로 하세요")
+                }
+
+            }else if(!next){       // false 값으로 next가 아닐경우
+                alert('프로그램을 종료합니다')
+            }
+            console.log(nameArr, scoreArr)
+
+        }else if(!check){         // if(false) 값이면
+            console.log("취소합니다.")
+        }
+
+
+//name어레이에 언쉬프트 값이 저장 공간으로 들어간다.
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var nameArr = [];  // 값이 여러가지 원래 들어가지만 쓴 값을 넣기 위해 저장공간을 만들어둔것 뿐.
+        var scoreArr = [];
+
+        var max_user = prompt("학생의 수를 입력해 주세요.")
+        var check = confirm(max_user+" 인원이 맞습니까?")  // confirm 은 무언가 확인하는 것. true 와 false 를 나누는것.
+
+        if(check){             // if(true) 값이면
+
+            for(var i = 0; i < max_user; i++){   // 변수 i 가 max_user 수치보다 적을때 반복실행해라.
+                var name = prompt("이름을 입력하세요");
+                var score = prompt("점수를 입력하세요");
+                nameArr.unshift(name)
+                scoreArr.unshift(score)
+                // .unshift 는 배열(nameArr)이라는 저장공간 안에 값을 입력하기 위해 쓴다.(가장 최근에 쓴게 앞에 들어간다!!!)
+                // .unshift 와는 반대로 .push 를 쓸 경우에는 최근 값이 뒤로 들어간다.
+            }
+
+            document.write(nameArr +"<br/>"+scoreArr)   // 쓰여지는것으로 보여짐
+            var next = confirm("입력정보가 맞습니까?")   // 확인단계
+
+            if(next){                                  // true 값으로 next가 확인이 되었을 경우
+                console.log("반 전체 평균을 산출합니다.")
+            }else if(!next){                           // false 값으로 next가 아닐경우
+                alert('프로그램을 종료합니다')
+            }
+            console.log(nameArr, scoreArr)
+
+        }else if(!check){         // if(false) 값이면
+            console.log("취소합니다.")
+        }
+
+
+//name어레이에 언쉬프트 값이 저장 공간으로 들어간다.
+    </script>
+</head>
+<body>
+
+</body>
+</html>
