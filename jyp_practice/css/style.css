@@ -198,7 +198,9 @@ section .discography .wrap .left{
 }
 section .discography .wrap .left img{
     width: 100%;
+    max-width: 350px;
     vertical-align: top;
+    transition: 1s;
 }
 section .discography .wrap .left strong{
     display: block;
