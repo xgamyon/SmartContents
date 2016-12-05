@@ -27,7 +27,8 @@
             if(next){                                  // true 값으로 next가 확인이 되었을 경우
                 console.log("반 전체 평균을 산출합니다.")
 
-                var score = 0;     // 0 으로 선언해준 경우는 초기값 부터 시작해야 하기 때문에
+                var score = 0;     // 0을 주지 않으면 연산할수 없는 형태인 nan(not a number) 이 된다
+                // 연산 시켜주기 위한 초기값
 
                 for(i=0; i<scoreArr.length; i++){  //for(var i = 0 in scoreArr){ 이렇게 써도 무방
                     score += Number(scoreArr[i]);  //scoreArr[i] 는 [숫자,숫자,숫자..]안에 해당하는 값의 위치 값을 말한다.

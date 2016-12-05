@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        //function 은 내가 만든 함수이다!!
+
+        // 반환값없음  보이드함수 (값 자체가 존재하지 않는다.)
+        function sum(x,y){
+            console.log(x,y)
+        }
+
+
+
+        var abillity = 5;
+
+        function Level1(x){
+            console.log("레벨이 1이 되었습니다. 능력치가 "+x+" 올랐습니다.")
+        }
+        function Level2(x){
+            console.log("레벨이 2이 되었습니다.능력치가 "+Number(x+1)+" 올랐습니다.")
+        }
+        function Level3(){
+            console.log("레벨이 3이 되었습니다.")
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="sum(220,100)">기능1</button>
+
+    <button type="button" onclick="Level1(abillity)">레벨1업</button>
+    <button type="button" onclick="Level2(abillity)">레벨2업</button>
+    <button type="button" onclick="Level3()">레벨3업</button>
+</body>
+</html>

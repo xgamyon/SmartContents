@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    /*    function sum(x,y){
+            //리턴함수 다음은 인식하지 않는다!! return이 없으면 그 위치에서 값이 끝나기 때문에 되돌려주어서 x,y 에 값을 넣게 해주는것
+            return x+y  // 함수 호출문에게 값을 반환시켜준다.
+        }
+
+        console.log(sum(20,30))
+        console.log(sum(sum(10,20),sum(20,sum(30,10))))   */
+
+        var a = current(10,20)  //정의시킴
+        console.log(a)         // 밑의 값이 아무것도 없다면 undifind
+
+        function current(x,y){    // current()라는 함수를 호출하고 안에 값을 x 와 y 로 정의 한다.
+            return sum(x,y)+"원"   // sum 함수를 호출해주고 이라는 정해준 함수에 x 와 y 의 값을 넣고 반환시킨다.
+        }
+
+         function sum(x,y){
+             return x+y       // x와 y 값을 어떻게 할것인지에 대해 정의해주고 반환시킨다.
+         }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

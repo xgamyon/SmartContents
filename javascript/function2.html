@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var userList = [[],[]];
+
+        function addUser(){
+            var user = prompt("사용자를 입력해 주세요")
+            var score = prompt("점수를 입력해 주세요")
+
+            userList[0].unshift(user);
+            userList[1].unshift(score);
+
+            console.log(userList)
+        }
+
+    </script>
+</head>
+<body>
+    <button type="button" name="button" onclick="addUser()">학생 추가</button>
+</body>
+</html>

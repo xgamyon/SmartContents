@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    var userList = [[],[]];     //  바깥에 var로 선언된것은 전역(글로벌)변수
+
+
+        function addUser(){
+            var user = prompt("사용자를 입력해 주세요")
+            var score = prompt("점수를 입력해 주세요") // 안에 var로 선언된것은 지역변수
+
+            userList[0].unshift(user);
+            userList[1].unshift(score);
+
+            console.log(userList)
+        }
+        function avg(){
+            var score = 0;   // 이곳의 score는 지역변수이기때문에 그 위의 지역변수인 score 와 겹치지 않는다.
+
+            for(i = 0; i < userList[1].length; i++){   //userList 안의 1번째 자리(점수부분)의 length 위치
+                score += Number(userList[1][i]);
+                // score 는 userList의 [1]위치(점수부분)의 [i]위치의 숫자를 반복해서 더한다. Number 화 시켜서
+
+                console.log("평균값은 "+score/+userList[1].length+" 점입니다.");
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <button type="button" name="button" onclick="addUser()">학생추가</button>
+    <button type="button" name="button" onclick="avg()">vudrbssorl</button>
+</body>
+</html>

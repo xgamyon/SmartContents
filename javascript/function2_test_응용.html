@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    var userList = [[],[]];     //  바깥에 var로 선언된것은 전역(글로벌)변수
+
+
+        function addUser(){
+            var user = prompt("사용자를 입력해 주세요")
+            var score = prompt("점수를 입력해 주세요") // 안에 var로 선언된것은 지역변수
+
+            userList[0].unshift(user);
+            userList[1].unshift(score);
+
+            console.log(userList)
+        }
+        function avg(){
+            var score = 0;   // 이곳의 score는 지역변수이기때문에 그 위의 지역변수인 score 와 겹치지 않는다.
+
+            if(userList[1].length == 0){
+                // 만약에 1번째의 []안의 숫자가 0 과 같으면 ( 결국 0이라는건 값을 넣지 않아서 존재하지 않기 때문에 false 상태)
+                // if(!userList[1].length){   이렇게 ! 를 붙여서 아예 부정이라고 해도 된다.
+                alert('점수를 입력해야 내가 평균을 낼거 아냐!')
+            }else{
+
+                for(i = 0; i < userList[1].length; i++){   //userList 안의 1번째 자리(점수부분)의 length 위치
+                    score += Number(userList[1][i]);
+                    // score 는 userList의 [1]위치(점수부분)의 [i]위치의 숫자를 반복해서 더한다. Number 화 시켜서
+                    var avg = score/+userList[1].length;  //평균 내는 공식 (전체 점수 더한 값을 적은 수로 나눈다.)
+
+                    console.log("평균값은 "+avg+" 점입니다.");
+                }
+
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <button type="button" name="button" onclick="addUser()">학생추가</button>
+    <button type="button" name="button" onclick="avg()">vudrbssorl</button>
+</body>
+</html>

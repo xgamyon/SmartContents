@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    var user;
+    var cardeck = [];
+    var cardModel = ['♠','♣','♥','◆'];
+    var users = [];
+
+
+    function addUser(){
+        user = prompt("사용자 수를 입력하세요.")
+    }
+
+
+    function cardMake(){
+        cardeck = [];
+        for(i=0; i<4; i++){
+            for(j=1; j<=13; j++){
+                if(j == 1){
+                    cardeck.push(cardModel[i]+"A")
+                }else if(j == 11){
+                    cardeck.push(cardModel[i]+"J")
+                }else if(j == 12){
+                    cardeck.push(cardModel[i]+"Q")
+                }else if(j == 13){
+                    cardeck.push(cardModel[i]+"K")
+                }else{
+                    cardeck.push(cardModel[i]+j)
+                }
+            }
+        }
+    }
+
+    function selector(){
+        var random = Math.floor(Math.random() * cardeck.length);
+        users.unshift(cardeck[random]);
+        cardeck.splice(random,1)
+        console.log(users)
+    }
+    function checkvalue(){
+        console.log("현재 등록된 사용자수: "+user)
+        console.log(cardeck)
+    }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="addUser()"> 사용자 입력</button>
+    <button type="button" onclick="checkvalue()"> 사용자 확인</button>
+    <button type="button" onclick="cardMake()"> 카드생성</button>
+    <button type="button" onclick="selector()"> 나눠가져</button>
+</body>
+</html>

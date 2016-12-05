@@ -25,7 +25,8 @@
             if(check2){
                 console.log("반 전체 평균을 산출합니다.")
 
-                var score = 0; //prompt로 인해서 생겨나는 녀석이라 원래 값이 없기 때문에 0이라는 값을 준다.
+                var score = 0; // 0을 주지 않으면 연산할수 없는 형태인 nan(not a number) 이 된다
+                // 연산 시켜주기 위한 초기값
 
                 for(i = 0; i < scoreSave.length; i++){ //length를 안쓰면 그 안에 값이 적는대로이기 때문에 없는것으로 인식한다.
                     score += Number(scoreSave[i]);
