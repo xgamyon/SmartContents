@@ -251,11 +251,79 @@ section .discography .wrap .album-list ul li a span{
 section .discography .wrap .album-list ul li a img{
     border: 1px #ddd solid;
 }
-section .discography .wrap .album-list .list-btn a{
+section .wrap .album-list .list-btn a{
     display: inline-block;
     width: 10px;
     height: 10px;
     border-radius:50%;
     background-color: #ccc;
-    margin: 15px 0;
+    margin: 15px 1px;
 }
+
+/* discography 끝 */
+
+
+/* gallery 시작 */
+
+section .gallery{
+    height: 110px;
+    background-color: #f4f4f4;
+}
+section .gallery h2{
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    background-image: url(../image/title-gallery.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    font-size: 0;
+    width: 350px;
+    height: 60px;
+}
+section .gallery .wrap .grid-list{
+    width: 90%;
+    max-width: 769px;
+    margin: 100px auto 70px;
+    overflow: hidden;
+}
+section .gallery .wrap .grid-list ul{
+    overflow: hidden;
+}
+section .gallery .wrap .grid-list ul li{
+    float: left;
+    width: 20%;
+    max-width: 153px;
+}
+section .gallery .wrap .grid-list ul li img{
+    width: 100%;
+    max-width: 150px;
+    vertical-align: top;
+    margin-bottom: 3px;
+}
+section .wrap .album-list{
+    display: block;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* gallery 끝 */
