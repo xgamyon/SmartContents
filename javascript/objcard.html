@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var card = {
+            card_number:13,
+            card_deck:[],
+            shape:['♠','♣','♥','◆'],
+            theorem:function(){  // theorem 그냥 정리라는 뜻으로 지어준것
+
+                this.card_deck = [];
+                for(var i=0 in this.shape){
+                    //this 는 card 안에 존재하기때문에 card 를 뜻함. shape 안에 존재하는 수이면 이라는 뜻(줄여씀)
+                    console.log(i)   // 당연히 0 1 2 3 이 나온다.
+                    console.log(this.card_deck)
+                    for(var j=1; j<=this.card_number; j++){
+                        if(j == 1){
+                            this.card_deck.push(this.shape[i]+"A")
+                        }else if(j == 11){
+                            this.card_deck.push(this.shape[i]+"J")
+                        }else if(j == 12){
+                            this.card_deck.push(this.shape[i]+"Q")
+                        }else if(j == 13){
+                            this.card_deck.push(this.shape[i]+"K")
+                        }else{
+                            this.card_deck.push(this.shape[i]+j)
+                        }
+
+                    }
+                }
+            },
+            selector:[],
+            user:function(){
+
+            }
+
+
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <button type="button" onclick="card.theorem()">생성</button>
+    <button type="button" onclick="card.user()">나눠가져</button>
+
+
+
+
+</body>
+</html>

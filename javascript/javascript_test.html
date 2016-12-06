@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        var cardList = [];
+        var cardNum = 13;
+        var cardStyle = ['♠','♣','♥','◆'];
+        var userCard = [];
+
+            function arrangement(){
+                cardList = []
+                for(i = 0; i<cardStyle.length; i++){
+
+                    for(j=1; j<=cardNum; j++){
+                        if(j == 1){
+                            cardList.push(cardStyle[i]+"A")
+                        }else if(j == 11){
+                            cardList.push(cardStyle[i]+"J")
+                        }else if(j == 12){
+                            cardList.push(cardStyle[i]+"Q")
+                        }else if(j == 13){
+                            cardList.push(cardStyle[i]+"K")
+                        }else {
+                            cardList.push(cardStyle[i]+j)
+                        }
+                    }
+                }
+                console.log(cardList)
+            }
+
+            function call(){
+                var card_ran = Math.floor(Math.random() * cardList.length);
+                userCard.unshift(cardList[card_ran])
+                cardList.splice(card_ran,1)
+                console.log(userCard)
+            }
+            function start(){
+                for(i=0;i<3;i++){
+                        var card_ran = Math.floor(Math.random() * cardList.length);
+                        userCard.unshift(cardList[card_ran])
+                        cardList.splice(card_ran,1)
+                }
+                console.log(userCard)
+            }
+
+
+
+            // function start(){
+            //     if(){
+            //         for(i=0;i<3;i++){
+            //                 var card_ran = Math.floor(Math.random() * cardList.length);
+            //                 userCard.unshift(cardList[card_ran])
+            //                 cardList.splice(card_ran,1)
+            //         }
+            //         console.log(userCard)
+            //     }else if(){
+            //         var card_ran = Math.floor(Math.random() * cardList.length);
+            //         userCard.unshift(cardList[card_ran])
+            //         cardList.splice(card_ran,1)
+            //         console.log(userCard)
+            //     }
+            // }
+
+
+            function reset(){
+                userCard = []
+                console.log(userCard)
+            }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="arrangement()">카드정리</button>
+    <button type="button" onclick="start()">게임시작</button>
+    <button type="button" onclick="call()">콜</button>
+    <button type="button" onclick="reset()">다이</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    // {} 객체!!
+
+    var obj = {    // obj 안에 {}라는 객체에 밑에 있는 지시자들의 구성물이 있다!
+        name:"정주리",  // 하나하나 지시자라고 한다.  지시자:"값"
+        gender:"woman",
+        year:24,
+        skill:['HTML','CSS','Javascript','Javascript Core','Javascript DOM','LESS','Git','photoshop','jQuery','IA','WBS','RFP','NodeJs','Responsive','Accessbility'],
+        content:function(){
+            document.write(this.name+" 나에 의한 나를 위한 나의 자리를 만들어주세요 사장님!")
+            // this 는 obj를 말한다.  this 안의 name을 뜻함.
+        },
+        history:{
+            school:"하이초등학교"
+        }
+    }
+    console.log(obj.name)
+    console.log(obj.content())  //obj.content() 그냥 이렇게만 써도 무방, ()는 함수로 정의된 것이기 때문에.
+    // 콘솔로 정의 했지만 불러들이는 값은 document.write 이기 때문에 콘솔은 undifined고 글은 쓰여진다.
+    //var content = function(){   }     이것과 같은 의미.
+
+    console.log(obj.history.school)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
