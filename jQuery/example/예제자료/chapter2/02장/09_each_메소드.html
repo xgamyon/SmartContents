@@ -14,11 +14,13 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				$('#wrapper li').each(function(){
+					$(this).css('color','red')	 // this 는 각각의 li 를 뜻한다.
+				})
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>each() 메소드를 사용하여 ul엘리먼트 자식엘리먼트를 순환하여 모두 색을 바꿔 주세요.</span>
 		<div id="wrapper">

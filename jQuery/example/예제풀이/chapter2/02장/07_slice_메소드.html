@@ -15,11 +15,12 @@
 			$(document).ready(function(){
 				var el = $('#wrapper > ul > li');
 				el = el.slice(2,5);
+				// slice는 0 부터가 아니고 1부터이다!!! 2번째의 다음 녀석부터 5까지.
 				el.css('color', 'red');
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>slice() 메서드를 이용하여 해당 위치에 색을 바꿔주세요.</span>
 		<div id="wrapper">

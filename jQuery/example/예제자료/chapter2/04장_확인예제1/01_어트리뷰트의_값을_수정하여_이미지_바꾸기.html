@@ -21,26 +21,52 @@
 			#image img { width: 522px; height: 400px; }
 		</style>
 		<script>
+			// $(document).ready(function(){
+			// 	$('#nav ul #springBtn').click(function(){
+			// 		$('#image>img').attr('src','images/spring.jpg')    // attr는 속성을 어떻게 할것인가
+			// 		//attr 속성을 1개만(src) 쓰면 값을 알아오지기만 하지만 두개("주소") 쓰면 가져와서 변경한다.
+			// 	})
+			//
+			// 	$('#nav ul #summerBtn').click(function(){
+			// 		$('#image>img').attr({
+			// 		'src':'images/summer.jpg',
+			// 		'alt':'여름'
+			// 		})
+			// 		// 2개의 속성이 들어갈때는 위처럼 쓰면 되지만 값이 더 들어갈 경우는 객체형식인 {} 안에 : 로 속성을 추가할수 있다.
+			// 		// .attr({속성:'값', 속성:'값', 속성:'값'})
+			// 		// src 나 alt 값에 '' 따옴표 안써도 되지만 attr 에선 써주는걸 권장
+			// 	})
+			//
+			// 	$('#nav ul #fallBtn').click(function(){
+			// 		$('#image>img').attr({'src':'images/fall.jpg', 'alt':'가을'
+			// 		})
+			// 	})
+			// 	$('#nav ul #winterBtn').click(function(){
+			// 		$('#image>img').attr({'src':'images/winter.jpg', 'alt':'겨울'
+			// 		})
+			// 	})
+			//
+			// })
+
+
 			$(document).ready(function(){
-				$('#nav > ul > #springBtn').bind('click', function(){
-					
-				});
-				
-				$('#nav > ul > #summerBtn').bind('click', function(){
-					
-				});
-				
-				$('#nav > ul > #fallBtn').bind('click', function(){
-					
-				});
-				
-				$('#nav > ul > #winterBtn').bind('click', function(){
-					
-				});
-			});
+
+				var imgurl = ['spring.jpg','summer.jpg','fall.jpg','winter.jpg']
+				var url = 'images/'
+
+				$('#nav>ul>li').click(function(){    // #nav ul li 를 클릭하면 실행해
+
+					var idx = $(this).index();  // this (#nav>ul>li) 에 반환된 값 을 idx 라고 정의한다.
+					// console.log(idx) 의 각 li 를 누르면 0 1 2 3 이 찍힌다.
+					$('#image img').attr('src',url+imgurl[idx])
+				})
+
+			})
+
+
 		</script>
 	</head>
-	
+
 	<body>
 	<div id="wrapper">
 		<div id="nav">

@@ -13,11 +13,14 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				var first = $('#wrapper #el').css('color','red')
+				// 먼저 #wrapper #el 를 찾아 색을 바꾼것을 first 라고 정의하고
+				first.find('#nextEl').css('color','blue')
+				//그 first 라고 정의한것에서 #nextEl를 찾아서 색을 바꿔라
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>find() 메서드를 사용하여 id가 "el"인 엘리먼트를 찾아 색을 바꾸고 그안에 아이디가 "nextEl"인 엘리먼트를 찾아 색을 바꿔주세요.</span>
 		<div id="wrapper">

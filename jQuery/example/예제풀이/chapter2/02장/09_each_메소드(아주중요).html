@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>09_each_메소드.html</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			#wrapper > ul > li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrapper > ul > li > ul > li  { margin:5px; list-style: none; border: 1px solid blue; }
+		</style>
+		<script>
+			// $(document).ready(function(){
+			//
+			// 	$('#wrap li').each(function(){  // for 문과 같은 반복문이다.
+			// 		// each 는 각각의 (i) 의 i 값은 변수를 불러오고 싶을때.현재 상태에선 안써도 무방
+			// 		console.log($(this).text())  // this (#wrapper li) 이것 의 텍스트를 선택
+			// 	})
+			//
+			// })
+
+			// 위에 것을 자바스크립트로 쓴다면..
+
+			$(document).ready(function(){
+				for(i = 0; i < $('#wrap li').size(); i++){  // $('#wrapper li') 라는 녀석의 length
+				var el = $('#wrap li').eq(i).text()
+				// var el = $('#wrap li:eq('+i+')').text()  // +i+ 의 이유는 변수 i 를 문자로 만들어 주기 위함.
+				// '#wrap li:eq(' 라는 문자 +i+ 로 변수를 더하고 ')' 가 문자이기 때문에
+					console.log(el)
+				}
+			})
+
+		</script>
+	</head>
+
+	<body>
+		<span>each() 메소드를 사용하여 ul엘리먼트 자식엘리먼트를 순환하여 모두 색을 바꿔 주세요.</span>
+		<div id="wrap">
+			<ul>
+				<li>element01</li>
+				<li>element02</li>
+				<li>element03</li>
+				<li>element04</li>
+				<li>element05</li>
+				<li>element06</li>
+			</ul>
+		</div>
+	</body>
+</html>

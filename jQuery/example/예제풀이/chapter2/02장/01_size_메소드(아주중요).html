@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>04_index_method</title>
+		<title>01_size_method</title>
 		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 		<style>
 			html * { margin:0; padding:0; }
@@ -12,22 +12,20 @@
 			#wrapper > ul > li { margin:5px; list-style: none; border: 1px solid green; }
 		</style>
 		<script>
-			$(document).ready(function(){
-				var el = $('#wrapper #el');
-				var i = el.index();
-				alert(i);
-			});
+		    $(document).ready(function(){
+				var len = $('#wrapper > ul > li').size();  // 자바스크립트의 length 개념
+				alert(len);  // 전체적인 값 을 보기 때문에 갯수가 6개이기 때문에 6이라 나온다. 이것도 0이 아닌 1부터 인식
+		    });
 		</script>
 	</head>
-	
 	<body>
-		<span>ul의 자식 엘리먼트중 네번째 엘리먼트를 index() 메서드로 해당 index값을 alert()을 띄워 봅시다.</span>
+		<span>size() 메서드로 ul의 자식 엘리먼트의 갯수 세어보기</span>
 		<div id="wrapper">
 			<ul>
 				<li>1</li>
 				<li>2</li>
 				<li>3</li>
-				<li id="el">4 ( 여긴 몇번째 index일까요?? )</li>
+				<li>4</li>
 				<li>5</li>
 				<li>6</li>
 			</ul>

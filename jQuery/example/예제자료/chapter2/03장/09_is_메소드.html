@@ -13,11 +13,17 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				var el = $('#el>ul>li').is('#nextEl')
+				// #el>ul>li 안에 #nextEl 값을 변수 el 로 정의하고
+				if(el){   // el 이 true 값이면
+                    alert("있음")
+				}else {   // 그게 아니면
+					alert("없음")
+				}
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>is() 메서드를 사용하여 id가 "el"인 엘리먼트의 확장집합중 id가 "nextEl"인 엘리먼트가 존재하는지 체크하고 존재한다면 alert창을 띄워주세요.</span>
 		<div id="wrapper">

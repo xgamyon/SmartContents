@@ -13,11 +13,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				var el = $('#wrapper #el').index()
+				console.log(el)   // 0 1 2 3 번째에 있는 녀석을 선택해야 하니 결과값을 3으로 보여준다.
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>ul의 자식 엘리먼트중 네번째 엘리먼트를 index() 메서드로 해당 index값을 alert()을 띄워 봅시다.</span>
 		<div id="wrapper">

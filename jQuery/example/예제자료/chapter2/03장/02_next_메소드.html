@@ -13,11 +13,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				$('#wrapper ul>.first').next().css('color','red')
+				// .first 인 녀석의 다음 녀석 이기 때문에 2를 선택한다.
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>next() 메소드를 사용하여 1번 엘리먼트의 바로 다음 형제 엘리먼트의 글자색을 변경해 주세요.</span>
 		<div id="wrapper">

@@ -13,11 +13,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				$('#childEl').parents('.parentEl').css('color','red')
+				// #childEl 의 조상인 .parentEl 를
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>parents() 메서드를 사용하여 id가 "childEl"인 엘리먼트의 조상 엘리먼트중 id가 "parentEl"인 엘리먼트를 찾아 색을 바꿔 주세요.</span>
 	<div id="wrapper">

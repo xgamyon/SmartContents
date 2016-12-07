@@ -13,11 +13,13 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				var el = $('#wrapper li')
+				el.first().css('color','red')
+				el.last().css('color','blue')
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>first() 메서드로 ul의 자식 엘리먼트중 첫번째 엘리먼트와 last() 메서드로 마지막 엘리먼트의 색을 바꿔 주세요.</span>
 		<div id="wrapper">

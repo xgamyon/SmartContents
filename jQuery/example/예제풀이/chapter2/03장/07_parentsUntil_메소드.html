@@ -14,10 +14,11 @@
 		<script>
 			$(document).ready(function(){
 				$('#wrapper #childEl').parentsUntil('#wrapper #parentEl').css('color','red');
+				// #childEl 에서부터  부모격인 #wrapper #parentEl 까지
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>parentsUntil() 메서드를 사용하여 id가 "childEl"인 엘리먼트의 조상 엘리먼트중 id가 "parentEl"인 엘리먼트의 전엘리먼트의 색을 바꿔주세요.</span>
 		<div id="wrapper">

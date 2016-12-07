@@ -13,11 +13,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				$('#wrapper ul>.first').nextUntil('.end').css('color','red')
+				// .first 다음녀석부터 .end 전까지의 녀석들,  고로 값은 2 3 4
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>nextUntil() 메서드를 사용하여 1번의 형제 엘리먼트중 5번전까지의 형제 엘리먼트 모두에 컬러를 바꿔주세요.</span>
 		<div id="wrapper">
