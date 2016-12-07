@@ -13,25 +13,25 @@
 			#wrapper > ul > li > ul > li  { margin:5px; list-style: none; border: 1px solid blue; }
 		</style>
 		<script>
-			// $(document).ready(function(){
-			//
-			// 	$('#wrap li').each(function(){  // for 문과 같은 반복문이다.
-			// 		// each 는 각각의 (i) 의 i 값은 변수를 불러오고 싶을때.현재 상태에선 안써도 무방
-			// 		console.log($(this).text())  // this (#wrapper li) 이것 의 텍스트를 선택
-			// 	})
-			//
-			// })
+			$(document).ready(function(){
+
+				$('#wrap li').each(function(){  // for 문과 같은 반복문이다.
+					// each 는 각각의 (i) 의 i 값은 변수를 불러오고 싶을때.현재 상태에선 안써도 무방
+					console.log($(this).text())  // this (#wrapper li) 이것 의 텍스트를 선택
+				})
+
+			})
 
 			// 위에 것을 자바스크립트로 쓴다면..
 
-			$(document).ready(function(){
-				for(i = 0; i < $('#wrap li').size(); i++){  // $('#wrapper li') 라는 녀석의 length
-				var el = $('#wrap li').eq(i).text()
-				// var el = $('#wrap li:eq('+i+')').text()  // +i+ 의 이유는 변수 i 를 문자로 만들어 주기 위함.
-				// '#wrap li:eq(' 라는 문자 +i+ 로 변수를 더하고 ')' 가 문자이기 때문에
-					console.log(el)
-				}
-			})
+			// $(document).ready(function(){
+			// 	for(i = 0; i < $('#wrap li').size(); i++){  // $('#wrapper li') 라는 녀석의 length
+			// 	var el = $('#wrap li').eq(i).text()
+			// 	// var el = $('#wrap li:eq('+i+')').text()  // +i+ 의 이유는 변수 i 를 문자로 만들어 주기 위함.
+			// 	// '#wrap li:eq(' 라는 문자 +i+ 로 변수를 더하고 ')' 가 문자이기 때문에
+			// 		console.log(el)
+			// 	}
+			// })
 
 		</script>
 	</head>
