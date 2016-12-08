@@ -103,9 +103,35 @@
                         'left':0
                     })
                 }
+            })
 
+/////////////////////////////////////////////////////////////////////////////
+
+
+            $('.prev').click(function(){
+
+                $('.slide .view ul li')
+                .eq(idx)
+                .find('div')
+                .animate({
+                    'left': move
+                })
+                .parent()
+                .prev()
+                .find('div')
+                .css({
+                    'display':'block',
+                    'left': -move
+                })
+                .stop()
+                .animate({
+                    'left':0
+                })
+
+                idx --
 
             })
+
         })
 
 

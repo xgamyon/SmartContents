@@ -25,20 +25,20 @@
     </style>
 
     <script>
-        $(function(){
+        $(function(){    // $(document).ready(function(){  }) 와 같음
 
-            var move = $('.slide').width()// 이동값
+            var move = $('.slide').width()// 이동값 (.slide의 width 값 500px)
             var idx = 0; // 초기값
 
-            $('.next').click(function(){
+            $('.next').click(function(){  // .next 클래스를 클릭하면 실행해
 
                $('.slide .view ul li')// 슬라이드 안에 뷰 안에 유엘 안에 엘아이 선택해
                .eq(idx)//엘아이 중에 idx 번째 해당하는 놈
                .find('div')//의 자식 div
                .animate({//움직임줘
-                   left:-move//왼쪽으로 슬라이드 위드값 만큼 이동해
+                   'left':-move//왼쪽으로 슬라이드 위드값(500px) 만큼 이동해
                })
-               .parent()//부모로 올라와
+               .parent()//부모로 올라와 (ul)
                .next()//그다음놈
                .find('div')//의 자식
                .css({//한테  스타일줘
