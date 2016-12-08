@@ -18,28 +18,65 @@
 			#input input { float:left; margin-right:5px; }
 		</style>
 		<script>
+			// $(document).ready(function(){
+			// 	var input = $('#input');
+			// 	var select = input.children('.css_prop');
+			// 	var inputText = input.children('.css_prop_value');
+			// 	var button = input.children('.button');
+			// 	var contents = $('#el');
+			//
+			// 	select.change(function(){
+			// 		var cssTypeName = $(this).val();
+			// 		if(cssTypeName != ''){
+			// 			inputText.val(contents.css(cssTypeName));
+			// 		}
+			// 	});
+			//
+			// 	button.click(function(){
+			// 		var cssTypeName = select.val();
+			// 		contents.css(cssTypeName, inputText.val());
+			// 	});
+			// });
+
 			$(document).ready(function(){
-				var input = $('#input');
-				var select = input.children('.css_prop');
-				var inputText = input.children('.css_prop_value');
-				var button = input.children('.button');
-				var contents = $('#el');
-				
-				select.change(function(){
-					var cssTypeName = $(this).val();
-					if(cssTypeName != ''){
-						inputText.val(contents.css(cssTypeName));
-					}
-				});
-				
-				button.click(function(){
-					var cssTypeName = select.val();
-					contents.css(cssTypeName, inputText.val());
-				});
-			});
+
+
+				var prop_val;   //글로벌로 쓰기 위해서 밖으로 빼냄.
+
+				//선택박스 이벤트
+				var selectEvent = function(){
+					prop_val = $(this).val();  // 이곳의 값(value)을 가져와.
+					// this 는 select.css_prop 이것이 된다. 밑에서 불러왔기 때문에
+					var css_val = $('#el').css(prop_val)  // #el에 있는 css(prop_val)를 가져와
+					$('.css_prop_value').val(css_val)  // 텍스트박스에 있는 값(el에 있는 값)을 가져와
+					// $('.css_prop_value').attr('value', css_val)      // 이렇게 써도 무방 attr('속성', 값)
+				}
+
+				// 클릭이벤트 (적용버튼)정의
+				var comfirm = function(){
+					var css_val = $('.css_prop_value').val();
+					// console.log(css_val)
+					// 이곳의 css_val 는 글로벌이 아닌 지역변수 이기 때문에 위의 css_val 과 아무 상관이 없다.
+					$('#el').css(prop_val,css_val);  //#el 에 css 속성,값을 넣어라
+				}
+
+				//이벤트 실행
+				$('select.css_prop').change(selectEvent)
+				// css_prop의 셀렉트 박스를 텍스트박스의 값으로 바꿔라.
+				$('.button').click(comfirm);
+				// .button 를 클릭하면 comfirm 이 실행된다.
+
+
+
+
+
+
+			})
+
+
 		</script>
 	</head>
-	
+
 	<body>
 		<div id="wrapper">
 			<div id="controller">

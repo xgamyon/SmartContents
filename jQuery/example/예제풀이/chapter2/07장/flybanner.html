@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fly banner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            var $wrap = $('.wrap')  /* 창 전체(wrap이라는 class를 가진 녀석을 선택한것)를 $wrap 으로 정의 ($는 알아보기 쉬우라고..) */
+
+            $(window).resize(function(){   /* window 창 사이즈를 조절하면 실행해 */
+                $('.fly').css('left', $wrap.offset().left + $wrap.width() + 10) /* css("속성", 값)
+                /* fly 에 css 는 css의 left를 쓰겟다고 정의하고
+                   $wrap.offset().left 는 .wrap을 윈도우창 왼쪽에서부터 위치값을 정해주기 위해서..   더하기
+                   $wrap.width() + 10  은 .wrap의 width값(800px) + 10px 을 한 수치 */
+            })
+            $(window).scroll(function(){  /* window 를 스크롤 하면 실행해 */
+                $('.fly').stop().animate({
+                    /* .fly 를 애니메이션 하면.. stop()은 animate 가 실행되면서 그 위치까지 오는 모든값을
+                       계산해서 끊어서 내려오기 때문에 맨 마지막 값만 인식하게 하기 위해서 */
+                    top: $(this).scrollTop() + 20  /* css 처럼 top 값을 준것 (.fly를 스크롤 하면 ) + 20은 px */
+                }, 1000) /* 1000ms 라서 1s 를 뜻한다. 1초동안.. */
+                /* animate는 css 처럼 {}(객체)형식으로 들어간다. */
+            })
+            $(window).trigger('resize');
+            /* 문서가 시작하자마자 실행해주기 위해서 ( resize 는 한번 움직여 줘야 값이 실행하기 때문에)
+               문서가 준비되면 실행하면서 바로 실행되면서 resize 를 한번 실행시킨다. */
+        })
+    </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            margin: 0 auto;
+            width: 800px;
+            height: 2000px;
+            border: 1px #f00 solid;
+        }
+        .fly{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 80px;
+            height: 200px;
+            border: 1px #f00 solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap"></div>
+    <div class="fly"></div>
+</body>
+</html>

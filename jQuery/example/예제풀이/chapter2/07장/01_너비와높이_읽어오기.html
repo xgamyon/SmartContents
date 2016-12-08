@@ -15,20 +15,25 @@
 		<script>
 			$(document).ready(function(){
 				var box = $('#wrapper');
-				$(window).resize(function(){
-					$('#width').text(box.width());
+
+				$(window).resize(function(){    // 창의 이벤트가 변할때. 박스가 변할때.
+					// $('#wrapper').text(box.width())
+					$('#width').text(box.width()); // id width에다가  id wrapper의 width값을 불러와서 text로 적어라.
 					$('#height').text(box.height());
 					$('#innerWidth').text(box.innerWidth());
 					$('#innerHeight').text(box.innerHeight());
 					$('#outerWidth').text(box.outerWidth(true));
 					$('#outerHeight').text(box.outerHeight(true));
 				});
-				
+
 				$(window).trigger('resize');
+				// trigger  방아쇠 (윈도우에 걸려있는 이벤트 중에 resize 가 걸려있는 이벤트를 지가 실행한다.)
+				// $(window).resize();   와 같음
+				// 이렇게 쏴주지 않으면 창이 처음 열였을경우 0 의 값이기 떄문에 시작부터 값을 시작하기 위해 서 한번 실행해줘야한다.
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<span>브라우저 창의 크기를 변경해 보고 박스의 크기가 각 메서드에 따라 어떻게 다른지 확인해 보세요.</span>
 		<div id="wrapper">

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fly banner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+
+      //1안
+        // $('.menu a').click(function(){
+        //   var idx = $(this).index();
+        //   var move = $('.wrap div').eq(idx).offset().top;
+        //   // var move = $('.wrap div:eq('+idx+')').offset().top;  이렇게 써도 무방함!!
+        //   $('body,html').animate({
+        //      scrollTop:move
+        //   })
+        // })
+
+
+        //2안
+        var a = [];
+        $('.wrap div').each(function(){
+          a.push($(this).offset().top)
+        })
+
+        $('.menu a').click(function(){
+          var idx = $(this).index();
+          $('body,html').animate({
+            scrollTop:a[idx]
+          })
+
+        })
+    })
+
+    </script>
+
+    <style>
+      .wrap div{
+          height:700px;
+          border:1px #F00 solid;
+      }
+      .menu{
+          height:50px;
+          background:#000;
+          position:fixed;
+          top:0;
+          left:0;
+          width:100%;
+      }
+      .menu a{
+          color:#FFF;
+          font-size:20px;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="javascript:void(0)">menu1</a>  <!--javascript:void(0) 링크 기능을 막아버림 -->
+        <a href="javascript:void(0)">menu2</a>
+        <a href="javascript:void(0)">menu3</a>
+        <a href="javascript:void(0)">menu4</a>
+        <a href="javascript:void(0)">menu5</a>
+    </div>
+    <div class="wrap">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+</body>
+</html>

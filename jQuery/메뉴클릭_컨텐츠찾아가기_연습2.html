@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            var a = []
+
+            $('.wrap div').each(function(){  // each 문으로 반복문
+                a.push($(this).offset().top);  // a 에다가 wrap안의 div에 top 위치값을 담아라.
+            })
+            console.log(a)   // 각 div 의 위치값이 나온다.
+
+            $('.menu a').click(function(){
+                var idx = $(this).index();  // 0 1 2 3 4 를 말한다.
+                $('body,html').animate({
+                    scrollTop:a[idx]
+                    // 스크롤하면 Top 위치에 a 의 위치들을 메뉴 0 1 2 3 4 에 맞게 이동
+                })
+                console.log(a[idx]) 
+            })
+        })
+
+
+    </script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .menu{
+        height: 60px;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .menu a{
+        color: #fff;
+        font-size: 18px;
+    }
+    .wrap div{
+        height: 700px;
+        border: 1px #f00 solid;
+    }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="javascript:void(0)">menu1</a>
+        <a href="javascript:void(0)">menu2</a>
+        <a href="javascript:void(0)">menu3</a>
+        <a href="javascript:void(0)">menu4</a>
+        <a href="javascript:void(0)">menu5</a>
+    </div>
+    <div class="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+</html>
