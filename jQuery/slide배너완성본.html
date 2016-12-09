@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+
+        *{margin:0; padding:0;}
+        ul{list-style:none;}
+
+        .slide{border:1px #F00 solid; width:600px; height:300px; margin:0 auto; position:relative;}
+        .slide button{position:absolute; top:50%;width:30px; height:40px;}
+        .slide button.next{right:-50px;}
+        .slide button.prev{left:-50px;}
+        .slide .view{text-align:center; position:relative;  height:300px; overflow:hidden;}
+        .slide li {display:inline-block;}
+        .slide li.on a{background-color: #F00;}
+        .slide li a{position:relative; top:250px; z-index:1; display:block; width:20px; height:20px; line-height:20px; border:1px #FFF solid; color:#FFF; text-decoration:none;}
+        .slide li:first-child div{display:block; }
+        .slide li div{position:absolute; width:100%;left:0; top:0; display:none;}
+        .slide li div img{width:100%;}
+     </style>
+
+     <script>
+
+
+         $(function(){
+
+             var idx = 0;
+
+            // 마우스 들어왔다 나갓다 정지시키기
+             var inters = setInterval(function(){   // setInterval(호출함수)를 function(실행해) = 고로 click 함수가 실행된다.
+                 $('.next').trigger('click');       // $('.next').click()  으로 써도 무방 ,  trigger 는 강제로 실행
+             },3000); // 3초
+
+             $('.view').mouseenter(function(){      // 마우스가 .view 영역에 들어왔을때
+
+                 clearInterval(inters)              // 호출함수를 실행하라고 정의한(inters) 것을 멈춰라
+
+             }).mouseleave(function(){              // 마우스가 .view 영역에서 나갔을때
+
+                inters = setInterval(function(){    // 다시 3초동안 실행
+                 $('.next').trigger('click');       // $('.next').click()
+                 },3000);
+
+
+             })
+              // 정의 해줌
+             function movement(start,end,i){
+                 // 이름 있는 함수이기 때문에 어디서든 호출해서 쓸수 있다. 함수를 한번에 움직일때 쓴다. movement(위치값,위치값,위치값, .....)
+                 // 번외로 익명함수는 var movement = function(){   }      이것은 변수에 함수를 정해준것이기 때문에 상단에 위치 해야한다.
+                $('.view li').eq(i).addClass('on').find('div').css({     // 번째 li의 클래스를 on 시키고 그 자식 div 안에 css 를 준다.
+                    'left':start,      // 왼쪽으로 start 만큼
+                    'display':'block'  // display:none 이기 때문에 보여지게 하기 위해서.
+                }).stop().animate({    // 애니메이션의 움직임상 stop()을 주고 애니메이션을 준다.
+                    'left':end         // 왼쪽으로 end 만큼
+                }).parent().siblings().removeClass();   // 그 부모(li)의 형제들(siblings, 부모의 li가 아닌 형제관계인 모든 li)의 클래스를 지워라.
+
+                if(idx == $('.view li').length){   // 만약 idx가 li 의 length( 1 2 3 4만큼)인 4이면
+                    idx = 0    // idx 를 0 으로 만들고 (슬라이드 배너가 이미지를 넘어가니깐 다시 0으로)
+                    movement('100%',0,idx)    // 정의해준 start,end,i 값의 위치인  movement('100%',0,idx) 왼쪽에서 와야하니깐 왼쪽으로 width 만큼 100% 위치에 있다가 보여지는 0 값이고 위치값은 0
+                }else if(idx < 0){        // 그렇지 않으면 만약 위치값(idx) 이 0 보다 작으면 (이전 버튼으로 0 보다 작은 위치일 경우)
+                    idx = $('.view li').length -1;  // length 가 1 2 3 4개의 버튼이 있으니 위치값인 0 1 2 3 번째 위치가 되어야 하니깐 length 4 에서 -1 을 해주는것.
+                    movement('-100%',0,idx) // 움직임을(왼쪽으로 width 만큼 위치, 보여지는 0 위치로, idx는 -되는 수치)
+                }
+             }
+
+              // 정의해준것으로 응용
+             $('.next').click(function(){  // .next 를 클릭하면 실행해
+                  console.log(idx)
+                movement(0,'-100%',idx);   // 움직임 (보여지는 위치 0, 왼쪽으로 -100%값, length 값)
+                idx++                      // length 값을 증가시키고
+                movement('100%',0,idx);    // 움직임 (100% 오른쪽으로 가있는 녀석을, 보이지는 위치로 이동, length 값)
+             })
+
+             $('.prev').click(function(){  // .prev 를 클릭하면 실행해
+                movement(0,'100%',idx);    // 움직임 (보여지는 위치 0, 왼쪽으로 100%값, length -1한 값)
+                idx--                      // length 값을 감소시키고
+                movement('-100%',0,idx);   // 움직임 (왼쪽으로 -100%값, 보여지는 위치 0, length -1한 값)
+             })
+
+
+            // a 를 클릭시 이벤트
+            $('.view li a').click(function(){           // a 를 클릭하면 실행해
+                var hinum = $('.view li.on').index();   // .on의 li 위치값(.index())을 history number 로 정의(hinum)
+                idx = $(this).parent().index()          // 내가 누른a li의 위치값   =  내가 누른 li
+
+                if(hinum < idx){     // .on의 위치값이 내가 누른 위치값 보다  작으면
+                    movement(0,'-100%',hinum);  // 원래 위치에서 왼쪽으로 with 값만큼 이동된 곳, .on의 위치값
+                    movement('100%',0,idx);     // 오른쪽으로 width 값 만큼 옆에서 보이는곳으로 이동, 내가 누른 a 의 위치값
+                    // 이미지가  <- 방향으로 흐름
+                }else if(hinum > idx){
+                    movement(0,'100%',hinum);
+                    movement('-100%',0,idx);
+                    // 이미지가  -> 방향으로 흐름
+                }
+
+                return false;   // javascriptvoid(0) 와 같은 개념 ,   여기서 리턴하지말고 끝내
+            })
+
+         })
+
+
+     </script>
+
+
+
+
+
+
+</head>
+<body>
+
+    <div class="slide">
+        <div class="btngroup">
+                <button class="next">다음</button>
+                <button class="prev">이전</button>
+        </div>
+
+        <div class="view">
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <div><img src="../img/a.jpg"></div>
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <div><img src="../img/b.jpg"></div>
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <div><img src="../img/c.jpg"></div>
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <div><img src="../img/d.jpg"></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
