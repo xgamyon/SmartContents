@@ -84,7 +84,7 @@
             // a 를 클릭시 이벤트
             $('.view li a').click(function(){           // a 를 클릭하면 실행해
                 var hinum = $('.view li.on').index();   // .on의 li 위치값(.index())을 history number 로 정의(hinum)
-                idx = $(this).parent().index()          // 내가 누른a li의 위치값   =  내가 누른 li
+                idx = $(this).parent().index()          // 내가 누른a 부모(li)의 위치값   =  내가 누른 li
 
                 if(hinum < idx){     // .on의 위치값이 내가 누른 위치값 보다  작으면
                     movement(0,'-100%',hinum);  // 원래 위치에서 왼쪽으로 with 값만큼 이동된 곳, .on의 위치값

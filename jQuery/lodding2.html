@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        // 이렇게 하는건 팝업을 따로 쓸때 외에는 잘 쓰지 않는다.
+        $( "#result" ).load( "loadslide.html #slide");
+        /* 안에 html body 등등이 다 들어있으면 그놈들을 다 불러온다.
+           그래서 그것만 따로 파일로 두거나 그 해당하는 부분만 뒤에 붙여주면 그부분만 불러온다. */
+         // ** 웹서버에서만 구동됨!!
+
+         $('#result').on('click','.next',function(){   // .on 은 없는 엘리먼트를 찾아서 실행시키는 역할!!! ,이벤트를 넣겠다는 뜻
+                     // #result를 타고 안에 있는 것을 클릭하면 다음 녀석들을 실행해
+            console.log('aaa')
+
+        })
+     })
+
+    </script>
+
+
+
+    <style type="text/css">
+
+        *{margin:0; padding:0;}
+        ul{list-style:none;}
+
+        .slide{border:1px #F00 solid; width:600px; height:300px; margin:0 auto; position:relative;}
+        .slide button{position:absolute; top:50%;width:30px; height:40px;}
+        .slide button.next{left:-50px;}
+        .slide button.prev{right:-50px;}
+        .slide .view{text-align:center; position:relative;  height:300px; overflow:hidden;}
+        .slide li {display:inline-block;}
+        .slide li.on a{background-color: #F00;}
+        .slide li a{position:relative; top:250px; z-index:1; display:block; width:20px; height:20px; line-height:20px; border:1px #FFF solid; color:#FFF; text-decoration:none;}
+        .slide li:first-child div{display:block; }
+        .slide li div{position:absolute; width:100%;left:0; top:0; display:none;}
+        .slide li div img{width:100%;}
+     </style>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+
+
+
+
+
+</body>
+</html>
