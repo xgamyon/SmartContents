@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+
+        body{
+            font-family: 'Noto Sans KR',sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(../img/a.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;   /* 스크롤 해도 이미지는 고정으로 화면에 존재*/
+        }
+        .gnb{
+            height:100px;
+            width:100%;
+            left:0;
+            top:0;
+            background-color:rgba(0,0,0,0.8);
+            position:fixed;
+        }
+        .contents{width:1000px; height:2000px; background-color:rgba(255,255,255,.8); margin:120px auto 0;}
+    </style>
+    <script type="text/javascript">
+
+        $(function(){
+
+            $(window).scroll(function(){
+
+                var sct = $(this).scrollTop()
+
+                if(sct > $('.gnb').height() && !$('.gnb').is('.mini')){
+                    // gnb height 값이 스크롤 값보다 작거나 , 그리고 gnb가 is(true냐 false냐) mini 클래스가 ! 없으면.
+                    // && !$('.gnb').is('.mini')의 is 는 .gnb 에 .mini가 있느냐 없느냐를 말한다
+                    // && !$('.gnb').is('.mini') 를 안주면 계속 작은 값이기 때문에 계속 실행되는걸 막기 위해서
+                    $('.gnb').animate({
+                        top:-100
+                    },1000,function(){                  // 1000은 1000ms -> 1s
+                        // 에니메이션 종료후
+                        $(this).css({
+                            'bottom':'-100px',
+                            'top':'initial'   // 상속을 끊어버린다.  top:0 이 먹혀 있어서
+                        }).animate({
+                            'bottom':0
+                        },1000,function(){
+                            $(this).animate({
+                                height:50
+                            })
+                        })
+                    })
+
+                    // 위처럼 ~안에 안에 안에 형식으로 쓴 이유가 function을 밖으로 빼서 하면 한방에 다 읽기 때문.
+
+                    $('.gnb').addClass('mini')
+                }else if(sct < $('.gnb').height()){
+                    $('.gnb').removeClass('mini')  // 반복 실행되길 막기 위해서 3줄을 써서 임의의 .mini 를 썻다 지웠다 한것
+
+                }
+
+
+
+            })
+
+
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+    <div class="gnb"></div>
+    <div class="contents"></div>
+
+
+</body>
+</html>

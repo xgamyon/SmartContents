@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        li.on{background-color: #F00; color:#FFF;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    //  $(function(){
+    //
+    //  $('.menu li').click(function(){
+    //      var len = $('.menu li').length
+    //      var idx =  $(this).index()
+    //
+    //      for(i=0; i<len; i++){
+    //          if(i == idx){
+    //             $('.menu li').eq(i).addClass('on')
+    //          }else{
+    //             $('.menu li').eq(i).removeClass('on')
+    //          }
+    //       }
+    //    })
+    //  })
+
+
+    // $(function(){
+    //     $('.menu li').click(function(){
+    //
+    //         var idx = $(this).index()
+    //
+    //         $('.menu li').each(function(i,e){
+    //             $(e).removeClass('on')
+    //
+    //             if(i == idx){
+    //                 $(e).addClass('on')
+    //             }
+    //         })
+    //     })
+    // })
+
+
+
+
+    $(function(){
+        $('.menu li').click(function(){
+            $(this).addClass('on').siblings().removeClass()
+        })
+
+    })
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+
+
+</body>
+</html>

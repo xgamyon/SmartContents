@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        li.on{background-color: #F00; color:#FFF;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+
+
+
+        $(function(){
+
+         $('.menu li').click(function(){
+             $('.menu li').removeClass();
+             $(this).addClass('on')
+         })
+
+         /*
+         $('.menu li').click(function(){
+             $(this).addClass('on').siblings().removeClass()
+             // li 모두에 on 을 해주고 그 나머지 형제들에 remove 시킨다.
+         })
+         */
+
+         /* siblings each 알때     // 선택한 녀석을 제외한 나머지 형제들
+
+         // 결과적으로 싹다 remove 주고 선택된녀석만 add 한것
+         $('.menu li').click(function(){
+
+            var idx=$(this).index()
+
+             $('.menu li').each(function(i,e){   // index , element
+                                     // 몇번쨰 위치인지, 선택된 엘리먼트
+                $(e).removeClass('on');
+
+                if(idx == i){
+                    $(e).addClass('on');
+                }
+
+             })
+         */
+
+
+            /*
+            sibligns each   모를때
+            var len = $('.menu li').length  // 메뉴 전체 값 5
+             var idx = $(this).index();   // 내가 클릭한놈
+
+             for(i=0; i < len; i++){
+
+                 if(idx == i){
+
+                     $('.menu li').eq(i).addClass('on');
+
+                 }else{
+                     $('.menu li').eq(i).removeClass('on');
+                 }
+
+             }
+          })
+         */
+
+
+
+        })
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+
+
+</body>
+</html>
