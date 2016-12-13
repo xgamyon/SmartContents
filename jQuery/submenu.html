@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    .menu{
+        width: 300px;
+        margin: 0 auto;
+        border: 1px #ccc solid;
+    }
+    .menu>ul{
+        margin: 20px;
+        border: 1px #F00 solid;
+    }
+    .menu a{
+        text-decoration: none;
+        color:#000;
+    }
+    .menu ul ul{
+        display: none;
+        border: 1px #F00 solid;
+    }
+
+</style>
+
+<script type="text/javascript">
+
+    // $(function(){   //문서가 준비되면
+    //
+    //     $('.menu>ul>li').hover(function(){    //.menu>ul>li 에 hover 시켰을때 실행해
+    //         $(this).children('ul').stop().slideDown(500)  //이것의 자식ul을 0.5초간격으로 보여줘, stop은 마우스를 계속 가져다 댔을때 반복을 막기위함.
+    //     },function(){       // hover가 아닌 나머지는 다시 가려줘
+    //         $(this).children('ul').stop().slideUp(500)
+    //     })
+    // })
+
+
+        // return false 는 a 태그에 링크가 아예 안먹기 때문에 왠만하면 안쓰는게 좋다.
+
+
+        //   $('.menu > ul > li').click(function(){
+        //       $(this).toggleClass('on')    // .on 이라는 클래스를 생성시켯다 말았다 한다.
+        //   })
+
+
+
+        $(function(){
+            var over = function(){
+                $(this).children('ul').stop().slideDown(function(){
+                    $(this).css({
+                        'background-color':'red'
+                    })
+                })
+            }
+            var out = function(){
+                $(this).children('ul').stop().slideUp()
+            }
+
+            $('.menu > ul > li').hover(over,out)
+        })
+
+
+        // $(function(){
+        //   //문서가 준비되면
+        //   var over = function(){
+        //       $(this).children('ul').stop().slideDown()
+        //   }
+        //   var out = function(){
+        //       $(this).children('ul').stop().slideUp()
+        //   }
+        //
+        //   $('.menu > ul > li').hover(over,out)
+        //
+        // })
+
+
+
+</script>
+
+
+<body>
+
+    <!--show-->
+    <!--hide-->
+    <!--toggle-->
+    <!--fadeIn-->
+    <!--fadeOut-->
+    <!--fadeToggle-->
+    <!--slideDown-->
+    <!--slideUp-->
+    <!--slideToggle-->
+    <!--toggleClass-->
+
+
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="">menu1</a>
+                <ul>
+                    <li><a href="">submenu1</a></li>
+                    <li><a href="">submenu2</a></li>
+                    <li><a href="">submenu3</a></li>
+                    <li><a href="">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu2</a>
+                <ul>
+                    <li><a href="">submenu1</a></li>
+                    <li><a href="">submenu2</a></li>
+                    <li><a href="">submenu3</a></li>
+                    <li><a href="">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu3</a>
+                <ul>
+                    <li><a href="">submenu1</a></li>
+                    <li><a href="">submenu2</a></li>
+                    <li><a href="">submenu3</a></li>
+                    <li><a href="">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu4</a>
+                <ul>
+                    <li><a href="">submenu1</a></li>
+                    <li><a href="">submenu2</a></li>
+                    <li><a href="">submenu3</a></li>
+                    <li><a href="">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu5</a>
+                <ul>
+                    <li><a href="">submenu1</a></li>
+                    <li><a href="">submenu2</a></li>
+                    <li><a href="">submenu3</a></li>
+                    <li><a href="">submenu4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+</body>
+</html>

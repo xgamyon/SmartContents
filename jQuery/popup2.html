@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title></head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            $('.open').click(function(){
+                bl()      // 검은색 백그라운드인 .bl 을 불러오게 호출
+
+                var tg = '.'+$(this).attr('id'); // attr은 속성값을 뽑아온다.
+                // '.' 을 붙여주는 이유는 아이디에 있는 값인 popup1을 가져와서 .popup1 를 말한다.
+                var w = $(tg).width();  // tg라고 뽑은 클래스의 width 값
+                // console.log(w)
+                var h = $(tg).height();
+
+                // $(tg).show().css({
+                //     'left':'50%',
+                //     'top':function(){
+                //         return $(window).scrollTop()+50+'px'
+                //         // 윈도우 창 기준 스크롤한 top 값을 구해서 넣는다.
+                //         // 이러면 버튼의 위치가 밑에 있어도 윈도우창 제일 상단에 뜬다.
+                //     },
+                //     'marginLeft':function(){    // margin-left가 아닌 marginLeft 로 써야한다.
+                //         return '-'+(w/2)+'px'   // 팝업마다 각각 width 값이 다르기 때문에..
+                //         // margin-left 값 안에 변환해서 넣는다. 뽑은 width값 나누기 2해준 값에 - 붙임 ( -100px)
+                //     }
+                // })
+
+                $(tg).show().css({
+                    'left':'50%',
+                    'top':function(){
+                        return $(window).scrollTop()+50+'%'
+                    },
+                    'marginLeft':function(){
+                        return '-'+(w/2)+'px'
+                    },
+                    'marginTop':function(){
+                        return '-'+(h/2)+'px'
+                    }
+                })
+
+
+
+                var close = function(){
+
+                    $('.pop').hide();
+                    $('.bl').fadeOut(function(){       // .bl 이 fadeOut 되고 .bl을 지워라 (소스에서 계속 실행하기 때문에)
+                        $(this).remove();
+                    });
+                }
+
+                $('.close').click(close);  // .close 버튼을 누르면 close를 실행해
+                $('body').on('click','.bl',close)  // body에 .bl을 click 하면 close함수를 실행해
+                // $('body').find('.bl').on('click',close)    // 이게 가능한 이유는 이미 실행 된것을 불러오는것이기 때문에
+                // 이벤트를 다수의 것을 한꺼번에 쓰기 위해서 .on('이벤트','선택요소','함수실행') 또는 .on({이벤트:함수},"선택요소")로 쓸수 있다.
+
+
+
+                function bl(){            // bl 이라는 함수를 만들어준것, 익명함수이기 떄문에 제일 위에 bl() 로 써서 먼저 불러와준다.
+                    $('body').prepend('<div class="bl"></div>')  //body 안에 .prepend( 자식의 첫번째 요소) 에 넣은 값을 쓴다.
+                }
+
+            })
+        })
+
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #ccc;
+        }
+        button.open{    /* 그 밑의 버튼까지 잡기 때문에 .open 으로 확실하게 잡아줌 */
+            margin-top:500px;
+        }
+        .wrap{
+            width: 800px;
+            height:1500px;
+            border: 1px #f00 solid;
+            margin: 50px auto;
+            background-color: #fff;
+        }
+        .pop{
+            background-color: #fff;
+            position: absolute;
+            border: 1px #f00 solid;
+            display: none;
+        }
+        .bl{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba(0,0,0,.8);
+        }
+        .popup1{width:200px; height:300px;}
+        .popup2{width:300px; height:200px;}
+        .popup3{width:500px; height:500px;}
+
+    </style>
+
+
+
+<body>
+    <div class="wrap">
+        <button class="open" id="popup1">팝업 나와1</button>
+        <button class="open" id="popup2">팝업 나와2</button>
+        <button class="open" id="popup3">팝업 나와3</button>
+    </div>
+
+    <div class='pop popup1'>
+        <button class="close">닫기</button>
+        <h1>팝업1</h1>
+    </div>
+    <div class='pop popup2'>
+        <button class="close">닫기</button>
+        <h1>팝업2</h1>
+    </div>
+    <div class='pop popup3'>
+        <button class="close">닫기</button>
+        <h1>팝업3</h1>
+    </div>
+
+</body>
+</html>
