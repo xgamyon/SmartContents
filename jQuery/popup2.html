@@ -15,6 +15,7 @@
                 var w = $(tg).width();  // tg라고 뽑은 클래스의 width 값
                 // console.log(w)
                 var h = $(tg).height();
+                var wh = $(window).height();
 
                 // $(tg).show().css({
                 //     'left':'50%',
@@ -32,13 +33,13 @@
                 $(tg).show().css({
                     'left':'50%',
                     'top':function(){
-                        return $(window).scrollTop()+50+'%'
+                        return $(window).scrollTop()+'px'
                     },
                     'marginLeft':function(){
                         return '-'+(w/2)+'px'
                     },
                     'marginTop':function(){
-                        return '-'+(h/2)+'px'
+                        return (wh/2)-(h/2)+'px'
                     }
                 })
 
