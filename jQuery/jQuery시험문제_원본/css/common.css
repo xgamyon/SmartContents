@@ -8,8 +8,6 @@ header nav ul{list-style-position: inside; list-style: none;}
 header nav li{line-height:150%; border-top:1px #EEE solid; padding:10px 20px; }
 header nav li:first-child{border-top:none;}
 header nav li a{text-decoration: none; color:#000; display: block;}
-header nav li.on a{background-color: red; transition: 1s;}
-header nav li.out a{color:#000; transition: 1s;}
 
 div.content{height:100%;}
 div.content>section{ margin-left:250px; height:100%; overflow:hidden; border-bottom:1px #CCC solid;}
@@ -35,7 +33,7 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .fadebanner li.on a{background:#E8B482}
 .fadebanner li:first-child img{display: block}
 
-.movie-view .view{width:800px; height:442px; margin: 30px  auto 30px;}
+.movie-view .view{width:800px; height:442px; margin: 30px  auto 30px;} 
 .movie-view ul {list-style: none; text-align: center}
 .movie-view ul li{display: inline-block;}
 
