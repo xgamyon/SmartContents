@@ -1,7 +1,10 @@
 $(function(){
     // Hover Menu
-        $('header ul>li').hover(function(){
-            $(this).toggleClass('on');
+        $('header ul>li').mouseenter(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+        })
+        $('header ul>li').mouseleave(function(){
+            $(this).removeClass('on').addClass('out');
         })
 
 
