@@ -8,7 +8,9 @@ header nav ul{list-style-position: inside; list-style: none;}
 header nav li{line-height:150%; border-top:1px #EEE solid; padding:10px 20px; }
 header nav li:first-child{border-top:none;}
 header nav li a{text-decoration: none; color:#000; display: block;}
-header nav li.on a{background-color: red; transition: 1s;}
+header nav li.on{background-color: red; transition: 1s;}
+header nav li.on a{color:#fff; transition: 1s;}
+header nav li.out{transition: 1s;}
 header nav li.out a{color:#000; transition: 1s;}
 
 div.content{height:100%;}
@@ -20,9 +22,11 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .slidebanner{border:1px #F00 solid;  width:500px; height:260px; margin:0 auto; position:relative;}
 .slidebanner ul{ width:500px; height:260px;overflow:hidden;  position:relative; text-align:center; font-size:0}
 .slidebanner li{display: inline-block;}
+
 .slidebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
 .slidebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
-.slidebanner li.on a{background:#E8B482}
+.slidebanner li.on a{background:#E8B482;}
+.slidebanner li.on img{display: block;}
 .slidebanner button{position:absolute; top:0; cursor: pointer}
 .slidebanner button.next{right: 0; top:50%;}
 .slidebanner button.prev{left: 0; top:50%;}
