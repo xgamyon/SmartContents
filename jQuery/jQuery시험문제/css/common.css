@@ -26,7 +26,8 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .slidebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
 .slidebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
 .slidebanner li.on a{background:#E8B482;}
-.slidebanner li.on img{display: block;}
+/*.slidebanner li.on img{display: block;}*/
+.slidebanner li:first-child img{display: block;}
 .slidebanner button{position:absolute; top:0; cursor: pointer}
 .slidebanner button.next{right: 0; top:50%;}
 .slidebanner button.prev{left: 0; top:50%;}
