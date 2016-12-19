@@ -29,11 +29,12 @@
 
              var idx = 0;
 
-            // 마우스 들어왔다 나갓다 정지시키기
+            // 자동으로 3초간 움직임
              var inters = setInterval(function(){   // setInterval(호출함수)를 function(실행해) = 고로 click 함수가 실행된다.
                  $('.next').trigger('click');       // $('.next').click()  으로 써도 무방 ,  trigger 는 강제로 실행
              },3000); // 3초
 
+            // 마우스 들어왔다 나갓다 정지시키기
              $('.view').mouseenter(function(){      // 마우스가 .view 영역에 들어왔을때
 
                  clearInterval(inters)              // 호출함수를 실행하라고 정의한(inters) 것을 멈춰라
