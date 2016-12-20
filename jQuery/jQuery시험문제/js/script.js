@@ -71,6 +71,28 @@ $(function(){
             $('.slidebanner ul li').eq(idx).addClass('on').siblings().removeClass()
         })
 
+        // a 태그 클릭시 이미지 이동
+        $('.slidebanner ul li a').click(function(){
+            var on = $('.slidebanner ul li.on').index();
+            li = $(this).parent().index();
+
+            if(on < li){
+                $('.slidebanner ul li').eq(on).find('img').animate({
+                    'left':-wid
+                }).parent().eq(li)
+                idx ++
+                $('.slidebanner ul li').eq(idx).addClass('on').siblings().removeClass()
+
+            }else if(on > li){
+                $('.slidebanner ul li').eq(on).find('img').animate({
+                    'left':-wid
+                }).parent().eq(li)
+                idx --
+                $('.slidebanner ul li').eq(idx).addClass('on').siblings().removeClass()
+            }
+
+        })
+
 
 
 
