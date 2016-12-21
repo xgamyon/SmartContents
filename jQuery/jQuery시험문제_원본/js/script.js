@@ -70,7 +70,7 @@ var navEvent = { // mouseEvent function
             idx = $(this).index();
             var sot = $('.content section').eq(idx).offset().top;
             $('html,body').stop().animate({
-                scrollTop:sot
+                'scrollTop':sot
             })
             return false;
         }
@@ -249,16 +249,59 @@ var wing = {
 }
 
 // 팝업 이벤트
+
 var popup = {
     event:function(){
-        var pop1 = function(){
-            var target ='.'+$(this).attr('id');
-            $(target).show()
+        var target;
+        var h;
+        var top;
+        var idx;
+        var winh;
+        var open = function(){
+            bl(function(){
+                $(this).fadeTo("slow", 0.33)
+            })
+
+            target ='.'+$(this).attr('id');
+            h = $(target).height();
+            winh = $(window).height();
+            top = $(window).scrollTop()
+
+            $(target).show().css({
+                'top': top-h,
+                'left':'50%'
+            }).stop().animate({
+                'top':top+(winh/2)-(h/2)
+            },500)
+
+            function bl(){
+                $('body').prepend('<div class="bl"></div>')
+            }
         }
 
 
-        $('.btnevent1').on({
-            'click':pop1
+        var close = function(){
+            h = $(target).height();
+            idx= $(this).index();
+            top = $('.h-type .btngroup div').eq(idx).offset().top;
+
+            $('.pop').stop().animate({
+                'top':top-h
+            },500).fadeOut()
+
+            $('.bl').fadeTo("slow", 0, function(){
+                $(this).remove();
+            })
+
+
+        }
+
+
+        $('.btnevent').on({
+            'click':open
+        })
+        $('.close').on({
+            'click':close
         })
     }
 }
