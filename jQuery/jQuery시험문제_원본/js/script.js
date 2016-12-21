@@ -55,20 +55,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var navEvent = { // mouseEvent function
     mouse:function(){
         var over = function(){
@@ -81,8 +67,8 @@ var navEvent = { // mouseEvent function
 
         var idx = 0
         var scroll = function(){
-            navEvent.idx = $(this).index();
-            var sot = $('.content section').eq(navEvent.idx).offset().top;
+            idx = $(this).index();
+            var sot = $('.content section').eq(idx).offset().top;
             $('html,body').stop().animate({
                 scrollTop:sot
             })
@@ -189,13 +175,126 @@ var slide = {
     }
 
 }
+var fadeidx = 1;
+// fade in 배너
+var fade = {
+    event:function(){
+
+        var fadeinout = function(){
+            fadeidx = $(this).parent().index(); // a 의 부모 li
+            $('.fadebanner li').eq(fadeidx).addClass('on').find('img').fadeIn().parent().siblings().removeClass().find('img').fadeOut();
+        }
+
+        // 자동 움직임
+        var inter = setInterval(function(){ // 자동 실행!
+
+            $('.fadebanner li a').eq(fadeidx).click()
+            // console.log(fadeidx)
+            fadeidx++
+            if(fadeidx == $('.fadebanner li').length){
+                fadeidx = 0;
+                $('.fadebanner li').eq(fadeidx).click() // 첫번째 이미지로 돌려줌
+            }
+        },1000)
+
+
+        $('.fadebanner li a').on({
+            'click':fadeinout
+        })
+    }
+}
+
+
+
+// 무비 클릭시 영상 바뀜 (내가짠것)
+// $(function(){
+//     var url = 'https://www.youtube.com/embed/'
+//     var moviecode = ['Uv554B7YHk4','4z4sN05-xIs','1ELGunbuvqc','uBezVQweeUE','q6f-LLM1H6U']
+//     $('.movie-view > ul > li').click(function(){
+//         var idx = $(this).index();
+//         $('.movie-view .view iframe').attr('src',url+moviecode[idx])
+//         return false;
+//     })
+// })
+
+
+// 선생님 방법 무비클릭
+var movie = {
+    event:function(){
+        $('.movie-view li a').click(function(){
+
+            var movecode = $(this).attr('href');
+            var url = "https://www.youtube.com/embed/"+movecode+"?rel=0&amp;controls=0&amp;showinfo=0"
+            $('.movie-view iframe').attr('src',url)
+
+            return false // a 태그 실행 안되게!
+        })
+    }
+}
+
+
+// 윙배너
+var wing = {
+    event:function(){
+        var fly = function(){
+            $('.wing').stop().animate({
+                'top':$(this).scrollTop()
+            },500)
+        }
+
+        $(window).on({
+            'scroll':fly
+        })
+    }
+}
+
+// 팝업 이벤트
+var popup = {
+    event:function(){
+        var pop1 = function(){
+            var target ='.'+$(this).attr('id');
+            $(target).show()
+        }
+
+
+        $('.btnevent1').on({
+            'click':pop1
+        })
+    }
+}
 
 
 
 
 //문서 준비
 $(function(){
-    //mouseEvent
     navEvent.mouse();  // 마우스클릭 색, 클릭 위치값
     slide.event();     // 슬라이드배너
+    fade.event();      // fade 배너
+    movie.event();     // movie 클릭 이미지
+    wing.event();      // 윙배너 따라다니게
+    popup.event();
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////
