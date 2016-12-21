@@ -1,100 +1,101 @@
-$(function(){
-    // Hover Menu
-        $('header ul>li+li').mouseenter(function(){
-            $(this).removeClass('out').addClass('on').siblings().removeClass('on');
-        })
-        $('header ul>li+li').mouseleave(function(){
-            $(this).removeClass('on').addClass('out')
-        })
+//Hover Menu
 
 
-    // ScrollMove Menu
-        $('header ul>li').click(function(){
+var menu = {
+    nav:function(){
+        var over = function(){
+            $(this).css('background','red').children().css('color','#FFF')
+        }
+        var out = function(){
+            $(this).css('background','initial').children().css('color','initial')
+        }
+
+        var scroll = function(){
             var idx = $(this).index();
-            // console.log(idx)
             var top = $('.content section').eq(idx).offset().top;
-            // console.log(top)
-            $('body,html').animate({
+            $('html,body').stop().animate({
                 'scrollTop':top
             })
+        }
 
+        $('nav li').on({
+            'mouseenter': over,
+            'mouseleave': out,
+            'click':scroll
         })
+    }
+}
 
+var idx = 0;
+var slide = {
+    event:function(){
 
-
-    // Slide Banner
         var wid = $('.slidebanner').width();
-        var idx = 0;
 
-        $('.next').click(function(){
-            $('.slidebanner ul li').eq(idx).find('img').animate({
+        var next = function(){
+            $('.slidebanner li').eq(idx).find('img')
+            .animate({
                 'left':-wid
-            }).parent().next().find('img').css({
-                'display':'block',
-                'left':wid
+            }).parent().removeClass().next().addClass('on').find('img').css({
+                'left':wid,
+                'display':'block'
             }).stop().animate({
                 'left':0
             })
-            idx ++
-            if(idx == $('.slidebanner ul li').length){
-                idx = 0
-                $('.slidebanner ul li').eq(idx).find('img').css({
-                    'left':wid
+            idx++
+            if(idx == $('.slidebanner li').length){
+                idx = 0;
+                $('.slidebanner li').eq(idx).addClass('on').find('img').css({
+                    'left':wid,
+                    'display':'block'
                 }).stop().animate({
                     'left':0
                 })
             }
-            //a 태그 이동
-            $('.slidebanner ul li').eq(idx).addClass('on').siblings().removeClass()
-        })
+        }
 
-        $('.prev').click(function(){
-            $('.slidebanner ul li').eq(idx).find('img').animate({
+        var prev = function(){
+            $('.slidebanner li').eq(idx).find('img')
+            .animate({
                 'left':wid
-            }).parent().prev().find('img').css({
-                'display':'block',
-                'left':-wid
+            }).parent().removeClass().prev().addClass('on').find('img').css({
+                'left':-wid,
+                'display':'block'
             }).stop().animate({
                 'left':0
             })
-            idx --
-            if(idx < 0){
-                idx = $('.slidebanner ul li').length-1;
-                $('.slidebanner ul li').eq(idx).find('img').css({
-                    'display':'block',
-                    'left':-wid
+            idx--
+            if(idx < 0 ){
+                idx = $('.slidebanner li').length-1;
+                $('.slidebanner li').eq(idx).addClass('on').find('img').css({
+                    'left':-wid,
+                    'display':'block'
                 }).stop().animate({
                     'left':0
                 })
             }
-            //a 태그 이동
-            $('.slidebanner ul li').eq(idx).addClass('on').siblings().removeClass()
+        }
+
+
+        $('.next').on({
+            'click': next
         })
-
-        // a 태그 클릭시 이미지 이동
-        $('.slidebanner ul li a').click(function(){
-            var on = $('.slidebanner ul li.on').index();
-            li = $(this).parent().index();
-
-            if(on < li){
-                $('.slidebanner ul li').eq(on).find('img').animate({
-                    'left':-wid
-                }).parent().eq(li)
-                idx ++
-                $('.slidebanner ul li').eq(idx).addClass('on').siblings().removeClass()
-
-            }else if(on > li){
-                $('.slidebanner ul li').eq(on).find('img').animate({
-                    'left':-wid
-                }).parent().eq(li)
-                idx --
-                $('.slidebanner ul li').eq(idx).addClass('on').siblings().removeClass()
-            }
-
+        $('.prev').on({
+            'click': prev
         })
+    }
+}
 
 
 
 
 
+
+
+
+
+
+$(function(){
+    menu.nav();
+    slide.event();
 })
