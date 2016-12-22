@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+            /*vertical-align
+
+            -- inline-block /table-cell --
+                top
+                bottom
+                middle
+
+            -- display:inline --
+                text-top
+                text-bottom
+                baseline*/
+
+            body{text-align:center;}
+            .hellocontents{line-height:40px;}
+            .aa{vertical-align:top; border:1px #F00 solid; }
+            .hellocontents span{vertical-align:text-top;}
+            .aa div{display:table-cell; border:1px #F00 solid; vertical-align:bottom;}
+            .aa div:nth-child(1){width:300px; height: 100px;}
+            .aa div:nth-child(2){width:300px;height: 200px;}
+            .aa div:nth-child(3){width:300px;height: 300px;}
+
+    </style>
+</head>
+<body>
+    <div class="hellocontents">hello world hello world <span> hello word</span> hello world</div>
+    <div class="aa">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+
+</body>
+</html>

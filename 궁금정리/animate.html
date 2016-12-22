@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+
+        .box{width:100px; height:100px; background: #000;}
+
+    </style>
+    <script>
+        $(function(){
+           $('.box').animate({
+                marginLeft:'200px',
+                opacity:'0'
+            },{
+                duration:3000,
+                step:function(){
+                    var a = $(this).offset().left
+                    if(a > 100){
+
+                        $(this).stop().animate({  // .stop 으로 위치까지 왔다가 끊어버리고 animate 실행
+                            'marginLeft':0,
+                            opacity:'1'
+
+                        })
+                    }
+
+
+                }
+            })
+
+
+
+
+
+        })
+    </script>
+
+</head>
+<body>
+
+   <div class="box"></div>
+
+</body>
+</html>

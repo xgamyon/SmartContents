@@ -88,7 +88,7 @@ var idx = 0;
 var slide = {
     event:function(){
         var wid = $('.slidebanner').width();
-        $('.next').click(function(){
+        var next = function(){
             $('.slidebanner ul li').eq(idx).find('img').animate({
                 'left':-wid
             }).parent().removeClass().next().addClass('on').find('img').css({
@@ -106,9 +106,9 @@ var slide = {
                     'left':0
                 })
             }
-        })
+        }
 
-        $('.prev').click(function(){
+        var prev = function(){
             $('.slidebanner ul li').eq(idx).find('img').animate({
                 'left':wid
             }).parent().removeClass().prev().addClass('on').find('img').css({
@@ -128,10 +128,10 @@ var slide = {
                 })
             }
 
-        })
+        }
 
         // a 태그 클릭 관련
-        $('.slidebanner li a').click(function(){
+        var slidebanner = function(){
             var hisnum = $('.slidebanner li.on').index();  // .on의 위치
             idx = $(this).parent().index();  //내가 클릭한 li 위치
 
@@ -168,10 +168,40 @@ var slide = {
                     'left':0
                 }).parent().siblings().removeClass()
             }
+        }
 
 
+        //자동으로 움직임
+        var inter = setInterval(function(){ // 자동 실행!
+            $('.next').click();
+        },1000)
+
+
+        //마우스 들어왔다 나갔다
+        var over = function(){
+            clearInterval(inter)
+        }
+        var out = function(){
+            inter = setInterval(function(){
+                $('.next').click();
+            },1000)
+        }
+
+
+
+        $('.next').on({
+            'click':next
         })
-
+        $('.prev').on({
+            'click':prev
+        })
+        $('.slidebanner li a').on({
+            'click':slidebanner
+        })
+        $('.slidebanner').on({
+            'mouseenter':over,
+            'mouseleave':out
+        })
     }
 
 }
@@ -179,7 +209,6 @@ var fadeidx = 1;
 // fade in 배너
 var fade = {
     event:function(){
-
         var fadeinout = function(){
             fadeidx = $(this).parent().index(); // a 의 부모 li
             $('.fadebanner li').eq(fadeidx).addClass('on').find('img').fadeIn().parent().siblings().removeClass().find('img').fadeOut();
@@ -197,10 +226,36 @@ var fade = {
             }
         },1000)
 
+        // 마우스 들어갔다 나왔다 정지
+        var mousein = function(){
+            clearInterval(inter)
+        }
+        var mouseout = function(){
+            inter = setInterval(function(){
+
+                $('.fadebanner li a').eq(fadeidx).click()
+                fadeidx++
+                if(fadeidx == $('.fadebanner li').length){
+                    fadeidx = 0;
+                    $('.fadebanner li').eq(fadeidx).click()
+                }
+            },1000)
+        }
 
         $('.fadebanner li a').on({
             'click':fadeinout
         })
+        $('.fadebanner').on({
+            'mouseenter':mousein,
+            'mouseleave':mouseout
+        })
+
+
+
+
+
+
+
     }
 }
 
@@ -226,6 +281,10 @@ var movie = {
             var movecode = $(this).attr('href');
             var url = "https://www.youtube.com/embed/"+movecode+"?rel=0&amp;controls=0&amp;showinfo=0"
             $('.movie-view iframe').attr('src',url)
+
+            var idx = $(this).parent().index();
+            $('.movie-view li').eq(idx).fadeTo('fast',0.5).siblings().fadeTo('fast',1)
+
 
             return false // a 태그 실행 안되게!
         })
@@ -253,43 +312,49 @@ var wing = {
 var popup = {
     event:function(){
         var target;
+        var w;
         var h;
         var top;
         var idx;
         var winh;
         var open = function(){
-            bl(function(){
-                $(this).fadeTo("slow", 0.33)
-            })
+            bl()
+            $('.blaind').fadeTo("slow", 0.8)
 
             target ='.'+$(this).attr('id');
+            w = $(target).width();
             h = $(target).height();
             winh = $(window).height();
-            top = $(window).scrollTop()
-
+            top = $(window).scrollTop();
+            console.log(w)
             $(target).show().css({
                 'top': top-h,
-                'left':'50%'
+                'left':'50%',
+                'marginLeft':'-'+(w/2)+'px'
             }).stop().animate({
-                'top':top+(winh/2)-(h/2)
+                'top':top+(winh/2)-(h/2),
+                'opacity':1
             },500)
 
             function bl(){
-                $('body').prepend('<div class="bl"></div>')
+                $('body').prepend('<div class="blaind"></div>')
             }
         }
 
 
         var close = function(){
-            h = $(target).height();
-            idx= $(this).index();
-            top = $('.h-type .btngroup div').eq(idx).offset().top;
+
+            h = $(this).parent().height();
+            top = $(window).scrollTop();
+            console.log(top)
+            console.log(h)
 
             $('.pop').stop().animate({
-                'top':top-h
-            },500).fadeOut()
+                'top':top-h,
+                'opacity':0
+            },500)
 
-            $('.bl').fadeTo("slow", 0, function(){
+            $('.blaind').fadeTo("slow", 0, function(){
                 $(this).remove();
             })
 
@@ -303,6 +368,10 @@ var popup = {
         $('.close').on({
             'click':close
         })
+        $('body').on({
+            'click':close
+        },'.blaind')
+        // $('body').on('click','.blaind',close)
     }
 }
 
@@ -316,7 +385,7 @@ $(function(){
     fade.event();      // fade 배너
     movie.event();     // movie 클릭 이미지
     wing.event();      // 윙배너 따라다니게
-    popup.event();
+    popup.event();     // 팝업 이벤트
 })
 
 
