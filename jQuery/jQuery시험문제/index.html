@@ -11,20 +11,20 @@
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-	
+
 <header>
 	<div>
 		<h1>jQuery Test</h1>
 		<nav>
 			<ul>
-				<li><a href="">Description</a></li>
-				<li><a href="">A. Hover Menu</a></li>
-				<li><a href="">B. ScrollMove Menu</a></li>
-				<li><a href="">C. Slide Banner</a></li>
-				<li><a href="">D. Fade Banner</a></li>
-				<li><a href="">E. SNS Move List Gellay</a></li>
-				<li><a href="">F. Wing banner</a></li>
-				<li><a href="">G. Layout Popup</a></li>
+				<li><a href="javascript:void(0)">Description</a></li>
+				<li><a href="javascript:void(0)">A. Hover Menu</a></li>
+				<li><a href="javascript:void(0)">B. ScrollMove Menu</a></li>
+				<li><a href="javascript:void(0)">C. Slide Banner</a></li>
+				<li><a href="javascript:void(0)">D. Fade Banner</a></li>
+				<li><a href="javascript:void(0)">E. SNS Move List Gellay</a></li>
+				<li><a href="javascript:void(0)">F. Wing banner</a></li>
+				<li><a href="javascript:void(0)">G. Layout Popup</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -61,7 +61,7 @@
 			<li>매뉴를 클릭 하면 해당컨텐츠에 맞는 세션으로 스크롤이 이동되게하시오</li>
 			<li>해당컨텐츠로 이동될때 에니메이션으로 바로 이동되게 만드십시오.</li>
 		</ol>
-			
+
 		</div>
 	</section>
 	<section class="d-type">
@@ -83,26 +83,26 @@
 				<li>다음/이전버튼클릭시 번호에 하이라이트가 이동되게하시오</li>
 			</ol>
 			<div class="slidebanner">
-				
+
 				<ul>
-					<li>
-						<a href="">1</a>
+					<li class="on">
+						<a href="javascript:void(0)">1</a>
 						<img src="images/1.jpg" alt="">
 					</li>
 					<li>
-						<a href="">2</a>
+						<a href="javascript:void(0)">2</a>
 						<img src="images/2.jpg" alt="">
 					</li>
 					<li>
-						<a href="">3</a>
+						<a href="javascript:void(0)">3</a>
 						<img src="images/3.jpg" alt="">
 					</li>
 					<li>
-						<a href="">4</a>
+						<a href="javascript:void(0)">4</a>
 						<img src="images/4.jpg" alt="">
 					</li>
 					<li>
-						<a href="">5</a>
+						<a href="javascript:void(0)">5</a>
 						<img src="images/5.jpg" alt="">
 					</li>
 				</ul>
@@ -124,26 +124,26 @@
 			<li>해당번호에 맞게 번호가 이동되게하시오</li>
 		</ol>
 		<div class="fadebanner">
-				
+
 				<ul>
 					<li class="on">
-						<a href="">1</a>
+						<a href="javascript:void(0)">1</a>
 						<img src="images/1.jpg" alt="">
 					</li>
 					<li>
-						<a href="">2</a>
+						<a href="javascript:void(0)">2</a>
 						<img src="images/2.jpg" alt="">
 					</li>
 					<li>
-						<a href="">3</a>
+						<a href="javascript:void(0)">3</a>
 						<img src="images/3.jpg" alt="">
 					</li>
 					<li>
-						<a href="">4</a>
+						<a href="javascript:void(0)">4</a>
 						<img src="images/4.jpg" alt="">
 					</li>
 					<li>
-						<a href="">5</a>
+						<a href="javascript:void(0)">5</a>
 						<img src="images/5.jpg" alt="">
 					</li>
 				</ul>
@@ -161,7 +161,7 @@
 			</ol>
 
 			<div class="movie-view">
-				
+
 				<div class="view">
 					<iframe width="800" height="442" src="https://www.youtube.com/embed/Uv554B7YHk4?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 				</div>
@@ -199,27 +199,32 @@
 			</ol>
 
 			<div class="btngroup">
-				
-					<button class="btnevent1">이벤트1</button>
-					<div class="event1 pop">
-						<h2>이벤트1</h2>
-						<img src="" alt="">
-					</div>
-					<button class="btnevent2">이벤트2</button>
-					<div class="event2 pop">
-						<h2>이벤트1</h2>
-						<img src="" alt="">
-					</div>
-					<button class="btnevent3">이벤트3</button>
-					<div class="event3 pop">
-						<h2>이벤트3</h2>
-						<img src="" alt="">
-					</div>
-					<button class="btnevent4">이벤트4</button>
-					<div class="event4 pop">
-						<h2>이벤트4</h2>
-						<img src="" alt="">
-					</div>
+
+				<button class="btnevent" id="event1">이벤트1</button>
+				<button class="btnevent" id="event2">이벤트2</button>
+				<button class="btnevent" id="event3">이벤트3</button>
+				<button class="btnevent" id="event4">이벤트4</button>
+
+				<div class="event1 pop">
+					<h2>이벤트1</h2>
+					<img src="" alt="">
+					<button class="close">닫기</button>
+				</div>
+				<div class="event2 pop">
+					<h2>이벤트2</h2>
+					<img src="" alt="">
+					<button class="close">닫기</button>
+				</div>
+				<div class="event3 pop">
+					<h2>이벤트3</h2>
+					<img src="" alt="">
+					<button class="close">닫기</button>
+				</div>
+				<div class="event4 pop">
+					<h2>이벤트4</h2>
+					<img src="" alt="">
+					<button class="close">닫기</button>
+				</div>
 
 			</div>
 		</div>
