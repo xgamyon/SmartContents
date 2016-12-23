@@ -141,26 +141,24 @@ var banner = {
         //자동실행
         var idx = 1
         var inter = setInterval(function(){
-            $('.fadebanner li a').eq(idx).click()
+            $('.fadebanner li').eq(idx).children('a').click()
             idx++
             if(idx == $('.fadebanner li').length){
                 idx = 0
-                $('.fadebanner li').eq(idx).click()
             }
-        },4800)
+        },800)
 
         var over = function(){
             clearInterval(inter)
         }
         var out = function(){
             inter = setInterval(function(){
-                $('.fadebanner li a').eq(idx).click()
+                $('.fadebanner li').eq(idx).children('a').click()
                 idx++
                 if(idx == $('.fadebanner li').length){
                     idx = 0
-                    $('.fadebanner li').eq(idx).click()
                 }
-            },4800)
+            },800)
         }
 
 
@@ -183,7 +181,7 @@ var youtobe = {
             // 클릭시 fadeTo 옵션
             var idx = 0
             idx = $(this).parent().index();
-            console.log(idx)
+            // console.log(idx)
             $('.movie-view li').eq(idx).fadeTo('fast',0.5).siblings().fadeTo('fast',1)
 
             return false;
