@@ -1,0 +1,14 @@
+package 값읽기;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) { // main  쓰고 컨트롤 + 스페이스
+		//입력받기
+		Scanner sc = new Sccanner(System.in);
+		int = a;
+		
+		a = sc.nextInt();
+		System.out.printIn();
+	}
+}

@@ -1,0 +1,16 @@
+자바
+
+http://www.oracle.com/kr
+
+1. 자바를 다운받아 설치한다 
+
+
+C:\Program Files\Java\jdk1.8.0_111
+
+2. 환경설정을 한다 
+바탕화면에 컴퓨터 - 마우스 오른쪽 - 속성
+고급시스템설정 -환경변수 
+시스템 변수 - 새로만들기 
+
+변수이름 JAVA_HOME
+변수내용 C:\Program Files\Java\jdk1.8.0_111

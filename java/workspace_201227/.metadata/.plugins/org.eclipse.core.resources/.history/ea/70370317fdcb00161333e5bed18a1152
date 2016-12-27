@@ -1,0 +1,15 @@
+package 변수;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		
+		int a;
+		/* 변수 - 값이 변한다 해서 변수이다.
+		 *       컴퓨터의 메모리에 이름을 붙여놓고 
+		 *       그 이름으로 메모리에 접근하기 위해 사용한다.
+		 */
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package 사각형면적구하기;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		/*
+
+	}
+
+}
