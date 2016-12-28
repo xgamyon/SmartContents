@@ -1,0 +1,23 @@
+package 연습문제;
+
+import java.util.Scanner;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int input;
+		int y = 1000;
+		int km;
+		int m;
+		System.out.print("meter 입력 : ");
+		input = sc.nextInt();	
+		km = x/y;
+		m = x%y;
+
+		System.out.printf("값 : %dKm",km);
+		System.out.printf(" %dm\n",m);
+	}
+
+}

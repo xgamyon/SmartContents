@@ -1,0 +1,15 @@
+package 문자열입출력;
+
+
+public class TestMain {
+	
+	public static void main(String[] args) {
+		String name;
+		String phone;
+		String address;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("이 름 : ");
+	}
+}

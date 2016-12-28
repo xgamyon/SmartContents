@@ -1,0 +1,10 @@
+package 스트링변수;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		//main    ctrl + space
+
+	}
+
+}

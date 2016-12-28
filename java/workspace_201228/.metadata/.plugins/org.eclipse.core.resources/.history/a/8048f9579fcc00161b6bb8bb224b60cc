@@ -1,0 +1,27 @@
+package 문자열입출력;
+
+import java.util.Scanner;
+
+public class TestMain {
+	
+	public static void main(String[] args) {
+		String name;
+		String phone;
+		String address;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("이 름 : ");
+		name = sc.nextLine();
+		System.out.print("전 화 : ");
+		name = sc.nextLine();
+		System.out.print("주 소 : ");
+		name = sc.nextLine();
+		
+		// \t - 탭키,  \n - 줄바꿈 기호
+		System.out.print(name + "\t");
+		System.out.print(phone + "\t");
+		System.out.print(name + "\t");
+						
+	}
+}

@@ -1,0 +1,18 @@
+package 연습문제;
+
+import java.util.Scanner;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int x;
+		System.out.print("meter 입력 : ");
+		x = sc.nextInt();
+
+		System.out.printf("%d\n",x);
+		System.out.printf("%d\n",x);
+	}
+
+}

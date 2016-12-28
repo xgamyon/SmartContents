@@ -1,0 +1,19 @@
+package 사칙연산;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int x, y;
+		
+		System.out.print("정수 1 : ");
+		x = sc.nextInt();
+		
+		System.out.print("정수 2 : ");
+		x = sc.nextInt();
+
+		
+	}
+
+}

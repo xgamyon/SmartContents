@@ -1,0 +1,23 @@
+package 연습문제;
+
+import java.util.Scanner;
+
+public class TestMain2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int km, m, result;
+		
+		System.out.print("km 입력 : ");
+		km = sc.nextInt();
+		
+		System.out.print("m 입력 : ");
+		m = sc.nextInt();
+		
+		result = 
+		
+		System.out.printf("%d %d", result);
+	}
+
+}

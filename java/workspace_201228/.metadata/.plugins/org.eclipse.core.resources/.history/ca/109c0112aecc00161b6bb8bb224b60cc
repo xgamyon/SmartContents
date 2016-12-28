@@ -1,0 +1,36 @@
+
+public class EscapeTest {
+
+	public static void main(String[] args) {
+
+		System.out.println("\"Hello\"");
+		// "" 를 출력하고 싶으면 역슬래쉬를 이용해서 만든다.
+		// \"  -> "를 출력하라
+		System.out.println("역슬래쉬 출력하기 \\");
+		
+		System.out.println("100%");
+		
+		/* 자바 1.5부터 추가된 출력함수가 있음
+		   printf 함수 사용하기
+		   
+		   %d - decimal (10진수)
+		   %s - string (string(문자))
+		   %f - 실수
+		   %lf - double
+		   %x - 6진수 형태로 출력
+		   %o - 8진수 형태로 출력
+		 */
+		System.out.printf("%d %x %o\n", 16, 16, 16);   // \n 은 줄바꿈, ln과 같다.
+		System.out.printf("%d %x %o\n", 15, 15, 15);
+		System.out.printf("%d %s", 23, "문자열");
+		
+		//자릿수 배정이 가능하다.
+		System.out.print(10);
+		System.out.print(20);
+		System.out.println();  // 줄바꿈 하려고..
+		
+		System.out.printf("%d %");
+
+	}
+
+}

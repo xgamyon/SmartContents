@@ -1,0 +1,11 @@
+
+public class EscapeTest {
+
+	public static void main(String[] args) {
+
+		System.out.println("\"Hello\"");
+		// "" 를 출력하고 싶으면 역슬래쉬를 이용해서 만든다.
+
+	}
+
+}

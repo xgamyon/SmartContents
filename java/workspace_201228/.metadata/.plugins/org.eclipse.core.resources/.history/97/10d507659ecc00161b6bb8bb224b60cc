@@ -1,0 +1,13 @@
+package 스트링변수;
+
+
+import java.utill.Scanner;
+
+public class TestMain {
+	//main ctrl + space
+	public static void main(String[] args) {
+
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package 연습문제;
+
+import java.util.Scanner;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int input;
+		int km, meter;
+
+		System.out.print("meter 입력 : ");
+		input = sc.nextInt();	
+		km = input/1000;
+		meter = input%1000;
+
+		System.out.printf("값 : %dKm %dm\n",km,meter);
+	}
+
+}

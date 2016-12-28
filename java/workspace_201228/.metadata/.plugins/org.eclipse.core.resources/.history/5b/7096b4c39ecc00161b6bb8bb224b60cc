@@ -1,0 +1,11 @@
+package 문자열입출력;
+
+
+public class TestMain {
+	
+	public static void main(String[] args) {
+		String name;
+		String phone;
+		String address;
+	}
+}

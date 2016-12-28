@@ -1,0 +1,29 @@
+package 연습문제;
+
+import java.util.Scanner;
+
+public class TestMain {
+
+	/*
+	   1.입력변수 정의
+	   2.출력변수 정의
+	   3.입력
+	   4.계산
+	   5.출력
+	 */
+	public static void main(String[] args) {
+		
+		int input;
+		int km, meter;
+		Scanner sc = new Scanner(System.in); // 변수를 사용하기 전에만 쓰면된다.
+		
+		System.out.print("meter 입력 : ");
+		input = sc.nextInt();
+		
+		km = input / 1000;
+		meter = input % 1000;
+
+		System.out.printf("%d meter 는 %dKm %dm 입니다.",input, km, meter);
+	}
+
+}

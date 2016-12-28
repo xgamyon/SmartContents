@@ -1,0 +1,23 @@
+package 연습문제;
+
+import java.util.Scanner;
+
+public class TestMain2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int x, y;
+		System.out.print("금액 : ");
+		
+		x = sc.nextInt();
+		y = x/10000;
+		z = x/1000;
+		a = x/100;
+		b = x/10;
+		c = x/1;
+		
+		System.out.printf("10000 -> %d장",y);
+	}
+
+}
