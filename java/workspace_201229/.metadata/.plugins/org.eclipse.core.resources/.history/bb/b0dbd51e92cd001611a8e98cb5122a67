@@ -1,0 +1,13 @@
+package 거스름돈구하기;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		/*
+		 * 1.입력 : 거슬러줘야 할 금액
+		 * 2.결과 : 50000원 ~10원 동전 종류의 갯수
+		 */
+
+	}
+
+}

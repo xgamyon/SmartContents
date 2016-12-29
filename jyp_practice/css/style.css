@@ -306,24 +306,84 @@ section .wrap .album-list{
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* gallery 끝 */
+
+
+/* notice 시작 */
+
+section .notice{
+    height: 110px;
+    background-color: #f4f4f4;
+}
+section .notice h2{
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    background-image: url(../image/title-notice.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    font-size: 0;
+    width: 350px;
+    height: 60px;
+}
+section .notice .wrap{
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 70px;
+}
+section .notice .wrap .list table{
+    width: 100%;
+    border-collapse: collapse;
+    /* 테이블 형식의 border를 없앤다.*/
+}
+section .notice .wrap .list table thead{
+  visibility: hidden;
+  border-bottom: 2px #aaa solid;
+}
+section .notice .wrap .list table tr td,
+section .notice .wrap .list table tr th{
+    border-bottom: 1px #ccc solid;
+    background-color: #fcfcfc;
+    padding: 10px 0;
+}
+section .notice .wrap .list table tbody tr td:first-child{
+    text-align: center;
+}
+section .notice .wrap .list table tbody tr td:nth-child(3){
+    text-align: center;
+}
+
+section .notice .wrap .list table tbody tr td[colspan="3"] div{
+    padding: 40px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* notice 끝 */
