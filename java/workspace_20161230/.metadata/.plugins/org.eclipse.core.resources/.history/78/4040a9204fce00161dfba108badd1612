@@ -1,0 +1,7 @@
+package 관계선언자;
+
+public class TestMain {
+	public static void main(String[] args) {
+		
+	}
+}

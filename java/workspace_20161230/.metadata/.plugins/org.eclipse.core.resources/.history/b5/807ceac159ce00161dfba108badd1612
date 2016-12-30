@@ -1,0 +1,36 @@
+package 주급게산하기;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		String name;  // 이름
+		int weekTime; // 근무시간
+		int perPay;   // 시간당 급여액
+		int weekPay;  // 주급
+		int overPay;  // 연장수당 - 근무시간에 40시간 초과분에 대해서 50%를 가산한 금액
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("이름 : ");
+		name = sc.nextLine();
+		
+		System.out.print("근무시간 : ");
+		weekTime = sc.nextInt();
+		
+		System.out.print("시간당 급여액 : ");
+		perPay = sc.nextInt();
+		
+		weekTime *= 5;  // weekTime = weekTime * 5;
+		weekPay = weekTime * perPay;
+		
+		overPay = 0; // 안받는 사람도 있으니까..40시간넘어간 사람만
+		if(weekTime > 40){
+			overPay = (weekTime-40) * perPay/2; // 일한 시간에서 40시간을 뺀 값에 근무시간의 50% 금액을 곱한다.
+		}
+		
+		
+		System.out.println(name + "님의 주급은" + weekPay + "원 입니다.");
+		
+		
+	}
+}

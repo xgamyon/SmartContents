@@ -1,0 +1,9 @@
+package for문예제;
+
+public class TestMain {
+	public static void main(String[] args) {
+		int i;
+		
+		System.out.println("1~10까지 출력");
+	}
+}

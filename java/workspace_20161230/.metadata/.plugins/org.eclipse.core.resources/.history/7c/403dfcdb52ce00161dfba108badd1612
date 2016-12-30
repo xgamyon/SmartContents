@@ -1,0 +1,9 @@
+package 주급게산하기;
+
+public class TestMain {
+	public static void main(String[] args) {
+		string name  // 이름
+		int weeltime // 근무시간
+		
+	}
+}

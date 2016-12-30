@@ -1,0 +1,15 @@
+package ¹®ÀÚ;
+
+public class TestMain {
+	public static void main(String[] args) {
+		System.out.println("A");
+		System.out.println((int) 'A');
+		System.out.println("0");
+		System.out.println((int) '0');
+		
+		int a = 10;
+		System.out.println(a);
+		a = 0x15
+		
+	}
+}

@@ -1,0 +1,8 @@
+package 己利贸府;
+
+public class TestMain {
+	public static void main(String[] args) {
+		String name;
+		int kor, eng, mat;
+	}
+}

@@ -1,0 +1,10 @@
+package 주급게산하기;
+
+public class TestMain {
+	public static void main(String[] args) {
+		String name;  // 이름
+		int weekTime; // 근무시간
+		int perPay;
+		
+	}
+}

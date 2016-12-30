@@ -1,0 +1,16 @@
+package 己利贸府;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		String name;
+		int kor, eng, mat;
+		int total;
+		float svg;
+		Scanner cs = new Scanner(System.in);
+		
+		System.out.print("捞抚 : ");
+		name = sc.nextLine()
+	}
+}

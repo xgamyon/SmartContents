@@ -1,0 +1,13 @@
+package Â¦¼öÈ¦¼öÆÇ´ÜÇÏ±â;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int number;
+		
+		System.out.print(arg0);
+		if(number)
+	}
+}

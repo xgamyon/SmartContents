@@ -1,0 +1,49 @@
+package 수우미양가;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int score;
+		System.out.print("점수 : ");
+		score = sc.nextInt();
+
+		if(score >= 90){
+			System.out.println("수");
+		}else if(score >= 80){
+			System.out.println("우");
+		}else if(score >= 70){
+			System.out.println("미");
+		}else if(score >= 60){
+			System.out.println("양");
+		}else{
+			System.out.println("가");
+		}
+		
+		
+		int switchScore;
+		System.out.print("점수 : ");
+		switchScore = sc.nextInt();
+				
+		switch(switchScore/10){  // int끼리 연산은 int 고 , double 이 포함된 연산은 double 이다. 
+		case 10:
+		case 9:
+			System.out.print("수");
+			break;
+		case 8:
+			System.out.print("우");
+			break;
+		case 7:
+			System.out.print("미");
+			break;
+		case 6:
+			System.out.print("양");
+			break;
+		default:
+			System.out.print("가");
+			break;
+		}
+	}
+}

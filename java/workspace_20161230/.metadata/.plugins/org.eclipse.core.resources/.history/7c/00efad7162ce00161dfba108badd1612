@@ -1,0 +1,20 @@
+package switch예제;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		String season;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("계절 : ");
+		season = sc.nextLine();
+		
+		switch(season){
+		case "여름":
+			System.out.println("냉면,수박,화채");
+			break;
+		
+		}
+	}
+}

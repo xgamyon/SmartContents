@@ -1,0 +1,17 @@
+package 짝수홀수판단하기;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int number;
+		
+		System.out.print("정수 : ");
+		number = sc.nextInt();
+		
+		if(number %2 == 0){
+			Sytem.out.print("");
+		}
+	}
+}

@@ -1,0 +1,7 @@
+package Â¦¼öÈ¦¼öÆÇ´ÜÇÏ±â;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+	}
+}

@@ -1,0 +1,16 @@
+package 주급게산하기;
+
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		String name;  // 이름
+		int weekTime; // 근무시간
+		int perPay;   // 시간당 급여액
+		int weekPay;  // 주급
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+	}
+}

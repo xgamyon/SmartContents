@@ -1,0 +1,22 @@
+package 관계선언자;
+
+public class TestMain {
+	public static void main(String[] args) {
+		int a,b;
+		a=10;
+		b=5;
+		// if 문 하고 관련이 깊다.
+		System.out.println(a>b);
+		System.out.println(a>=b);
+		System.out.println(a<b);
+		System.out.println(a<=b);
+		System.out.println(a==b);
+		System.out.println(a!=b);
+		
+		//논리연산자 && 양쪽 수식의 결과가 모두 true일때 true 값 결과(~이고)
+		System.out.println(a>=15 && a<=10);
+		
+		//논리연산자 || 양쪽 수식의 결과가 둘중 하나라도 true 일때 true(~이거나)
+		System.out.println(a>=15 || a<=10);
+	}
+}
