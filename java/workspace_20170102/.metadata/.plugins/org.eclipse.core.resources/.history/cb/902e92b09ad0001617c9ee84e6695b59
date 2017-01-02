@@ -1,0 +1,14 @@
+package 짝수홀수평균구하기;
+
+public class TestMain {
+	public static void main(String[] args) {
+		int i; // 열번 반복하라고 옆에서 숫자 세주기
+		int number; // 숫자 읽을 변수
+		int even_sum, even_cnt; //짝수합, 짝수개수
+		int odd_sum, odd_cnt; // 홀수합, 홀수개수
+		
+		even
+	
+		
+	}
+}

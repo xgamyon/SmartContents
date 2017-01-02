@@ -148,6 +148,60 @@ footer ul li a i[class^="flaticon-"]::before{
 
 
 
+/* profile 시작 */
+
+section .profile{
+    background-image: url("../image/1.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    border: 1px #f00 solid;
+    height: 100%;
+}
+section .profile h2{
+    text-indent: -9999px;
+    font-size: 0;
+}
+section .profile .wrap .picture{
+    position: absolute;
+    width: 200px;
+    height: 470px;
+    margin-left: 8%;
+    border: 1px #f00 solid;
+}
+section .profile .wrap .picture ul li{
+    display: inline-block;
+}
+section .profile .wrap .picture ul li a{
+    display: block;
+    border: 2px #fff solid;
+    width: 80px;
+    height: 80px;
+}
+section .profile .wrap .picture ul li a img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* profile 끝 */
+
+
 /* discography 시작 */
 
 body.nonebg{
@@ -347,43 +401,36 @@ section .notice .wrap .list table tr th{
     background-color: #fcfcfc;
     padding: 10px 0;
 }
+section .notice .wrap .list table tbody .select td{
+    background-color: #f8f5f2;
+    font-weight: bold;
+    padding: 15px 0;
+}
+section .notice .wrap .list table tbody .select td span{
+    color: #05abf6;
+}
 section .notice .wrap .list table tbody tr td:first-child{
     text-align: center;
+}
+section .notice .wrap .list table tbody tr td:nth-child(2){
+    max-width: 0;
+}
+section .notice .wrap .list table tbody tr td:nth-child(2) span{
+    display:block;
+    max-width: 700px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 section .notice .wrap .list table tbody tr td:nth-child(3){
     text-align: center;
 }
-
+section .notice .wrap .list table tbody tr td[colspan="3"]{
+    background-color: #fff;
+}
 section .notice .wrap .list table tbody tr td[colspan="3"] div{
     padding: 40px;
     text-align: left;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* notice 끝 */

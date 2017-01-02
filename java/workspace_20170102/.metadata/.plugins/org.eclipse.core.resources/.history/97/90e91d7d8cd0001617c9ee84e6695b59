@@ -1,0 +1,18 @@
+
+public class TestMain {
+	public static void main(String[] args) {
+		int i, sum=0;
+		
+		sum=0; // 누적이 되어야 하는 변수값, 반드시 초기화
+		
+		
+		int start = 1;
+		int end = 100;
+		int inc = 1;
+		
+		for(i=start; i<=end; i++){
+			sum = sum + i;
+			System.out.printf("i=%d sum=%d\n", i, sum);
+		}
+	}
+}

@@ -1,0 +1,8 @@
+
+public class TestMain {
+	public static void main(String[] args) {
+		int i, sum=0;
+		
+		sum=0;
+	}
+}

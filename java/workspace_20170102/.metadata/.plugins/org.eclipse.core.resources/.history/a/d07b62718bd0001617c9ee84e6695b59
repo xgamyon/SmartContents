@@ -1,0 +1,12 @@
+
+public class TestMain {
+	public static void main(String[] args) {
+		int i, sum=0;
+		
+		sum=0; // 누적이 되어야 하는 변수값, 반드시 초기화
+		
+		for(i=0; i<10; i++){
+			sum = sum + i;
+		}
+	}
+}
