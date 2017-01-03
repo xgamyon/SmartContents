@@ -1,0 +1,11 @@
+package 자바랜덤값얻기;
+
+import java.util.Random;
+
+public class TestMain {
+	public static void main(String[] args) {
+		Random random = new Random();
+		
+		System.out.println(random.nextInt());
+	}
+}

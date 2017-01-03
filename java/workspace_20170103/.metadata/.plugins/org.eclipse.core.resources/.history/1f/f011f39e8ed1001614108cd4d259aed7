@@ -1,0 +1,16 @@
+package 다차원배열;
+
+public class TestMain {
+	public static void main(String[] args) {
+		// 1. 변수선언
+		final int MAX = 5;
+		
+		int [][]a = new int[MAX][MAX];
+		int i, j, k;
+		
+		k = 1;
+		for(i=0; i<MAX; i++){
+			for(j=0; j=MAX-1)
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package 로또프로그램;
+
+public class TestMain {
+	public static void main(String[] args) {
+		// 상수 = 변수처럼 보이지만 값변환 못하게
+		final int MAX = 6;
+		int []lotto;
+		int i;
+		boolean duplicate; // 중복이냐?
+		int count;
+		Random rand = new Random();
+		
+		
+	}
+}

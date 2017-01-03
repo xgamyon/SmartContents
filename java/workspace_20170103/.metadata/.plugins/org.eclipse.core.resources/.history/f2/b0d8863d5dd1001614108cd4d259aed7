@@ -1,0 +1,10 @@
+package 일차원배열;
+
+public class TestMain {
+	public static void main(String[] args) {
+		int []arr;   // 배열선언
+		
+		arr = new int[5]; // 배열 생성
+		
+	}
+}

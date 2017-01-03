@@ -151,24 +151,48 @@ footer ul li a i[class^="flaticon-"]::before{
 /* profile 시작 */
 section{
     height: 100%;
+    margin-top: -100px;
 }
 section .profile{
     background-image: url("../image/1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-top: -100px;
     height: 100%;
 }
 section .profile h2{
     text-indent: -9999px;
     font-size: 0;
 }
+section .profile .wrap{
+    position: relative;
+    top: 0;
+    height: 100%;
+}
+section .profile .wrap .prev,
+section .profile .wrap .next{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    opacity:0.5;
+
+}
+section .profile .wrap .prev{
+    background-image: url("../image/prevImgBtn.png");
+    left:1%;
+}
+section .profile .wrap .next{
+    background-image: url("../image/nextImgBtn.png");
+    right:1%;
+}
 section .profile .wrap .picture{
-    margin-top: 200px;
-    width: 200px;
+    position: absolute;
+    width: 250px;
     height: 470px;
     margin-left: 8%;
+    margin-top: 200px;
 }
 section .profile .wrap .picture ul li{
     float: left;
@@ -182,8 +206,8 @@ section .profile .wrap .picture ul li a{
 }
 section .profile .wrap .picture ul li a img{
     width: 100%;
+    opacity: 0.8;
 }
-
 
 
 
