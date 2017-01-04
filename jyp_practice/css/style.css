@@ -171,7 +171,6 @@ section .profile .wrap .bgimg{
     background-position: center;
     background-size: cover;
     height: 100%;
-    border: 1px;
 }
 section .profile .wrap .picture{
     position: absolute;
