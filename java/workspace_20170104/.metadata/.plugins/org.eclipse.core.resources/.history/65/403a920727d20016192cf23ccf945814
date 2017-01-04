@@ -1,0 +1,13 @@
+package 함수3;
+
+public class TestMain {
+	/* 
+	   반환값이 있는 함수 - 작업 후 외부로 값을 전달해야 할 경우
+	  - 반환값은 딱 한개만 가능하다, 예외없음
+	 */
+	static int add(int x, int y){
+		// 두개의 정수를 입력받아 더해서 결과를 반환할 함수
+		// 함수 앞에 viod 이외의 타입이 오면 반드시 return 구문을 작성해야 한다.
+		int z = x+y;
+	}
+}

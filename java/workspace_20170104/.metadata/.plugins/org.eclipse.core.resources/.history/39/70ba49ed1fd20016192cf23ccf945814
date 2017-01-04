@@ -1,0 +1,46 @@
+package 함수;
+
+/* 
+   static : 원칙으로 클래스 안의 모든 함수나 변수는 객체를 생성하지 않으면 사용불가하나
+                  예외적으로 static을 붙이면, 객체 안만들어도 사용이 가능하다.
+            static 이 붙은 애들은 붙은 것끼리만 호출가능
+ */
+
+
+public class TestMain {
+	// 함수 선언
+	static void displayStar(){
+		System.out.println("***************************************");
+	}
+	
+	// 함수 업그레이드 : 내용을 바꾸려고 할때
+	static void displayStar(int starCnt){
+		/* int starCnt : 피라미터, 인수, 매개변수 라는 말로 부른다.
+		                          여기에 선언된 변수를 통해 함수 외부에서 값을 전달할 수 있다.
+		                          함수 호출방법은 displayStar(10); 이런식으로 호출한다.
+		 */
+		for(int i=0; i<=starCnt; i++){
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+	public static void main(String[] args) {
+		// 함수 호출하기
+		displayStar();
+		displayStar();
+		displayStar();
+		displayStar();
+		displayStar();
+		for(int i=1; i<=5; i++){
+			displayStar();
+		}
+		
+		
+		displayStar(10);
+		displayStar(50);
+		displayStar(5);
+		for(int i=1; i<=5; i++){
+			displayStar();
+		}
+	}
+}

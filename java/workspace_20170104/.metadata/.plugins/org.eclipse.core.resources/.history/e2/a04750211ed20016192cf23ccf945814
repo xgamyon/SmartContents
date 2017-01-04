@@ -1,0 +1,24 @@
+package 함수;
+
+/* 
+   static : 원칙으로 클래스 안의 모든 함수나 변수는 객체를 생성하지 않으면 사용불가하나
+                  예외적으로 static을 붙이면, 객체 안만들어도 사용이 가능하다.
+            static 이 붙은 애들은 붙은 것끼리만 호출가능
+ */
+
+
+public class TestMain {
+	// 함수 선언
+	static void displayStar(){
+		System.out.println("***************************************");
+	}
+	public static void main(String[] args) {
+		// 함수 호출하기
+		displayStar();
+		displayStar();
+		displayStar();
+		displayStar();
+		displayStar();
+		for(int i=1;)
+	}
+}

@@ -1,7 +1,0 @@
-package 로또프로그램;
-
-public class TestMain {
-	public static void main(String[] args) {
-		// 상수 = 변수처럼 보이지만 값변환 못하게
-	}
-}

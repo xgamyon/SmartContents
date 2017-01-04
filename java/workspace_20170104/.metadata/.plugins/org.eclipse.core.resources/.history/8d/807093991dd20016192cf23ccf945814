@@ -1,0 +1,10 @@
+package 함수;
+
+public class TestMain {
+	public static void main(String[] args) {
+		// 함수 선언
+		void displayStar(){
+			
+		}
+	}
+}

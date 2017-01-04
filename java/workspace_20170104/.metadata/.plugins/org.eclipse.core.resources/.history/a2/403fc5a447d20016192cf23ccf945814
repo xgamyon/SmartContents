@@ -1,0 +1,19 @@
+package 로또;
+
+public class Lotto {
+	private final int MAX = 6;
+	private int []lotto = new int[MAX];
+	private int curCnt = 0;
+	
+	void Start(){
+		
+	}
+	// 배열 내에 이미 로또 번호가 존재하는지 묻기 위한 함수
+	boolean isExist(int key){
+		for(int i=0; i<curCnt; i++){
+			if(lotto[i] == key){
+				return tre;
+			}
+		}
+	}
+}

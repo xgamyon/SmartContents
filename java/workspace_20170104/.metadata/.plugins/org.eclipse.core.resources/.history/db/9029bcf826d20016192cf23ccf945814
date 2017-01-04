@@ -1,0 +1,11 @@
+package 함수3;
+
+public class TestMain {
+	/* 
+	   반환값이 있는 함수 - 작업 후 외부로 값을 전달해야 할 경우
+	  - 반환값은 딱 한개만 가능하다, 예외없음
+	 */
+	static int add(int x, int y){
+		
+	}
+}

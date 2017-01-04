@@ -1,0 +1,13 @@
+package ÇÔ¼ö2;
+
+public class TestMain {
+	
+	static void displayStar(int lineCnt, int starCnt){
+		int i,j
+		for()
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,6 @@
+package ·Î¶Ç;
+
+public class Lotto {
+	private final int MAX = 6;
+	private int []lotto = new int[MAX
+}

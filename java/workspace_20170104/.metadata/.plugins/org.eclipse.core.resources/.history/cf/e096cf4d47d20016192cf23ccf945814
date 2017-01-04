@@ -1,0 +1,5 @@
+package ·Î¶Ç;
+
+public class Lotto {
+	private final int MAX = 6;
+}

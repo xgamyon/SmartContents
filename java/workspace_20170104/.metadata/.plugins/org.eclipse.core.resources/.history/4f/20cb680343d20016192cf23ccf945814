@@ -1,0 +1,27 @@
+package 객체지향프로그래밍;
+/*
+  class 앞에 public 의 의미
+   누구나 다 사용 가능하다. 
+   각자 다른 폴더(패키지)에 있는 클래스 간에 서로 접근 못함.
+  public 쓴 것만 접근 가능하다.
+  
+   파일 하나에 public이 허용되는 클래스는 하나만 가능하고
+   이 클래스명이 파일명과 일치해야한다.   
+ */
+class Person{
+	String name;
+	int age;
+}
+
+public class TestMain {
+	public static void main(String[] args) {
+		
+		Person p1 = new Person();  // 객체 만들기
+		
+		p1.name = "홍길동";
+		p1.age = 23;
+		
+		System.out.println(p1.name);
+		System.out.println(p1.age);
+	}
+}
