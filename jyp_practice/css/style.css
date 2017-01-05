@@ -165,12 +165,17 @@ section .profile .wrap{
     top: 0;
     height: 100%;
 }
-section .profile .wrap .bgimg{
-    background-image: url("../image/1.jpg");
+section .profile .wrap .bgimg ul li{
+    position: absolute;
+    display: none;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: 100%;
     height: 100%;
+}
+section .profile .wrap .bgimg ul li.on{
+    display: block;
 }
 section .profile .wrap .picture{
     position: absolute;

@@ -1,0 +1,8 @@
+
+// 디폴트 패키지 - 패키지가 없는 상태
+public class TestMain {
+	public static void main(String[] args) {
+		person p1 = new person();
+		
+	}
+}

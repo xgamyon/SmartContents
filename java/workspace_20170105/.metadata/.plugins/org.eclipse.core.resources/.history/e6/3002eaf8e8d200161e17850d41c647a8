@@ -1,0 +1,11 @@
+import kr.co.himedia.person;
+
+// 디폴트 패키지 - 패키지가 없는 상태
+public class TestMain {
+	public static void main(String[] args) {
+		person p1 = new person();
+		
+		p1.setName("홍길동");
+		p1.setAge(15);
+	}
+}
