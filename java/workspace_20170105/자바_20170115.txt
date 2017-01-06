@@ -1,0 +1,33 @@
+패키지? 클래스를 묶어 놓은 것
+A회사 - 클래스  System
+B회사 - 클래스  System
+클래스를 관리하기 위해서 패키지를 만들어 패키지안에 넣자
+Acompany 패키지 만들고 거기에 System 클래스를 넣으면
+Acompany.System
+Bcompany 패키지 만들고 거기에 System 클래스를 넣으면
+Bcompany.System
+
+패키지 이름을 어떻게? 회사 홈페이지 도메인 
+도메인을 뒤집어서 만들고 도메인 영역은 비워놓고 그 
+아래에 새로 패키지를 만들어서 클래스를 둔다 
+himedia.co.kr
+
+kr.co.himedia 
+
+문제) 클래스 만들기 
+Position
+  int x;
+  int y;
+
+main
+   Position pos1 = new Position();
+   System.out.println
+
+
+this 변수 - 객체 자신의 주소를 담아 보관하는 변수 
+               시스템이 만들어준다 
+               클래스내에서 자기 자신을 지칭할때 쓰인다. 
+
+
+
+

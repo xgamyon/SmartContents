@@ -1,0 +1,21 @@
+
+public class TestMain {
+	public static void main(String[] args) {
+		
+		StringBuilder sb = new StringBuilder();
+		String s = new String();
+		int i;
+		
+		System.out.println("시작");
+		for(i=1; i<=5000; i++){
+			s = s+i;
+		}
+		System.out.println(s);
+		
+		System.out.println("시작");
+		for(i=1; i<=5000; i++){
+			sb.append(i);
+		}
+		System.out.println(sb);
+	}
+}

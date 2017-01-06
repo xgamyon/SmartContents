@@ -1,0 +1,31 @@
+
+public class TestMain {
+	public static void main(String[] args) {
+		String s1 = "String";  // 예외적인 상황
+		String s2 = new String("String");
+		String s3 = new String();
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		
+		System.out.println(s1.charAt(0));
+		System.out.println(s1.charAt(1));
+		System.out.println(s1.charAt(2));
+		System.out.println(s1.charAt(3));
+		System.out.println(s1.charAt(4));
+		System.out.println(s1.charAt(5));
+		// System.out.println(s1.charAt(6));   index값을 벗어나서 에러남
+		
+		// 문자열의 길이 알아내기
+		System.out.println(s1.length());
+		
+		s3 = "124";
+		int a = Integer.parseInt(s3);  // String --> int로 전환
+		
+		s3 = String.valueOf(s3);       // int --> String 으로 전환
+		
+		System.out.println(s3.toString());
+		
+	}
+}
