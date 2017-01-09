@@ -1,0 +1,16 @@
+package 己利贸府;
+
+public class TestMain {
+	public static void main(String[] args) {
+		final int MAX = 3;
+		String []ppt = new String [MAX];
+		String []idnum = new String [MAX];
+
+		int []write = new int[MAX];
+		int []word = new int[MAX];
+		int []ppt = new int[MAX];
+		int []spread = new int[MAX];
+		int []total = new int[MAX];
+		
+	}
+}

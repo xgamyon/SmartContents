@@ -1,0 +1,30 @@
+package 己利贸府;
+
+public class TestMain {
+	public static void main(String[] args) {
+		final int MAX = 3;
+		String []name = new String [MAX];
+		String []idnum = new String [MAX];
+
+		int []write = new int[MAX];
+		int []word = new int[MAX];
+		int []ppt = new int[MAX];
+		int []spread = new int[MAX];
+		int []total = new int[MAX];
+		String []grade = new String[MAX];
+		int count = 0;
+		void input(){
+			for(int i=0; i<MAX; i++){
+				System.out.print("荐氰锅龋 : ");
+				idnum[i] = sc.nextLine();
+			}
+			
+		}
+		void process(){
+			
+		}
+		void output(){
+	
+		}
+	}
+}

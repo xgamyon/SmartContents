@@ -49,11 +49,6 @@ var profile = {
             $('.bgimg ul li').eq(idx).fadeIn(500).addClass('on').siblings().fadeOut(500).removeAttr('class');
         }
 
-        // var sum = function(){
-        //     idx = $(this).parent().index();
-        //     $('.bgimg ul li').eq(idx).siblings().fadeOut(500).removeAttr('class').delay(1000).eq(idx).fadeIn(500).addClass('on');
-        // }
-
         var next = function(){
             $('.bgimg ul li').eq(idx).next().fadeIn(500).addClass('on').siblings().fadeOut(500).removeAttr('class');
             idx++

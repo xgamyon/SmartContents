@@ -71,6 +71,22 @@
     }
 
 
+    section .profile{
+        margin-top: -55px;
+    }
+    section .profile .wrap .picture{
+        width: 230px;
+        height: 100px;
+    }
+    section .profile .wrap .picture ul li a{
+        width: 40px;
+        height: 40px;
+        margin: 0 2px 2px 0;
+    }
+
+
+
+
 
 
     section .discography .wrap .left,
