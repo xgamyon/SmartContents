@@ -1,0 +1,15 @@
+package kr.co.himedia;
+
+//DTO - Data Transfer Object, VO
+//1. 데이타만 저장되는 클래스, 무조건
+public class ScoreDto {
+	private String name;
+	private int kor;
+	private int eng;
+	private int mat;
+	private int total;
+	private double avg;
+	private String grade;
+
+	
+}

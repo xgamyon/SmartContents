@@ -6,7 +6,6 @@ INDEX VERSION 1.129+D:\minseok\SmartContents\java\workspace_20170109\.metadata\.
 1904741536.index
 3878457715.index
 2927524569.index
-1661025523.index
 3886916044.index
 3681335767.index
 1847969816.index

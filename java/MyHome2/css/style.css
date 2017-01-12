@@ -1,0 +1,480 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic';
+    font-size: 12px;
+}
+html, body{
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    background-image: url(../image/Z.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0;
+}
+header{
+    position: relative;
+    z-index: 1;
+    height: 100px;
+    background-color: rgba(255,255,255,0.7);
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+header h1{
+    float: left;
+}
+header h1 a{
+    display: block;
+    width: 104px;
+    height: 52px;
+    background-image: url(../image/logo-s.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent:-9999px;
+    font-size:0px;
+    padding: 24px 0;
+    transition: 1s;
+}
+header h1 a:hover{
+    transform: rotateY(180deg);
+}
+header nav{
+    float: right;
+}
+header nav li{
+    float: left;
+    height: 100px;
+    line-height: 100px;
+}
+header nav .menu{
+    display: none;
+    width: 200px;
+    height: 55px;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    font-weight:bold;
+    line-height: 55px;
+    color: #fff;
+    background-color: #ff5d9f;
+}
+header nav li:hover{
+    background-color: rgba(255,255,255,0.5);
+}
+header nav li a{
+    display: block;
+    padding: 0 18px;
+    font-size:16px;
+    font-weight: bold;
+    color: #ff5d9f;
+    letter-spacing: -0.5px;
+    transition: 0.25s;
+}
+header nav li a:hover{
+    border-top: 3px #f8c899 solid;
+    color: #f8c899;
+
+}
+
+
+section{
+    position: relative;
+}
+
+section .biglogo{
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: 12%;
+    width: 250px;
+    height: 250px;
+    background-image: url("../image/mainlogo.png");
+    background-position:  center 0;
+    transition:1s;
+}
+section .biglogo:hover{
+    transform: scale(1.2);
+    opacity:0;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 57px;
+    line-height: 57px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.25s;
+}
+footer .bottomlogo{
+    float: left;
+    width: 105px;
+    height: 45px;
+    background-image: url("../image/jyplogo-b.png");
+    margin-top: 5px;
+    margin-left: 5%;
+    transition: 1s;
+}
+footer ul{
+    float: right;
+}
+footer ul li{
+    float: left;
+}
+footer ul li a i[class^="flaticon-"]{
+    display: block;
+    padding: 0 10px;
+    color: #fff;
+}
+footer ul li:last-child{
+    margin-right: 20px;
+}
+footer ul li a i[class^="flaticon-"]::before{
+    font-size: 28px;
+    transition: 1s;
+}
+
+
+
+
+/* profile 시작 */
+section{
+    height: 100%;
+}
+section .profile{
+    height: 100%;
+    margin-top: -100px;
+}
+section .profile h2{
+    text-indent: -9999px;
+    font-size: 0;
+}
+section .profile .wrap{
+    position: relative;
+    top: 0;
+    height: 100%;
+}
+section .profile .wrap .bgimg ul li{
+    position: absolute;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+section .profile .wrap .bgimg ul li:first-child{
+    display: block;
+}
+section .profile .wrap .bgimg ul li.on{
+    display: block;
+}
+section .profile .wrap .picture{
+    position: absolute;
+    width: 185px;
+    height: 470px;
+    top:0;
+    margin-left: 8%;
+    margin-top: 200px;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+section .profile .wrap .picture:hover{
+    opacity: 1;
+}
+section .profile .wrap .picture ul li{
+    float: left;
+}
+section .profile .wrap .picture ul li a{
+    display: block;
+    border: 2px #fff solid;
+    width: 80px;
+    height: 80px;
+    margin: 0 8px 8px 0;
+}
+section .profile .wrap .picture ul li a img{
+    width: 100%;
+}
+section .profile .wrap .prev a,
+section .profile .wrap .next a{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    opacity:0.5;
+}
+section .profile .wrap .prev a:hover,
+section .profile .wrap .next a:hover{
+    opacity: 1;
+}
+section .profile .wrap .prev a{
+    background-image: url("../image/prevImgBtn.png");
+    left:1%;
+}
+section .profile .wrap .next a{
+    background-image: url("../image/nextImgBtn.png");
+    right:1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* profile 끝 */
+
+
+/* discography 시작 */
+
+body.nonebg{
+    background-image: none;
+}
+section .discography{
+    height: 110px;
+    background-color: #f4f4f4;
+}
+section .discography h2{
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    background-image: url(../image/title-discography.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    font-size: 0;
+    width: 350px;
+    height: 60px;
+}
+section .discography .wrap{
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 70px;
+}
+section .discography .wrap .global-leng ul li{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    background-image: url(../image/a-titlebg.png);
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+section .discography .wrap .global-leng ul li a{
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+section .discography .wrap .left{
+    display: table-cell;
+    width: 35%;
+    float: left;
+    margin-right: 20px;
+}
+section .discography .wrap .left img{
+    width: 100%;
+    max-width: 350px;
+    vertical-align: top;
+    transition: 1s;
+}
+section .discography .wrap .left strong{
+    display: block;
+    margin-top: 15px;
+}
+section .discography .wrap .left ol li{
+    list-style-position: inside;
+    line-height: 20px;
+}
+section .discography .wrap .content{
+    display: table-cell;
+    line-height: 20px;
+}
+section .discography .wrap .content .title_bg{
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    color: #fff;
+    background-image: url("../image/a-titlebg.png");
+    margin-bottom: 15px;
+}
+section .discography .wrap .content .title_bg h3{
+    float: left;
+    font-size: 24px;
+}
+section .discography .wrap .content .title_bg span{
+    float: right;
+}
+section .discography .wrap .content .txt_bold{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+section .discography .wrap .album-list {
+    margin-top: 30px;
+    text-align: center;
+}
+section .discography .wrap .album-list ul{
+    transition: 1s;
+}
+section .discography .wrap .album-list ul li {
+    display: inline-block;
+    padding: 0 3px;
+}
+section .discography .wrap .album-list ul li a span{
+    display: block;
+    line-height: 20px;
+}
+section .discography .wrap .album-list ul li a img{
+    border: 1px #ddd solid;
+}
+section .wrap .album-list .list-btn a{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background-color: #ccc;
+    margin: 15px 1px;
+}
+
+/* discography 끝 */
+
+
+/* gallery 시작 */
+
+section .gallery{
+    height: 110px;
+    background-color: #f4f4f4;
+}
+section .gallery h2{
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    background-image: url(../image/title-gallery.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    font-size: 0;
+    width: 350px;
+    height: 60px;
+}
+section .gallery .wrap .grid-list{
+    width: 90%;
+    max-width: 769px;
+    margin: 100px auto 70px;
+    overflow: hidden;
+}
+section .gallery .wrap .grid-list ul{
+    overflow: hidden;
+}
+section .gallery .wrap .grid-list ul li{
+    float: left;
+    width: 20%;
+    max-width: 153px;
+}
+section .gallery .wrap .grid-list ul li img{
+    width: 100%;
+    max-width: 150px;
+    vertical-align: top;
+    margin-bottom: 3px;
+}
+section .wrap .album-list{
+    display: block;
+    text-align: center;
+}
+
+/* gallery 끝 */
+
+
+/* notice 시작 */
+
+section .notice{
+    height: 110px;
+    background-color: #f4f4f4;
+}
+section .notice h2{
+    position: relative;
+    top: 25px;
+    margin: 0 auto;
+    background-image: url(../image/title-notice.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    font-size: 0;
+    width: 350px;
+    height: 60px;
+}
+section .notice .wrap{
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 70px;
+}
+section .notice .wrap .list table{
+    width: 100%;
+    border-collapse: collapse;
+    /* 테이블 형식의 border를 없앤다.*/
+}
+section .notice .wrap .list table thead{
+  visibility: hidden;
+  border-bottom: 2px #aaa solid;
+}
+section .notice .wrap .list table tr td,
+section .notice .wrap .list table tr th{
+    border-bottom: 1px #ccc solid;
+    background-color: #fcfcfc;
+    padding: 10px 0;
+}
+section .notice .wrap .list table tbody .select td{
+    background-color: #f8f5f2;
+    font-weight: bold;
+    padding: 15px 0;
+}
+section .notice .wrap .list table tbody .select td span{
+    color: #05abf6;
+}
+section .notice .wrap .list table tbody tr td:first-child{
+    text-align: center;
+}
+section .notice .wrap .list table tbody tr td:nth-child(2){
+    max-width: 0;
+}
+section .notice .wrap .list table tbody tr td:nth-child(2) span{
+    display:block;
+    max-width: 700px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+section .notice .wrap .list table tbody tr td:nth-child(3){
+    text-align: center;
+}
+section .notice .wrap .list table tbody tr td[colspan="3"]{
+    background-color: #fff;
+}
+section .notice .wrap .list table tbody tr td[colspan="3"] div{
+    padding: 40px;
+    text-align: left;
+}
+
+/* notice 끝 */

@@ -1,0 +1,30 @@
+package kr.co.himedia;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ScoreManager {
+	private List<ScoreDto> dataList =
+			          new ArrayList<ScoreDto>();
+	Scanner sc = new Scanner(System.in);
+	
+	public void start()
+	{}
+	
+	public void menuDisplay()
+	{
+		System.out.println("---------");
+		System.out.println("  메 뉴  ");
+		System.out.println("---------");
+		System.out.println(" 1.출력  ");
+		System.out.println(" 2.추가  ");
+		System.out.println(" 3.수정  ");
+		System.out.println(" 4.삭제  ");
+		System.out.println(" 5.검색  ");
+		System.out.println(" [0].종료");
+		System.out.println("---------");
+	}
+	
+	
+}

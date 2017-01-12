@@ -1,0 +1,30 @@
+package »ó¼Ó1;
+
+class Parent
+{
+	private int x;
+	protected int y;
+	public int z;
+}
+
+public class TestMain {
+	public static void main(String[] args) {
+		Parent p = new Parent();
+		String s="";
+		Object ob = new Object();
+		
+	//	p.x = 10;
+		p.y = 20; 
+		p.z = 30;
+		
+		System.out.println(p);
+		System.out.println(p.toString());
+		
+	}
+}
+
+
+
+
+
+
