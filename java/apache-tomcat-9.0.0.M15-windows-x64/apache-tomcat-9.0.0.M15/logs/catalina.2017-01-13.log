@@ -1,0 +1,48 @@
+13-Jan-2017 11:19:19.028 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M15
+13-Jan-2017 11:19:19.035 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 5 2016 13:44:25 UTC
+13-Jan-2017 11:19:19.036 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+13-Jan-2017 11:19:19.036 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
+13-Jan-2017 11:19:19.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
+13-Jan-2017 11:19:19.037 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2017 11:19:19.038 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_111\jre
+13-Jan-2017 11:19:19.038 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_111-b14
+13-Jan-2017 11:19:19.039 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Jan-2017 11:19:19.039 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+13-Jan-2017 11:19:19.041 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+13-Jan-2017 11:19:19.041 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\logging.properties
+13-Jan-2017 11:19:19.042 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2017 11:19:19.042 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2017 11:19:19.043 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2017 11:19:19.044 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+13-Jan-2017 11:19:19.045 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+13-Jan-2017 11:19:19.045 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\temp
+13-Jan-2017 11:19:19.046 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.10 using APR version 1.5.2.
+13-Jan-2017 11:19:19.047 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13-Jan-2017 11:19:19.048 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13-Jan-2017 11:19:19.624 정보 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2j  26 Sep 2016)
+13-Jan-2017 11:19:19.835 정보 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Jan-2017 11:19:19.968 정보 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Jan-2017 11:19:19.972 정보 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Jan-2017 11:19:19.975 정보 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Jan-2017 11:19:19.976 정보 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1473 ms
+13-Jan-2017 11:19:20.006 정보 [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+13-Jan-2017 11:19:20.007 정보 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M15
+13-Jan-2017 11:19:20.025 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome2.xml
+13-Jan-2017 11:19:20.444 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome2.xml has finished in 419 ms
+13-Jan-2017 11:19:20.445 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome3.xml
+13-Jan-2017 11:19:20.463 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome3.xml has finished in 18 ms
+13-Jan-2017 11:19:20.465 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\docs
+13-Jan-2017 11:19:20.483 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\docs has finished in 18 ms
+13-Jan-2017 11:19:20.484 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\examples
+13-Jan-2017 11:19:20.865 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\examples has finished in 381 ms
+13-Jan-2017 11:19:20.866 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\host-manager
+13-Jan-2017 11:19:20.902 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\host-manager has finished in 36 ms
+13-Jan-2017 11:19:20.903 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\manager
+13-Jan-2017 11:19:20.947 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\manager has finished in 44 ms
+13-Jan-2017 11:19:20.948 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\ROOT
+13-Jan-2017 11:19:20.973 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\ROOT has finished in 26 ms
+13-Jan-2017 11:19:20.976 정보 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+13-Jan-2017 11:19:20.984 정보 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+13-Jan-2017 11:19:20.986 정보 [main] org.apache.catalina.startup.Catalina.start Server startup in 1010 ms
+13-Jan-2017 11:19:41.076 정보 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome4.xml
+13-Jan-2017 11:19:41.125 정보 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\minseok\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome4.xml has finished in 49 ms
