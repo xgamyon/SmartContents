@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Woorizip/회원가입_publishing&apos; to &apos;html&apos;" description="Rename resource &apos;회원가입_publishing&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="회원가입_publishing" name="html" stamp="1484545325931" updateReferences="true"/>
+</session>
