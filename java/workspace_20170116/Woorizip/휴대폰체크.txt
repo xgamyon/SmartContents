@@ -1,0 +1,28 @@
+Woorizip 
+\\192.168.0.18\java\jsp\회원가입
+
+
+127.0.0.1:9000/Woorizip/html/join1.html
+
+css
+js
+images
+
+member
+           join1.html
+	   join2.html
+
+127.0.0.1:9000/Woorizip/member/join1.html
+
+function phoneCheck(type) {
+var phoneNum1 = $("#" + type + "1").val(); 
+var phoneNum2 = $("#" + type + "2").val(); 
+var phoneNum3 = $("#" + type + "3").val(); 
+var phoneNumber = phoneNum1 + "-" 
++ phoneNum2 + "-" + phoneNum3; 
+var regExp = /(01[0|1|6|9|7])[-](\d{3}|\d{4})[-](\d{4}$)/g;
+var result = regExp.exec(phoneNumber); 
+if(result) return true; else return false; 
+}
+
+출처: http://whiterussian.tistory.com/70 [화이트 러시안]

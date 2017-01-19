@@ -1,0 +1,207 @@
+19-Jan-2017 10:45:08.775 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/9.0.0.M15
+19-Jan-2017 10:45:08.782 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 5 2016 13:44:25 UTC
+19-Jan-2017 10:45:08.782 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         9.0.0.0
+19-Jan-2017 10:45:08.783 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
+19-Jan-2017 10:45:08.783 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
+19-Jan-2017 10:45:08.784 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Jan-2017 10:45:08.784 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_111\jre
+19-Jan-2017 10:45:08.785 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_111-b14
+19-Jan-2017 10:45:08.785 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Jan-2017 10:45:08.786 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+19-Jan-2017 10:45:08.787 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+19-Jan-2017 10:45:08.788 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\logging.properties
+19-Jan-2017 10:45:08.789 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Jan-2017 10:45:08.790 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Jan-2017 10:45:08.790 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Jan-2017 10:45:08.791 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+19-Jan-2017 10:45:08.792 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15
+19-Jan-2017 10:45:08.793 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\temp
+19-Jan-2017 10:45:08.794 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.10 using APR version 1.5.2.
+19-Jan-2017 10:45:08.794 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+19-Jan-2017 10:45:08.795 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+19-Jan-2017 10:45:09.254 정보 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2j  26 Sep 2016)
+19-Jan-2017 10:45:09.436 정보 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Jan-2017 10:45:09.547 정보 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Jan-2017 10:45:09.549 정보 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Jan-2017 10:45:09.552 정보 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Jan-2017 10:45:09.552 정보 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1135 ms
+19-Jan-2017 10:45:09.575 정보 [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+19-Jan-2017 10:45:09.577 정보 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/9.0.0.M15
+19-Jan-2017 10:45:09.587 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome2.xml
+19-Jan-2017 10:45:09.629 심각 [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@47e99cc0]
+	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:441)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4832)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4964)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\minseok\SmartContents\java\MyHome2] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:733)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	... 13 more
+
+19-Jan-2017 10:45:09.633 심각 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome2.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@47e99cc0]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+19-Jan-2017 10:45:09.637 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome2.xml has finished in 49 ms
+19-Jan-2017 10:45:09.638 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome3.xml
+19-Jan-2017 10:45:09.642 심각 [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@207b4b9c]
+	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:441)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4832)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4964)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\minseok\SmartContents\java\workspace_20170111\MyHome3] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:733)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	... 13 more
+
+19-Jan-2017 10:45:09.644 심각 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome3.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@207b4b9c]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+19-Jan-2017 10:45:09.646 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome3.xml has finished in 7 ms
+19-Jan-2017 10:45:09.646 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome4.xml
+19-Jan-2017 10:45:09.651 심각 [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@6872593a]
+	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:441)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4832)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4964)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\minseok\SmartContents\java\workspace_20170111\MyHome4] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:733)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	... 13 more
+
+19-Jan-2017 10:45:09.652 심각 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome4.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@6872593a]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+19-Jan-2017 10:45:09.654 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome4.xml has finished in 8 ms
+19-Jan-2017 10:45:09.655 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\Woorizip.xml
+19-Jan-2017 10:45:09.661 심각 [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@22da32c5]
+	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:441)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4832)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4964)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\minseok\SmartContents\java\workspace_20170116\Woorizip] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:733)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	... 13 more
+
+19-Jan-2017 10:45:09.663 심각 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\Woorizip.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@22da32c5]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+19-Jan-2017 10:45:09.665 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\Woorizip.xml has finished in 9 ms
+19-Jan-2017 10:45:09.666 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\docs
+19-Jan-2017 10:45:09.934 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\docs has finished in 268 ms
+19-Jan-2017 10:45:09.935 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\examples
+19-Jan-2017 10:45:10.238 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\examples has finished in 303 ms
+19-Jan-2017 10:45:10.239 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\host-manager
+19-Jan-2017 10:45:10.264 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\host-manager has finished in 25 ms
+19-Jan-2017 10:45:10.265 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\manager
+19-Jan-2017 10:45:10.286 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\manager has finished in 21 ms
+19-Jan-2017 10:45:10.287 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\ROOT
+19-Jan-2017 10:45:10.302 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\webapps\ROOT has finished in 15 ms
+19-Jan-2017 10:45:10.305 정보 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+19-Jan-2017 10:45:10.311 정보 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+19-Jan-2017 10:45:10.313 정보 [main] org.apache.catalina.startup.Catalina.start Server startup in 760 ms
+19-Jan-2017 10:46:10.339 정보 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/MyHome4]
+19-Jan-2017 10:46:10.358 정보 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome4.xml
+19-Jan-2017 10:46:10.408 정보 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome4.xml has finished in 50 ms
+19-Jan-2017 10:46:30.416 정보 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/MyHome2]
+19-Jan-2017 10:46:30.421 정보 [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome2.xml
+19-Jan-2017 10:46:30.442 정보 [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome2.xml has finished in 21 ms
+19-Jan-2017 10:46:40.446 정보 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/MyHome3]
+19-Jan-2017 10:46:40.454 정보 [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome3.xml
+19-Jan-2017 10:46:40.496 정보 [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\MyHome3.xml has finished in 41 ms
+19-Jan-2017 10:47:00.511 정보 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Woorizip]
+19-Jan-2017 10:47:00.517 정보 [localhost-startStop-5] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\Woorizip.xml
+19-Jan-2017 10:47:00.713 정보 [localhost-startStop-5] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Jan-2017 10:47:00.716 정보 [localhost-startStop-5] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor D:\SmartContents\java\apache-tomcat-9.0.0.M15-windows-x64\apache-tomcat-9.0.0.M15\conf\Catalina\localhost\Woorizip.xml has finished in 199 ms

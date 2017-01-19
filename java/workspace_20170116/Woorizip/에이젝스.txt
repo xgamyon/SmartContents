@@ -1,0 +1,55 @@
+Ajax(아약스, 에이젝스)
+- 웹2.0 시대를 열은 개념 
+- 문서를 일부분 서버로 보내서 다시 가져오는것
+- 문서가 전체 로드된 이후에 문서의 일부분만 수정이 
+  가능하다
+
+
+
+
+  create table tb_code
+  (
+      seq  number,
+      type char(1),
+      parent char(2),
+      code char(2),
+      descript varchar2(40)
+  );
+
+ insert  into tb_code values(1, 1, '01', '01', '종로구');
+ insert  into tb_code values(2, 1, '01', '02', '강서구');
+ insert  into tb_code values(3, 1, '01', '03', '강동구');
+ insert  into tb_code values(4, 1, '01', '04', '강북구');
+ insert  into tb_code values(5, 1, '01', '05', '관악구');
+
+ insert  into tb_code values(1, 1, '02', '01', '해운대구');
+ insert  into tb_code values(2, 1, '02', '02', '진구');
+ insert  into tb_code values(3, 1, '02', '03', '사상구');
+
+ insert  into tb_code values(1, 1, '03', '01', '광주1구');
+ insert  into tb_code values(2, 1, '03', '02', '광주2구');
+ insert  into tb_code values(3, 1, '03', '03', '광주3구');
+
+ insert  into tb_code values(1, 1, '04', '01', '대구1구');
+ insert  into tb_code values(2, 1, '04', '02', '대구2구');
+ insert  into tb_code values(3, 1, '04', '03', '대구3구');
+
+ insert  into tb_code values(1, 1, '05', '01', '인천1구');
+ insert  into tb_code values(2, 1, '05', '02', '인천2구');
+ insert  into tb_code values(3, 1, '05', '03', '인천3구');
+
+ insert  into tb_code values(1, 1, '06', '01', '대전1구');
+ insert  into tb_code values(2, 1, '06', '02', '대전2구');
+ insert  into tb_code values(3, 1, '06', '03', '대전3구');
+
+ insert  into tb_code values(1, 1, '07', '01', '울산1구');
+ insert  into tb_code values(2, 1, '07', '02', '울산2구');
+ insert  into tb_code values(3, 1, '07', '03', '울산3구');
+
+ comit;
+
+ -전부 삭제 
+ delete from tb_code;
+
+ select descript from tb_code;
+

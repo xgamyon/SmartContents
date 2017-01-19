@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/Woorizip/menber/join1.html" element2="/Woorizip/menber/join2.html" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1484545514327"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/Woorizip/menber/join1.html" element2="/Woorizip/menber/join2.html" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1484545514327"/>&#x0A;<refactoring comment="Delete resource &apos;Woorizip/ajax/test2.jsp&apos;" deleteContents="false" description="Delete resource &apos;Woorizip/ajax/test2.jsp&apos;" element1="/Woorizip/ajax/test2.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1484791295368"/>
 </session>
