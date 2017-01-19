@@ -4,15 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/style.js">
-
-    </script>
+    <script src="../js/style.js"></script>
+    <script src="../js/common.js"></script>
     <title>회원가입1</title>
 </head>
+<script>
+//전체 동의하기 
+function goAllAgree()
+{
+	if(document.getElementById("allcheck").checked)
+	{
+		document.getElementById("agree1").checked=true;
+		document.getElementById("agree2").checked=true;
+		document.getElementById("agree3").checked=true;
+		document.getElementById("agree4").checked=true;	
+	}
+	else
+	{
+		document.getElementById("agree1").checked=false;
+		document.getElementById("agree2").checked=false;
+		document.getElementById("agree3").checked=false;
+		document.getElementById("agree4").checked=false;	
+	}
+}
+
+//jquery 로 
+$(document).ready(function(){
+	//document.getElementById("allcheck")
+	//$("#allcheck")
+	
+    $("#allcheck").click(function(){
+    	//alert($("#allcheck").is(":checked"));
+    	if( $("#allcheck").is(":checked") )
+    	{
+    		$(".checkagree").prop("checked", true)
+        	
+    		/*$("#agree1").prop("checked", true);
+        	$("#agree2").prop("checked", true);
+        	$("#agree3").prop("checked", true);
+        	$("#agree4").prop("checked", true);*/
+    	}
+    	else
+    	{
+    		$(".checkagree").prop("checked", false)
+        	
+    		/*$("#agree1").prop("checked", false);
+        	$("#agree2").prop("checked", false);
+        	$("#agree3").prop("checked", false);
+        	$("#agree4").prop("checked", false);*/
+    	}
+        	
+    });
+});
+
+
+function goSend1()
+{
+	//var frm = document.myForm;
+	var frm = document.forms[0];
+	if( document.myform.hpYn.value==1) //휴대폰 인증시 사용
+	{
+		if( frm.phone.value.length<11)
+		{
+			alert("휴대폰 번호를 입력하세요");
+			frm.phone.focus();
+			return false;
+		}
+		
+		if(isPhoneValid(frm.phone.value)==false)
+		{
+			alert("전화번호 형식에 맞게 입력하세요");
+			frm.phone.focus();
+			return false;
+		}
+		
+		if( frm.name1.value.length<2)
+		{
+			alert("이름은 2글자 이상으로 입력하세요");
+			frm.name1.focus();
+			return false;
+		}
+		
+	}
+	else
+	{
+		if(frm.email1.value.length<2)	
+		{
+			alert("이메일을 입력하세요");
+			frm.email1.focus();
+			return false;
+		}
+		
+		if(frm.email2.value.length<2)
+		{
+			alert("도메인을 선택하세요");
+			frm.email2.focus();
+			return false;
+		}
+		
+		if( frm.name2.value.length<2)
+		{
+			alert("이름은 2글자 이상으로 입력하세요");
+			frm.name2.focus();
+			return false;
+		}
+	}
+	
+	
+	if( document.getElementById("agree1").checked==false)
+	{
+		alert("이용약관에 동의해 주십시요");
+		document.getElementById("agree1").focus();
+		return false;
+	}
+	
+	if( document.getElementById("agree2").checked==false)
+	{
+		alert("유료서비스 약관에 동의해 주십시요");
+		document.getElementById("agree2").focus();
+		return false;
+	}
+	
+	if( document.getElementById("agree3").checked==false)
+	{
+		alert("개인정보 수집및 이용에 동의해 주십시요");
+		document.getElementById("agree3").focus();
+		return false;
+	}
+	
+	//서버로 정보 전송하기 
+	
+	frm.method="post"; 
+	//회원가입-보안을 요하기 때문에 꼭 post로 보내야한다
+	frm.action="join2.jsp";
+	frm.submit(); //서버로 전송하기 
+}
+
+function goCerti(value)
+{
+	document.myform.hpYn.value=value;
+}
+
+</script>
 <body>
+<form name="myform" action="join2.html"> 
+	<input type="hidden" name="hpYn" value="1">
+	
     <header>
     </header>
     <section class="join">
@@ -24,8 +164,10 @@
             <div class="form">
                 <div class="join_bt">
                     <ul>
-                        <li class="on"><a href="javascript:void(0)">휴대폰 인증 가입</a></li>
-                        <li><a href="javascript:void(0)">이메일 인증 가입</a></li>
+                        <li class="on"><a href="#none" 
+                                    onclick="goCerti('1')">휴대폰 인증 가입</a></li>
+                        <li><a href="#none"
+                                    onclick="goCerti('2')">이메일 인증 가입</a></li>
                     </ul>
                 </div>
                 <div class="change">
@@ -40,13 +182,13 @@
                                 <tr>
                                     <td>휴대폰 번호</td>
                                     <td class="text">
-                                        <input type="text" placeholder="휴대폰 번호 입력">
+                                        <input type="text" name="phone"  id="phone" placeholder="입력예시(010-0000-0000)">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>이름</td>
                                     <td class="text">
-                                        <input type="text" placeholder="이름 입력 (2자 이상)">
+                                        <input type="text" name="name1" id="name1" placeholder="이름 입력 (2자 이상)">
                                     </td>
                                 </tr>
                             </tbody>
@@ -66,11 +208,11 @@
                                         <div class="email_form">
                                             <ul>
                                                 <li>
-                                                    <input type="text" placeholder="이메일 아이디 입력">
+                                                    <input type="text" name="email1" id="email1" placeholder="이메일 아이디 입력">
                                                 </li>
                                                 <li>
-                                                    <select>
-                                                        <option value="@ 선택">@ 선택</option>
+                                                    <select name="email2" id="email2">
+                                                        <option value="">@ 선택</option>
                                                         <option value="naver.com">naver.com</option>
                                                         <option value="daum.net">daum.net</option>
                                                         <option value="nate.com">nate.com</option>
@@ -83,7 +225,7 @@
                                 <tr>
                                     <td>이름</td>
                                     <td class="text">
-                                        <input type="text" placeholder="이름 입력 (2자 이상)">
+                                        <input type="text" name="name2" id="name2" placeholder="이름 입력 (2자 이상)">
                                     </td>
                                 </tr>
                             </tbody>
@@ -95,14 +237,17 @@
             <div class="agree">
                 <ul class="all">
                     <li>
-                        <input type="checkbox">
+                    <!-- html 주석 -->
+                        <input type="checkbox" id="allcheck"
+                        >
                         전체동의 <span>(선택사항 포함)</span>
                     </li>
                 </ul>
                 <ul class="terms">
                     <li>
                         <a href="javascript:void(0)">
-                            <input type="checkbox">
+                            <input type="checkbox" id="agree1"
+                            class="checkagree">
                             이용약관 <span>(필수)</span>
                             <div class="arrow" href="javascript:void(0)"></div>
                         </a>
@@ -124,7 +269,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)">
-                            <input type="checkbox">
+                            <input type="checkbox" id="agree2" class="checkagree">
                             유료서비스약관 <span>(필수)</span>
                             <div class="arrow" href="javascript:void(0)"></div>
                         </a>
@@ -146,7 +291,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)">
-                            <input type="checkbox">
+                            <input type="checkbox" id="agree3" class="checkagree">
                             개인정보 수집 및 이용 <span>(필수)</span>
                             <div class="arrow" href="javascript:void(0)"></div>
                         </a>
@@ -168,7 +313,7 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)">
-                            <input type="checkbox">
+                            <input type="checkbox" id="agree4" class="checkagree">
                             이벤트, 서비스안내 수신 <span>(선택)</span>
                             <div class="arrow" href="javascript:void(0)"></div>
                         </a>
@@ -191,9 +336,12 @@
                 </ul>
             </div>
             <div class="nextbt">
-                <a href="join2.html">다음 단계</a>
+                <a href="#none" id="btnSend" 
+                          onclick="goSend1()">다음 단계</a>
             </div>
         </div>
     </section>
+</form>
+
 </body>
 </html>
