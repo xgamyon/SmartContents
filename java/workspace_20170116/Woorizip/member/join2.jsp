@@ -49,6 +49,36 @@ $(document).ready(function(){
 		//return false;
 	});
 	
+	$("#userid").keyup( function(){
+		//1. 값 읽어오기 
+		var id = $("#userid").val();
+		if( id.length>=6){
+			
+			//아이디가 이미 사용중인지 여기서 ajax를 통해 확인해보려고 한다 
+			  $.ajax({
+		    	    type:"POST",
+		    	    data:"userid="+id,
+		    		url: "idcheck.jsp", //호출할 문서명
+		    	   	success: function(result){
+		    	   	 	data = $.parseJSON(result);
+		    	   	 	if(data.useyn=="Y")
+		    	   	 	{
+		    	   			$("#idresult").html("사용가능");
+		    	   	 	}
+		    	   	 	else
+		    	   	 	{
+		    	   	 		$("#idresult").html("이미 사용중입니다");
+		    	   	 	}
+		    		},//에러 없을때
+		    		error: function(err){
+		    			alert(err.responseText);
+		    		}//에러있을때 
+		    });
+		}else{
+			$("#idresult").html("");
+		}
+	});
+	
 });
 
 </script>
@@ -141,8 +171,8 @@ $(document).ready(function(){
                         <tr>
                             <td >아이디</td>
                             <td class="text">
-                                <input type="text" name="userid" id="userid" 
-                                              placeholder="6~30자로 입력">
+                                <input type="text" name="userid" id="userid" size="10" placeholder="6~30자로 입력">
+                                <span id="idresult" style="color:red"></span>
                             </td>
                         </tr>
                         <tr>
