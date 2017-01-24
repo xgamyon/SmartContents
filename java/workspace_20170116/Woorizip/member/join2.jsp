@@ -2,13 +2,16 @@
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 	<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
     <script src="../js/style.js">
 
     </script>
@@ -17,6 +20,20 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	//문서가 다 불러와지면 이 함수가 호출된다. 
+	
+	// 해당 아이디를 갖는 input 태그에 달력 붙이기
+	$("#testDatepicker").datepicker({
+		showOn: "both", 
+        buttonImage: "button.png", 
+        buttonImageOnly: true,
+        dateFormat:"yy-mm-dd",
+        changeMonth: true, 
+        dayNames: ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일'],
+        dayNamesMin: ['월', '화', '수', '목', '금', '토', '일'], 
+        monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+
+	});
 	
 	$("#btnCerti").click(function(){
 		alert("인증번호가 재 전송 되었습니다.");
@@ -41,12 +58,20 @@ $(document).ready(function(){
 			return false;
 		}
 	
-	    //비밀번호 
-	    
-		return false;
+		if($("#password").val().trim().length<6 )
+	    {
+	    	alert("비밀번호는 6자리 이상 입력해주세요");
+	    	$("#password").focus();
+	    	return false;
+	    }
 		
-		//alert('폼전송하기');
-		//return false;
+		if($("#password").val().trim()!= $("#password1").val())
+	    {
+	    	alert("비밀번호와 비밀번호 확인이 일치하지 않습니다");
+	    	$("#password").focus();
+	    	return false;
+	    }
+	    
 	});
 	
 	$("#userid").keyup( function(){
@@ -64,10 +89,12 @@ $(document).ready(function(){
 		    	   	 	if(data.useyn=="Y")
 		    	   	 	{
 		    	   			$("#idresult").html("사용가능");
+		    	   			$("#idcheck").val("Y");
 		    	   	 	}
 		    	   	 	else
 		    	   	 	{
 		    	   	 		$("#idresult").html("이미 사용중입니다");
+		    	   	 		$("#idcheck").val("N");
 		    	   	 	}
 		    		},//에러 없을때
 		    		error: function(err){
@@ -118,6 +145,7 @@ $(document).ready(function(){
 	<input type="hidden" name="name"  value="<%=name%>" >
 	<input type="hidden" name="phone" value="<%=phone%>" >
 	<input type="hidden" name="certi_number" value="1234" >
+	<input type="hidden" name="idcheck" id="idcheck" value="N" >
 	
 
     <header>
@@ -207,20 +235,21 @@ $(document).ready(function(){
                         </tr>
                         <tr>
                             <td>생년월일</td>
-                            <td>
-                                <div class="birthday_form">
+                            <td class="text">
+                            	<input type="text" id="testDatepicker" name="birthday">
+                                <!--<div class="birthday_form">
                                     <ul>
                                         <li>
-                                            <input type="text" name="year" id="year" placeholder=""> 년
+                                            <input type="number" name="year" id="year" placeholder=""> 년
                                         </li>
                                         <li>
-                                            <input type="text" name="month" id="month" placeholder=""> 월
+                                            <input type="number" name="month" id="month" placeholder=""> 월
                                         </li>
                                         <li>
-                                            <input type="text" name="day" id="day" placeholder=""> 일
+                                            <input type="number" name="day" id="day" placeholder=""> 일
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
                         <tr>

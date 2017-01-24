@@ -1,0 +1,136 @@
+
+     관계형 데이타베이스란?
+       데이타를 테이블 형태로 저장하고, 각 테이블과 
+       테이블의 관계를 기준으로 구현하는 데이타베이스 
+       오라클-오라클사
+       mssql-ms사가 만든다  
+       mysql  - 공짜, 오라클사  
+
+       RDBMS(Relational Database Management System)
+
+       DB - 데이타를 많이 모아 놓은것 
+       DBMS - 데이타베이스를 만들고, 수정하고, 데이타넣고 
+                  이런작업들을 진행하는 프로그램을 말함 
+
+
+       데이터 타입
+       number - java의 int, float, double, long 
+                     오라클에서는 전부 number 타입 
+       number(크기) - 40개 까지
+       number(10, 2) - 소숫점 이하 2자리까지 저장 
+                             - 10 : 소수점을 포함한 전체 자릿수
+
+       char(자릿수) - 고정길이문자열 
+
+
+       run sql ----------------------------------------------------
+
+       계정만들기 :
+       1. 시스템계정으로 로그온 
+       conn system/1234;
+       
+       2. create user 계정 identified by 패스워드;
+       create user test2 identified by 1234;
+     
+       3. 권한주기(계정에 접속권한주기)  
+       grant connect, resource to test2;
+
+       4.conn test2/1234;
+
+
+       create table test1
+
+	
+
+    테이블 만들기 ---------------------------------------------------
+       create table test1
+       ( id number, text char(10));
+
+     -- 테이블 확인 명령어 
+     select tname from tab;
+     select table_name from tabs;
+
+     --데이타 추가하기 
+     insert into 테이블명(필드1, 필드2, ...)
+     values('값1', '값2',...);
+
+     insert into test1(id, text)
+     values('1', 'test');
+
+     insert into test1(id, text)
+     values('2', 'AAA');
+
+     insert into test1(id, text)
+     values('3', 'BBB');
+
+     작업내용을 확정 : commit;
+     작업내용을 취소 : rollback;
+     
+     --테이블 내의 내용 확인하기 
+     select id, text from test1;
+
+     -- 오라클에서 문자열의 결합은 || 를 사용한다 
+     select '*' || text || '*' from test1;
+     
+     --가변길이 
+     create table test2
+       ( id number, text varchar(10));
+
+     insert into test2(id, text)  values('1', 'test');
+     insert into test2(id, text) values('2', 'AAA');
+     insert into test2(id, text) values('3', 'BBB');
+     commit;
+
+     select '*' || text || '*' from test2;
+
+     drop table  테이블명;
+
+
+     --방명록 테이블 만들기 
+     create table tb_guestbook
+     (
+         id number constraint pk_tb_guestboook 
+	          primary key,
+	 title varchar2(1000),
+	 contents varchar2(4000),
+	 writer varchar2(40),
+	 wdate date
+     );
+
+     primary key : 주키
+                   동일 테이블 안에서 각각의 레코드들을 식별하기 위한 유일한 값
+
+
+     insert into tb_guestbook(id, title, contents,
+     writer, wdate) values('1', '제목1', '내용1',
+       '홍길동', sysdate);
+
+    -- sysdate : 현재 데이타가 들어가는 시간과 날짜를 
+        알려주는 함수 
+  
+    insert into tb_guestbook(id, title, contents,
+     writer, wdate) values('2', '제목2', '내용2',
+       '홍길동', sysdate);
+
+     commit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

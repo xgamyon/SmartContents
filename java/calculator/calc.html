@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+   
+   <style>
+    table,th,td{
+      border: 0px solid gray;
+    }
+	
+    input{
+      display: inline-block;
+	margin: 5px 0;
+	padding: .5em .75em;
+	border-radius: .25em;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	background: transparent;
+	outline: 0;
+	vertical-align: middle;
+	font-family: inherit;
+	font-size: 18px;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+
+  	color: #666;
+  	border: 1px solid #ebebeb;
+  	border-bottom-color: #c6c6c6;
+  	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04);
+  	background: #fff;
+ 	  background: linear-gradient(to bottom, #ffffff 40%, #f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0 );/*IE*/
+
+    }
+  input:visited{
+      color: #666;
+  	border: 1px solid #ebebeb;
+  	border-bottom-color: #c6c6c6;
+  	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04);
+  	background: #fff;
+  	background: linear-gradient(to bottom, #ffffff 40%, #f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0 );/*IE*/
+  }
+  input:focus,input:hover{
+    background: #f4f4f4;
+	  background: linear-gradient(to bottom, #fafafa 0%, #fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ffffff', GradientType=0 );/*IE*/
+  }
+  input:active,input.active{
+    text-shadow: 0 1px 0px #fff;
+  	border-color: #ebebeb;
+  	border-top-color: #ddd;
+  	background: #f4f4f4;
+   	box-shadow: none
+  }
+  h1{
+    color:#333;
+  }
+ 
+   </style>
+
+   <script type="text/javascript">
+
+   //자바스크립트 내의 전역변수 - 모든 함수가 함께 사용이 가능한 변수들 
+   var left;  //좌변값 저장할 변수 
+   var right; //우변값 저장할 변수 
+   var operand; //연산자 저장할 변수 
+
+   function addChar(item)
+   {
+		var ori = document.getElementById("display").value;
+		ori = ori + item;
+		document.getElementById("display").value = ori;
+   }
+
+   function addOperand(oper)
+   {
+	   //1.지금까지 눌렀던거 left 변수에 저장하기 
+	   left = document.getElementById("display").value;
+	   operand = oper; //연산자 저장하기 
+	   document.getElementById("display").value=""; //지우고 다른 입력받을거 준비중 
+   }
+
+   function Calculate()
+   {
+	   right =  document.getElementById("display").value;
+	   var result=0;
+
+		if( operand =="+")
+			result = eval(left)+eval(right);
+		else if( operand =="-")
+			result = eval(left)-eval(right);
+		else if( operand =="*")
+			result = eval(left)*eval(right);
+		else if( operand =="/")
+			result = eval(left)/eval(right);
+
+		document.getElementById("display").value = result;
+   }
+   
+
+   function Clear()  //전부 초기화 하기 
+   {
+	   left = "";
+	   right="";
+	   operand ="";
+	   document.getElementById("display").value="";
+   }
+
+   function BackSpace()
+   {
+		var temp = document.getElementById("display").value;
+		if( temp.length>0)
+			temp = temp.substring(0, temp.length-1);
+		document.getElementById("display").value=temp;
+   }
+
+	function DotProcess()
+	{
+		var temp = document.getElementById("display").value;
+		var pos = temp.indexOf('.');// .이 있는지 확인한다 
+		if( pos == -1) //.이 없으므로 . 하나를 추가하자 - 정수를 실수로 바꾼다  
+			addChar('.');
+	}
+
+	function changeSign()
+	{
+		var temp = document.getElementById("display").value;
+		var pos = temp.indexOf('-');// .이 있는지 확인한다 
+		if( pos == -1) //+상황이니까 음수로 바꾸기 
+			document.getElementById("display").value = "-"+temp;
+		else //음수에서 양수로 바뀐다 - 만 탈락시킨다 
+		{
+			temp = temp.substring(1, temp.length);
+		}
+
+	}
+
+   </script>
+</head>
+  <body>
+    <CENTER>
+        <H1> Calculator</H1>
+    <FORM>
+      <TABLE >
+        <TR>
+          <TD ALIGN=CENTER COLSPAN=4>
+            <INPUT NAME="display" id="display" value="" size=20 style="text-align:right">
+          </TD>
+        </TR>
+        <TR ALIGN=CENTER>
+          <TD>
+            <INPUT TYPE="button" value="    7    "           onClick="addChar('7')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    8    "           onClick="addChar( '8')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    9    "           onClick="addChar( '9')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    /     "           onClick="addOperand( '/')">
+          </TD>
+        </TR>
+        <TR ALIGN=CENTER>
+          <TD>
+            <INPUT TYPE="button" value="    4    "            onClick="addChar( '4')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    5    "             onClick="addChar( '5')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    6    "             onClick="addChar( '6')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    *    "              onClick="addOperand( '*')">
+          </TD>
+        </TR>
+        <TR ALIGN=CENTER>
+          <TD>
+            <INPUT TYPE="button" value="    1    "              onClick="addChar( '1')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    2    "              onClick="addChar( '2')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    3    "               onClick="addChar( '3')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="     -    "              onClick="addOperand( '-')">
+          </TD>
+        </TR>
+        <TR ALIGN=CENTER>
+          <TD>
+            <INPUT TYPE="button" value="    0    "              onClick="addChar( '0')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="     .    "               onClick="DotProcess( '.')">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value=" +/- "               onClick="changeSign()">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    +    "               onClick="addOperand( '+')">
+          </TD>
+        </TR>
+        <TR ALIGN=CENTER>
+          <TD colspan="2">
+            <INPUT TYPE="button" value="      =      "  NAME="enter"     onClick="Calculate()">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="         C          "          onClick="Clear()">
+          </TD>
+          <TD>
+            <INPUT TYPE="button" value="    <-   "             onClick="BackSpace()">
+          </TD> 
+
+        </TR>
+    </TABLE>
+    </FORM>
+    </CENTER>
+</body>
+</html>
