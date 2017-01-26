@@ -6,9 +6,6 @@
     font-family: 'dotum';
     text-decoration: none;
 }
-img{
-    border: 0;
-}
 a,span{
     color: #383838;
 }
@@ -38,7 +35,7 @@ body{
     width: 900px;
     height: 540px;
 }
-.header{
+header{
     position: relative;
     margin: 0 auto;
     width: 840px;
@@ -56,16 +53,16 @@ body{
     margin-right: 4px;
     height: 22px;
 }
-.top_bt li.bt1 a{
+.top_bt li:first-child a{
     background-position: -187px -199px;
     width: 66px;
 }
-.top_bt li.bt2 a{
+.top_bt li:nth-child(2) a{
     position: relative;
     background-position: -293px -174px;
     width: 75px;
 }
-.top_bt li.bt2 a .rd{
+.top_bt li:nth-child(2) a .rd{
     position: absolute;
     left: 70px;
     background-image: url("../images/sp_nwstd.png");
@@ -74,11 +71,11 @@ body{
     width: 5px;
     height: 22px;
 }
-.top_bt li.bt3 a{
+.top_bt li:nth-child(3) a{
     background-position: -500px -270px;
     width: 28px;
 }
-.top_bt li.edit span{
+.top_bt li:nth-child(4) span{
     margin-right: 4px;
     color: #888;
     line-height: 22px;
@@ -98,25 +95,25 @@ body{
 
 
 
-.section{
+section{
     width: 850px;
     margin-left: 30px;
     height: 380px;
     overflow: hidden;
 }
-.section .paragraph1{
+section .paragraph1{
     width: 90px;
     height: 100%;
     float: left;
     margin-right: 10px;
 }
-.section .paragraph2{
+section .paragraph2{
     width: 530px;
     height: 100%;
     float: left;
     margin-right: 10px;
 }
-.section .paragraph3{
+section .paragraph3{
     width: 200px;
     height: 100%;
     float: left;
@@ -142,14 +139,14 @@ body{
     background-image: url("../images/013.gif");
     z-index: 1;
 }
-.weather a.weather1{
+.weather a:first-child{
     position: absolute;
     left: 10px;
     top: 4px;
     width: 20px;
     height: 20px;
 }
-.weather a.weather2{
+.weather a:last-child{
     position: absolute;
     right: 10px;
     top: 7px;
@@ -187,8 +184,6 @@ body{
     margin-bottom: 4px;
 }
 .cont a span{
-    display: block;
-    line-height: 15px;
     font-size: 11px;
 }
 
@@ -198,16 +193,13 @@ body{
 
 
 /*메인 배너*/
-
 .main1{
     position: relative;
     width: 351px;
     height: 197px;
     float: left;
-}
-.main1 img{
-    position: absolute;
-    width: 100%;
+    background: url('../images/007.jpg') no-repeat;
+    background-size: 100%;
 }
 .gra1{
     position: absolute;
@@ -229,8 +221,7 @@ body{
     margin: 120px 10px 10px;
     font-size: 19px;
     color: #fff;
-    letter-spacing: -3px;
-    line-height: 23px;
+    letter-spacing: -2px;
 }
 .main1 > a span{
     display: block;
@@ -239,18 +230,15 @@ body{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 14px;
 }
 .main2{
     position: relative;
     float: right;
     width: 172px;
     height: 96px;
+    background: url('../images/008.jpg') no-repeat;
+    background-size: 100%;
     margin-bottom: 5px;
-}
-.main2 img{
-    position: absolute;
-    width: 100%;
 }
 .main2 > a{
     position: absolute;
@@ -268,17 +256,14 @@ body{
     margin: 10px;
     color: #fff;
     overflow: hidden;
-    line-height: 14px;
 }
 .main3{
     position: relative;
     float: right;
     width: 172px;
     height: 96px;
-}
-.main3 img{
-    position: absolute;
-    width: 100%;
+    background: url('../images/009.jpg') no-repeat;
+    background-size: 100%;
 }
 .main3 > a{
     position: absolute;
@@ -297,7 +282,6 @@ body{
     color: #fff;
     overflow: hidden;
     letter-spacing: -0.2px;
-    line-height: 14px;
 }
 .gra2{
     position: absolute;
@@ -363,7 +347,6 @@ body{
     display: inline-block;
     width: 113px;
     height: 48px;
-    line-height: 14px;
 }
 .sub_main2{
     position: absolute;
@@ -382,7 +365,6 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
     margin: 8px 0;
-    line-height: 14px;
 }
 .sub_main2 ul li a{
     margin-left: 10px;
@@ -402,20 +384,16 @@ body{
     overflow: hidden;
     padding-bottom: 5px;
     margin: 0 0 5px;
-    line-height: 14px;
     border-bottom: 1px solid #f7f7f7;
 }
-.right_banner ul li.last_text{
-    border-bottom: 0;
-}
-.right_banner ul li a,
-.right_banner ul li a:hover{
-    letter-spacing: -0.3px;
+.right_banner ul li a{
+    letter-spacing: -0.2px;
 }
 .right_banner ul li a span{
-    letter-spacing: -0.3px;
+    letter-spacing: -0.2px;
     color: #1194c6;
 }
+
 .right_banner2{
     position: relative;
     margin-top: 8px;
@@ -448,7 +426,6 @@ body{
 .right_banner2 ul li > a strong{
     display: block;
     margin: 5px 10px;
-    line-height: 15px;
 }
 .right_banner2 ul li > a span{
     display: block;
@@ -459,7 +436,7 @@ body{
     white-space: nowrap;
 }
 .right_banner2 ul li > a span:hover{
-    text-decoration: none;
+    text-decoration: none !important;
     color: #7b7b7b;
 }
 
