@@ -1226,14 +1226,67 @@ img{
     height: 173px;
     border-top: 1px #b1b5c1 solid;
 }
-
-
-
-
-
-
-
-
+.quick{
+    width: 655px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.quick ul li{
+    float: left;
+    line-height: 50px;
+}
+.quick ul li a{
+    font-weight: bold;
+    color: #666666;
+}
+.quick ul li:before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 8px;
+    margin: 0 11px;
+    background-color: #c7cbce;
+}
+.quick ul li:first-child:before{
+    width: 0;
+    margin-left: -11px;
+}
+.copy_info{
+    width: 990px;
+    height: 123px;
+}
+.copy_info span{
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+    line-height: 18px;
+}
+.copy_info span .copyline{
+    display: inline-block;
+    width: 1px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: #ddd;
+}
+.copy_info .copymg{
+    margin: 10px 0;
+}
+.copy_info span a{
+    position: relative;
+    top: 0px;
+    margin-left: 5px;
+    display: inline-block;
+    width: 90px;
+    height: 15px;
+    line-height: 17px;
+    font-size: 11px;
+    color: #fff;
+    letter-spacing: -1px;
+    border-radius: 5px;
+    background-color: #c1c1c1;
+    behavior: url('PIE/PIE.htc');
+}
 
 
 
